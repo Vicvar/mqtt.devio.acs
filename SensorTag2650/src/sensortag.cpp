@@ -43,9 +43,11 @@
 #define PIPE_WRITE 1
 
 #define STMAC "B0:B4:48:C9:13:04"
-double humidity = 0;
-double temperature = 0;
-double light = 0;
+#define SIMULATED 1
+
+double humidity = 100;
+double temperature = 10;
+double light = 10;
 double barometer = 0; 
 
 int createChildProcess(const char* command, char* const arguments[], char* const environment[])
@@ -412,7 +414,8 @@ int main(int argc, char* argv[])
       //handle = system(hcitool_lecc.c_str());
       
       //Create separate process + redirect console
-      createChildProcess("/usr/bin/gatttool",args, NULL);
+      if (!SIMULATED)
+	createChildProcess("/usr/bin/gatttool",args, NULL);
       
       std::cout << "Disconnecting from device: [" << STMAC << "] "<< std::endl;
       //std::string hcitool_cc("sudo hcitool ledc ");
@@ -420,9 +423,9 @@ int main(int argc, char* argv[])
       //system(hcitool_cc.c_str());
       
       // Current measurements
-      std::cout << "Current Temperature: "<< temperature << std::endl;
-      std::cout << "Current Light: "<< light << std::endl;
-      std::cout << "Current Humidity: "<< humidity << std::endl;
+      std::cout << "Current Temperature: "<< getTemperature() << std::endl;
+      std::cout << "Current Light: "<< getLight() << std::endl;
+      std::cout << "Current Humidity: "<< getHumidity() << std::endl;
       usleep(10000000);
     }  
   return(0);
