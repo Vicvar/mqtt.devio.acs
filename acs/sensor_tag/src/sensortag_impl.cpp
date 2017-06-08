@@ -500,3 +500,8 @@ while(intents <= min_intents)
   }
   return child_num;
 }
+
+/* --------------- [ MACI DLL support functions ] -----------------*/
+#include <maciACSComponentDefines.h>
+MACI_DLL_SUPPORT_FUNCTIONS(sensortag_impl)
+/* ----------------------------------------------------------------*/
