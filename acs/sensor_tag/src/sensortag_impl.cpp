@@ -114,7 +114,7 @@ bool sensortag_devio::initilizeValue()
         return true;
 }
 
-CORBA::Double sensortag_devio::read(unsigned long long &timestamp)
+CORBA::Double sensortag_devio::read(ACS::Time& timestamp)
 {
         switch (sensor) {
                 case temperatue_t: return thread->get_temperature();
@@ -123,7 +123,7 @@ CORBA::Double sensortag_devio::read(unsigned long long &timestamp)
         }
 }
 
-void sensortag_devio::write(const CORBA::Double &value, unsigned long long& timestamp)
+void sensortag_devio::write(const CORBA::Double &value, ACS::Time& timestamp)
 {
         // NO-OP
 }
@@ -505,3 +505,4 @@ while(intents <= min_intents)
 #include <maciACSComponentDefines.h>
 MACI_DLL_SUPPORT_FUNCTIONS(sensortag_impl)
 /* ----------------------------------------------------------------*/
+
