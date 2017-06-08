@@ -19,6 +19,7 @@ sensortag_impl::~sensortag_impl()
 void sensortag_impl::initialize()
         throw (acsErrTypeLifeCycle::acsErrTypeLifeCycleExImpl)
 {
+        on();
         temperature_m =  new baci::ROdouble(
 			(component_name + ":temperature").c_str(),
                         getComponent(), new sensortag_devio(sensortag_devio::temperatue_t, refresh_thread));

@@ -7,7 +7,7 @@
   xmlns:baci="urn:schemas-cosylab-com:BACI:1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:import namespace="urn:schemas-cosylab-com:CDB:1.0" schemaLocation="CDB.xsd"/>
   <xs:import namespace="urn:schemas-cosylab-com:BACI:1.0" schemaLocation="BACI.xsd"/>
-  <xs:complexType name="SensorTag">
+  <xs:complexType name="SensorTagT">
     <xs:complexContent>
     <xs:extension base="baci:CharacteristicComponent">
     <xs:sequence>
@@ -18,7 +18,7 @@
     </xs:extension>
   </xs:complexContent>
   </xs:complexType>
-  <xs:element name="SensorTag" type="SensorTag"/>
+  <xs:element name="SensorTag" type="SensorTagT"/>
 </xs:schema>
 
 
