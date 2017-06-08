@@ -49,8 +49,8 @@ class sensortag_devio :     public virtual DevIO<CORBA::Double>
                 sensortag_devio(sensor_t sensor, sensortag_thread* thread);
                 virtual ~sensortag_devio();
                 virtual bool initilizeValue();
-                virtual CORBA::Double read(unsigned long long& timestamp);
-                virtual void write(const CORBA::Double &value, unsigned long long& timestamp);
+                virtual CORBA::Double read(ACS::Time& timestamp);
+                virtual void write(const CORBA::Double& value, ACS::Time& timestamp);
         private:
                 const sensor_t sensor;
                 sensortag_thread * thread;
