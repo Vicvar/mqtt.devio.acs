@@ -22,6 +22,9 @@ class sensortag_impl:   public virtual POA_Sensors::sensortag,
                 ACS::ROdouble_ptr light();
                 ACS::ROdouble_ptr humidity();
 
+		void on();
+		void off();		
+
                 virtual void initialize(void) throw (acsErrTypeLifeCycle::acsErrTypeLifeCycleExImpl);
                 virtual void execute(void) throw (acsErrTypeLifeCycle::acsErrTypeLifeCycleExImpl);
                 virtual void cleanUp(void);

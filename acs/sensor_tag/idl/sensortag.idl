@@ -23,6 +23,12 @@ module Sensors
 		 * In relative humidity
 		 */
 		readonly attribute ACS::ROdouble humidity;
+
+        /* Turn on refresh thread*/
+        void on();
+
+        /*Turn off refresh thread*/
+        void off();
 	};
 };
 
