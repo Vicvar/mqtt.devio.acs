@@ -77,14 +77,19 @@ INCLUDES        = sensortag_impl.h
 #
 # Libraries (public and local)
 # ----------------------------
-LIBRARIES       = SensorTagImpl
+LIBRARIES       = SensorTagImpl SensorTagSim
 LIBRARIES_L     =
 
 #
 # <brief description of lllll library>
-SensorTagImpl_OBJECTS   = sensortag_impl
+SensorTagImpl_OBJECTS   = sensortag_impl sensortag_thread
 SensorTagImpl_LIBS := sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging ACSErrTypeCommon \
 			acscommonStubs acserrStubs acserr logging logging maci maciStubs loki ACSErrTypeCORBA acscomponent baci loki
+
+SensorTagSim_OBJECTS := sensortag_impl sensortag_thread_sim
+SensorTagSim_LIBS := sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging ACSErrTypeCommon \
+			acscommonStubs acserrStubs acserr logging logging maci maciStubs loki ACSErrTypeCORBA acscomponent baci loki
+
 
 #
 # Scripts (public and local)
