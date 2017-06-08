@@ -1,0 +1,35 @@
+#ifndef _SENSORTAG_IDL_
+#define _SENSORTAG_IDL_
+
+#include <baci.idl>
+
+#pragma prefix "example"
+
+module Sensors
+{
+	interface sensortag : ACS::CharacteristicComponent
+	{
+		/**
+		 * In celsius degrees
+		 */
+		readonly attribute ACS::ROdouble temperature;
+
+		/**
+		 * In flux
+		 */
+		readonly attribute ACS::ROdouble light;
+
+		/**
+		 * In relative humidity
+		 */
+		readonly attribute ACS::ROdouble humidity;
+
+        /* Turn on refresh thread*/
+        void on();
+
+        /*Turn off refresh thread*/
+        void off();
+	};
+};
+
+#endif
