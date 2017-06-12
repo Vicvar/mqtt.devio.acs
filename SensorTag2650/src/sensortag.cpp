@@ -43,7 +43,7 @@
 #define PIPE_WRITE 1
 
 #define STMAC "B0:B4:48:C9:13:04"
-#define SIMULATED 1
+#define SIMULATED 0
 
 double humidity = 100;
 double temperature = 10;

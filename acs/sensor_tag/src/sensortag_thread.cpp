@@ -2,7 +2,7 @@
 
 
 sensortag_thread::sensortag_thread(const ACE_CString& name):
-        ACS::Thread(name), temperature(0.0D), light(0.0D), humidity(0.0D)
+        ACS::Thread(name), temperature(0.0), light(0.0), humidity(0.0)
 {
 
 }
@@ -35,7 +35,7 @@ CORBA::Double sensortag_thread::get_light()
 
 CORBA::Double sensortag_thread::get_humidity()
 {
-        return light;
+        return humidity;
 }
 
 #define PIPE_READ 0

@@ -1,0 +1,25 @@
+#ifndef _WEATHERSTATION_IDL_
+#define _WEATHERSTATION_IDL_
+
+#include <baci.idl>
+
+#pragma prefix "example"
+
+module Weather
+{
+	interface WeatherStation : ACS::ACSComponent
+	{
+
+	  /*Get current temperature*/
+	  double getTemperature();
+
+	  /*Get current humidity*/
+	  double getHumidity();
+	  
+	  /*Get current light */
+	  double getLight();
+	  
+	};
+};
+
+#endif

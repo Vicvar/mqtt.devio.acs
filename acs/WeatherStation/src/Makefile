@@ -8,7 +8,7 @@
 #
 # who       when      what
 # --------  --------  ----------------------------------------------
-# javarias  05/06/17  created
+# ruben.soto  11/06/17  created
 #
 
 # ALMA - Atacama Large Millimeter Array
@@ -72,22 +72,18 @@ xxxxx_LIBS      =
 #
 # Includes (.h) files (public only)
 # ---------------------------------
-INCLUDES        = sensortag_impl.h
+INCLUDES        = WeatherStationImpl.h
 
 #
 # Libraries (public and local)
 # ----------------------------
-LIBRARIES       = SensorTagImpl SensorTagSim
+LIBRARIES       = WeatherStationImpl
 LIBRARIES_L     =
 
 #
 # <brief description of lllll library>
-SensorTagImpl_OBJECTS = sensortag_impl sensortag_thread
-SensorTagImpl_LIBS = sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging ACSErrTypeCommon acscommonStubs acserrStubs acserr logging logging maci maciStubs loki ACSErrTypeCORBA acscomponent baci loki
-
-SensorTagSim_OBJECTS = sensortag_impl sensortag_thread_sim
-SensorTagSim_LIBS = sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging ACSErrTypeCommon \
-			acscommonStubs acserrStubs acserr logging logging maci maciStubs loki ACSErrTypeCORBA acscomponent baci loki
+WeatherStationImpl_OBJECTS = WeatherStationImpl
+WeatherStationImpl_LIBS = WeatherStationStubs sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging ACSErrTypeCommon acscommonStubs acserrStubs acserr logging logging maci maciClient maciStubs loki ACSErrTypeCORBA acscomponent baci loki
 
 
 #
@@ -134,16 +130,17 @@ tttlll_OBJECTS  =
 #
 # Configuration Database Files
 # ----------------------------
-CDB_SCHEMAS = SensorTag 
+CDB_SCHEMAS =
 
 # 
 # IDL Files and flags
 # 
-IDL_FILES := sensortag
+IDL_FILES = WeatherStation
 TAO_IDLFLAGS =
 USER_IDL =
 
-sensortagStubs_LIBS := baciStubs ACE TAO TAO_PortableServer TAO_CosProperty
+WeatherStationStubs_LIBS = baciStubs ACE TAO TAO_PortableServer TAO_CosProperty
+
 #
 # Jarfiles and their directories
 #

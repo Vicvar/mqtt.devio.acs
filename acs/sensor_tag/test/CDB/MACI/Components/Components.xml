@@ -6,6 +6,9 @@
       <_ Name="SensorTag"       Code="SensorTagImpl"	
                              Type="IDL:example/Sensors/sensortag:1.0"
                              Container="stContainer" ImplLang="cpp" />
+      <_ Name="WeatherStation"       Code="WeatherStationImpl"    
+                             Type="IDL:example/Weather/WeatherStation:1.0"
+                             Container="stContainer" ImplLang="cpp" />
       <_ Name="SensorTagSim"       Code="SensorTagSim"	
                              Type="IDL:example/Sensors/sensortag:1.0"
                              Container="cppSimContainer" ImplLang="cpp" />
