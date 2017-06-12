@@ -13,14 +13,20 @@ sensortag_thread::~sensortag_thread()
 
 void sensortag_thread::runLoop() 
 {
-        while(true) {
+	int i = 0;
+        while(check()) {
+		if (isSuspended() || (i++%10 !=0)) {
+			sleep(1);
+			continue;
+		}
                 createChildProcess(
                                 sensortag_thread::command,
                                 sensortag_thread::arguments, 
                                 NULL
                                 );
-                sleep(10);
+                sleep(1);
         }
+	setStopped();
 }
 
 CORBA::Double sensortag_thread::get_temperature()

@@ -13,12 +13,18 @@ sensortag_thread::~sensortag_thread()
 
 void sensortag_thread::runLoop() 
 {
-        while(true) {
+	int i = 0;
+        while(check()) {
+		if (isSuspended() || (i++%10 != 0)) {
+			sleep(1);
+			continue;
+		}
 		temperature = 30.0 * sin(2 * 3.1415/1800.0 * time(NULL)) + 45.0;
 		light = 70.0 * cos(2 * 3.1415/600.0 * time(NULL)) + 100.0;
 		humidity = 50.0 * sin(2 * 3.1415/1800.0 * time(NULL)) * cos(2 * 3.1415/600.0 * time(NULL)) + 50.0;
-                sleep(10);
+                sleep(1);
         }
+	setStopped();
 }
 
 CORBA::Double sensortag_thread::get_temperature()
