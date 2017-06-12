@@ -8,11 +8,7 @@
      ContainerPingInterval="10.0"
      AdministratorPingInterval="10.0">
 	
-	<!--  TODO: Does it really make sense to configure these specific test components as autostart components? -->
 	<Startup>
-		<cdb:_ string="CLOCK1" />
-		<cdb:_ string="TIMER1" />
-		<cdb:_ string="MOUNT1" />
 	</Startup>
 
 	<ServiceComponents>
