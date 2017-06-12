@@ -69,12 +69,21 @@ try:
 
     # Get the humidity
     humidity = ws.getHumidity()
-
-    # Ask the current value of the property
+    # Print value 
     simpleClient.getLogger().logInfo("Current Humidity: " + str(humidity))
 
+    # Get the temperature
+    temperature = ws.getTemperature()
+    # Print value 
+    simpleClient.getLogger().logInfo("Current Temperature: " + str(temperature))
+
+    # Get the humidity
+    light = ws.getLight()
+    # Print value 
+    simpleClient.getLogger().logInfo("Current Light: " + str(light))
+
     # Release it
-    simpleClient.releaseComponent("MOUNT1")
+    simpleClient.releaseComponent("WeatherStation")
 
 except Exception, e:
     simpleClient.getLogger().logCritical("Sorry, I expected there to be a Mount in the system and there isn't.")

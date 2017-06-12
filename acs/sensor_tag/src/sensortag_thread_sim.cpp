@@ -33,7 +33,7 @@ CORBA::Double sensortag_thread::get_light()
 
 CORBA::Double sensortag_thread::get_humidity()
 {
-        return light;
+        return humidity;
 }
 
 int sensortag_thread::createChildProcess(
