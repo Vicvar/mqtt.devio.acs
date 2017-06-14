@@ -24,7 +24,7 @@ void sensortag_thread::runLoop()
                                 sensortag_thread::arguments, 
                                 NULL
                                 );
-                sleep(1);
+                sleep(10);
         }
 	setStopped();
 }
