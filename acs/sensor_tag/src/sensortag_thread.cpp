@@ -15,8 +15,8 @@ void sensortag_thread::runLoop()
 {
 	int i = 0;
         while(check()) {
-		if (isSuspended() || (i++%10 !=0)) {
-			sleep(1);
+		if (isSuspended() || (i++%10 != 0)) {
+			usleep(1000000);
 			continue;
 		}
                 createChildProcess(
@@ -24,7 +24,8 @@ void sensortag_thread::runLoop()
                                 sensortag_thread::arguments, 
                                 NULL
                                 );
-                sleep(10);
+                usleep(10000000);
+		i = 0;
         }
 	setStopped();
 }
