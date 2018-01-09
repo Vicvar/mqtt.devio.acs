@@ -9,6 +9,8 @@
 
 namespace mqtt
 {
+    class mqtt_devio;
+
     class acs_callback : public virtual mqtt::callback
     {
         mqtt::client& cli_;
@@ -19,14 +21,15 @@ namespace mqtt
         void delivery_complete(mqtt::delivery_token_ptr token) override;
 
         std::string& topic_;
-
+        mqtt_devio* devio_;
 
         public:
-        acs_callback(mqtt::client& cli, std::string& topic);
+        acs_callback(mqtt::client& cli, std::string& topic, mqtt_devio* devio);
     };
 
     class mqtt_devio: public virtual DevIO<CORBA::Double>
     {
+        friend class acs_callback;
         public:
         mqtt_devio(const std::string& mqtt_brk_addr,
                 const std::string& baci_name);

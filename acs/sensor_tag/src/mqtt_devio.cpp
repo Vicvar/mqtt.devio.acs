@@ -5,8 +5,8 @@ using namespace mqtt;
 
 
 
-acs_callback::acs_callback(mqtt::client& cli, std::string& topic) : 
-cli_(cli), topic_(topic) {}
+acs_callback::acs_callback(mqtt::client& cli, std::string& topic, mqtt_devio* devio) : 
+cli_(cli), topic_(topic), devio_(devio) {}
 
 void acs_callback::connected (const std::string& cause)
 {
@@ -25,12 +25,18 @@ void acs_callback::connection_lost(const std::string& cause)
 
 void acs_callback::message_arrived(mqtt::const_message_ptr msg)
 {
-    std::cout << msg->get_topic() << ": " << msg->get_payload_str() << std::endl;
+    try {
+        CORBA::Double value = std::stod(msg->get_payload_str());
+        devio_->value = value;
+    }
+    catch (...) {
+        std::cout << "FAILED PARSING ";
+        std::cout << msg->get_topic() << ": " << msg->get_payload_str() << std::endl;
+    }
 }
 
 void acs_callback::delivery_complete(mqtt::delivery_token_ptr token)
 {
-
 }
 
 mqtt_devio::mqtt_devio(const std::string& mqtt_brk_addr, const std::string& baci_name):
@@ -43,7 +49,7 @@ mqtt_devio::mqtt_devio(const std::string& mqtt_brk_addr, const std::string& baci
     connOpts.set_automatic_reconnect(true);
 
     client_ = new mqtt::client(mqtt_brk_addr, topic);
-    cb_ = new acs_callback(*client_, topic);
+    cb_ = new acs_callback(*client_, topic, this);
     client_->set_callback(*cb_);
 
     try {
@@ -57,7 +63,6 @@ mqtt_devio::mqtt_devio(const std::string& mqtt_brk_addr, const std::string& baci
             << mqtt_brk_addr << "'" << std::endl;
         throw exc;
     }
-
 }
 
 bool mqtt_devio::initializeValue()
@@ -88,6 +93,5 @@ mqtt_devio::~mqtt_devio()
     }
     delete cb_;
     delete client_;
- 
 }
 
