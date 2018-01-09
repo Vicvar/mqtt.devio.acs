@@ -1,5 +1,5 @@
 #include "sensortag_impl.h"
-
+#include "mqtt_devio.h"
 
 sensortag_impl::sensortag_impl(
                 const ACE_CString name,
@@ -14,21 +14,42 @@ sensortag_impl::sensortag_impl(
 
 sensortag_impl::~sensortag_impl()
 {
+    delete temperature_devio_m;
+    delete light_devio_m;
+    delete humidity_devio_m;
 }
 
 void sensortag_impl::initialize()
         throw (acsErrTypeLifeCycle::acsErrTypeLifeCycleExImpl)
 {
-        on();
+//        on();
+        temperature_devio_m = new mqtt::mqtt_devio("tcp://localhost:1883", 
+                            (component_name + ":temperature").c_str());
+        light_devio_m = new mqtt::mqtt_devio("tcp://localhost:1883", 
+                            (component_name + ":light").c_str());
+        humidity_devio_m = new mqtt::mqtt_devio("tcp://localhost:1883", 
+                            (component_name + ":humidity").c_str());
         temperature_m =  new baci::ROdouble(
 			(component_name + ":temperature").c_str(),
-                        getComponent(), new sensortag_devio(sensortag_devio::temperatue_t, refresh_thread));
+                        getComponent(), 
+                        temperature_devio_m);
         light_m = new baci::ROdouble(
 			(component_name + ":light").c_str(),
-                        getComponent(), new sensortag_devio(sensortag_devio::light_t, refresh_thread));
+                        getComponent(), 
+                        light_devio_m);
         humidity_m = new baci::ROdouble (
 			(component_name + ":humidity").c_str(),
-                        getComponent(), new sensortag_devio(sensortag_devio::humidity_t, refresh_thread));
+                        getComponent(), 
+                        humidity_devio_m);
+//        temperature_m =  new baci::ROdouble(
+//			(component_name + ":temperature").c_str(),
+//                        getComponent(), new sensortag_devio(sensortag_devio::temperatue_t, refresh_thread));
+//        light_m = new baci::ROdouble(
+//			(component_name + ":light").c_str(),
+//                        getComponent(), new sensortag_devio(sensortag_devio::light_t, refresh_thread));
+//        humidity_m = new baci::ROdouble (
+//			(component_name + ":humidity").c_str(),
+//                        getComponent(), new sensortag_devio(sensortag_devio::humidity_t, refresh_thread));
 	
 }
 
@@ -39,15 +60,15 @@ void sensortag_impl::execute()
 
 void sensortag_impl::cleanUp()
 {
-        AUTO_TRACE(__PRETTY_FUNCTION__);
-        if (refresh_thread) {
-                try {
-                    this->off();
-                } catch(...) {
-                        ACS_SHORT_LOG((LM_WARNING, "Something went wrong with thr thread deactivation :("));
-                }
-        }
-        getContainerServices()->getThreadManager()->stopAll();
+//        AUTO_TRACE(__PRETTY_FUNCTION__);
+//        if (refresh_thread) {
+//                try {
+//                    this->off();
+//                } catch(...) {
+//                        ACS_SHORT_LOG((LM_WARNING, "Something went wrong with thr thread deactivation :("));
+//                }
+//        }
+//        getContainerServices()->getThreadManager()->stopAll();
 }
 
 void sensortag_impl::aboutToAbort()
@@ -80,53 +101,22 @@ ACS::ROdouble_ptr sensortag_impl::humidity()
 
 void sensortag_impl::on()
 {
-        AUTO_TRACE(__PRETTY_FUNCTION__);
-        if (refresh_thread == NULL) {
-                refresh_thread = getContainerServices()->getThreadManager()->
-                        create<sensortag_thread>(ACE_CString("sensortag_refresh_thread"));
-                        refresh_thread->resume();
-        } else {
-                refresh_thread->resume();
-        }
+//        AUTO_TRACE(__PRETTY_FUNCTION__);
+//        if (refresh_thread == NULL) {
+//                refresh_thread = getContainerServices()->getThreadManager()->
+//                        create<sensortag_thread>(ACE_CString("sensortag_refresh_thread"));
+//                        refresh_thread->resume();
+//        } else {
+//                refresh_thread->resume();
+//        }
 }
 
 void sensortag_impl::off()
 {
-        AUTO_TRACE(__PRETTY_FUNCTION__);
-        if(refresh_thread != NULL) {
-                refresh_thread->suspend();
-        }
-}
-
-sensortag_devio::sensortag_devio(
-                sensortag_devio::sensor_t sensor,
-                sensortag_thread * thread):
-        sensor(sensor), thread(thread)
-{
-
-}
-
-sensortag_devio::~sensortag_devio()
-{
-}
-
-bool sensortag_devio::initilizeValue()
-{
-        return true;
-}
-
-CORBA::Double sensortag_devio::read(ACS::Time& timestamp)
-{
-        switch (sensor) {
-                case temperatue_t: return thread->get_temperature();
-                case humidity_t: return thread->get_humidity();
-                case light_t: return thread->get_light();
-        }
-}
-
-void sensortag_devio::write(const CORBA::Double &value, ACS::Time& timestamp)
-{
-        // NO-OP
+//        AUTO_TRACE(__PRETTY_FUNCTION__);
+//        if(refresh_thread != NULL) {
+//                refresh_thread->suspend();
+//        }
 }
 
 /* --------------- [ MACI DLL support functions ] -----------------*/

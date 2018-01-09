@@ -40,12 +40,12 @@
 
 #
 # user definable C-compilation flags
-#USER_CFLAGS = 
+USER_CFLAGS = -std=c++11
 
 #
 # additional include and library search paths
 #USER_INC = 
-#USER_LIB = 
+USER_LIB = -L/usr/local/lib
 
 #
 # MODULE CODE DESCRIPTION:
@@ -82,12 +82,15 @@ LIBRARIES_L     =
 
 #
 # <brief description of lllll library>
-SensorTagImpl_OBJECTS = sensortag_impl sensortag_thread
-SensorTagImpl_LIBS = sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging ACSErrTypeCommon acscommonStubs acserrStubs acserr logging logging maci maciStubs loki ACSErrTypeCORBA acscomponent baci loki
+SensorTagImpl_OBJECTS = sensortag_impl mqtt_devio
+SensorTagImpl_LIBS = sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging \
+		ACSErrTypeCommon acscommonStubs acserrStubs acserr logging logging maci maciStubs loki \
+		ACSErrTypeCORBA acscomponent baci loki paho-mqtt3c paho-mqttpp3 paho-mqtt3a paho-mqtt3as paho-mqtt3cs
 
-SensorTagSim_OBJECTS = sensortag_impl sensortag_thread_sim
+SensorTagSim_OBJECTS = sensortag_impl mqtt_devio
 SensorTagSim_LIBS = sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging ACSErrTypeCommon \
-			acscommonStubs acserrStubs acserr logging logging maci maciStubs loki ACSErrTypeCORBA acscomponent baci loki
+		acscommonStubs acserrStubs acserr logging logging maci maciStubs loki ACSErrTypeCORBA acscomponent baci loki \
+		paho-mqtt3c paho-mqttpp3 paho-mqtt3a paho-mqtt3as paho-mqtt3cs
 
 
 #
