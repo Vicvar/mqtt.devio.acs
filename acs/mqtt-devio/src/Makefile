@@ -72,26 +72,20 @@ xxxxx_LIBS      =
 #
 # Includes (.h) files (public only)
 # ---------------------------------
-INCLUDES        = sensortag_impl.h
+INCLUDES        = mqtt_devio.h
 
 #
 # Libraries (public and local)
 # ----------------------------
-LIBRARIES       = SensorTagImpl SensorTagSim
+LIBRARIES       = mqttDevIO
 LIBRARIES_L     =
 
 #
 # <brief description of lllll library>
-SensorTagImpl_OBJECTS = sensortag_impl
-SensorTagImpl_LIBS = sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging \
+mqttDevIO_OBJECTS = mqtt_devio
+mqttDevIO_LIBS = ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging \
 		ACSErrTypeCommon acscommonStubs acserrStubs acserr logging logging maci maciStubs loki \
-		ACSErrTypeCORBA acscomponent baci loki paho-mqtt3c paho-mqttpp3 paho-mqtt3a paho-mqtt3as paho-mqtt3cs \
-		mqttDevIO
-
-SensorTagSim_OBJECTS = sensortag_impl
-SensorTagSim_LIBS = sensortagStubs baciStubs ACE TAO TAO_PortableServer TAO_CosProperty maciErrType baselogging ACSErrTypeCommon \
-		acscommonStubs acserrStubs acserr logging logging maci maciStubs loki ACSErrTypeCORBA acscomponent baci loki \
-		paho-mqtt3c paho-mqttpp3 paho-mqtt3a paho-mqtt3as paho-mqtt3cs mqttDevIO
+		ACSErrTypeCORBA acscomponent baci loki paho-mqtt3c paho-mqttpp3 paho-mqtt3a paho-mqtt3as paho-mqtt3cs
 
 
 #
@@ -138,16 +132,15 @@ tttlll_OBJECTS  =
 #
 # Configuration Database Files
 # ----------------------------
-CDB_SCHEMAS = SensorTag 
+CDB_SCHEMAS =
 
 # 
 # IDL Files and flags
 # 
-IDL_FILES := sensortag
+IDL_FILES := 
 TAO_IDLFLAGS =
 USER_IDL =
 
-sensortagStubs_LIBS := baciStubs ACE TAO TAO_PortableServer TAO_CosProperty
 #
 # Jarfiles and their directories
 #
