@@ -18,6 +18,12 @@ module Weather
 	  
 	  /*Get current light */
 	  double getLight();
+
+	void writeTemperature();
+
+	void writeHumidity();
+	
+	void writeLight();
 	  
 	};
 };

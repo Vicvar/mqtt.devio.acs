@@ -1,3 +1,4 @@
+
 #ifndef _SENSORTAG_IDL_
 #define _SENSORTAG_IDL_
 
@@ -29,6 +30,12 @@ module Sensors
 
         /*Turn off refresh thread*/
         void off();
+
+	void publishTemperature();
+
+	void publishLight();
+
+	void publishHumidity();
 	};
 };
 
