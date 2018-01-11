@@ -17,18 +17,28 @@ sensortag_impl::~sensortag_impl()
     delete temperature_devio_m;
     delete light_devio_m;
     delete humidity_devio_m;
+    delete temperature_devio_w;
+    delete light_devio_w;
+    delete humidity_devio_w;
 }
 
 void sensortag_impl::initialize()
         throw (acsErrTypeLifeCycle::acsErrTypeLifeCycleExImpl)
 {
 //        on();
-        temperature_devio_m = new mqtt::mqtt_devio("tcp://localhost:1883", 
+        temperature_devio_m = new mqtt::mqtt_read("tcp://localhost:1883", 
                             (component_name + ":temperature").c_str());
-        light_devio_m = new mqtt::mqtt_devio("tcp://localhost:1883", 
+        light_devio_m = new mqtt::mqtt_read("tcp://localhost:1883", 
                             (component_name + ":light").c_str());
-        humidity_devio_m = new mqtt::mqtt_devio("tcp://localhost:1883", 
+        humidity_devio_m = new mqtt::mqtt_read("tcp://localhost:1883", 
                             (component_name + ":humidity").c_str());
+	temperature_devio_w = new mqtt::mqtt_write("tcp://localhost:1883", 
+                            (component_name + ":temperature/w").c_str());
+	light_devio_w = new mqtt::mqtt_write("tcp://localhost:1883", 
+		                    (component_name + ":light/w").c_str());
+	humidity_devio_w = new mqtt::mqtt_write("tcp://localhost:1883", 
+		                    (component_name + ":humidity/w").c_str());
+	
         temperature_m =  new baci::ROdouble(
 			(component_name + ":temperature").c_str(),
                         getComponent(), 
@@ -98,6 +108,19 @@ ACS::ROdouble_ptr sensortag_impl::humidity()
         ACS::ROdouble_var prop = ACS::ROdouble::_narrow(humidity_m->getCORBAReference());
         return prop._retn();
 }
+void sensortag_impl::publishTemperature()
+{
+	temperature_devio_w->publish("Temperature message");
+}
+void sensortag_impl::publishLight()
+{
+	light_devio_w->publish("Light message");
+}
+void sensortag_impl::publishHumidity()
+{
+	humidity_devio_w->publish("Humidity message");
+}
+
 
 void sensortag_impl::on()
 {

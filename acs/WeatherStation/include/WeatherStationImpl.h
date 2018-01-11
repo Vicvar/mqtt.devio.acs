@@ -24,6 +24,9 @@ class WeatherStationImpl: public virtual acscomponent::ACSComponentImpl,
 		double getHumidity();
 		double getTemperature();
 		double getLight(); 
+		void writeTemperature(); 
+		void writeHumidity(); 
+		void writeLight(); 
 
         private:
                 std::string component_name;

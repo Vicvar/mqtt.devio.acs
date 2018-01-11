@@ -20,7 +20,7 @@ void WeatherStationImpl::initialize()
 {
   ACS_SHORT_LOG((LM_WARNING, "WeatherStationImpl::initialize()"));
   
-  const std::string currentComponent("SensorTagSim");
+  const std::string currentComponent("SensorTag");
   sensortag_sp = getContainerServices()->getComponentSmartPtr<Sensors::sensortag>(currentComponent.c_str());
   ACS_SHORT_LOG((LM_WARNING, "SensorTag Component Retrieved Successfully!"));
 }
@@ -70,6 +70,27 @@ double WeatherStationImpl::getLight()
   CORBA::Double var = sensortag_sp->light()->get_sync(completion.out());
   ACS_SHORT_LOG((LM_INFO,"Light: %f", var)); 
   return var;
+}
+void WeatherStationImpl::writeTemperature()
+{
+  ACS_SHORT_LOG((LM_WARNING, "WeatherStationImpl::writeTemperature()"));
+
+  ACSErr::Completion_var completion;
+  sensortag_sp->publishTemperature();
+}
+void WeatherStationImpl::writeHumidity()
+{
+  ACS_SHORT_LOG((LM_WARNING, "WeatherStationImpl::writeHumidity()"));
+
+  ACSErr::Completion_var completion;
+  sensortag_sp->publishHumidity();
+}
+void WeatherStationImpl::writeLight()
+{
+  ACS_SHORT_LOG((LM_WARNING, "WeatherStationImpl::writeLight()"));
+
+  ACSErr::Completion_var completion;
+  sensortag_sp->publishLight();
 }
 
 

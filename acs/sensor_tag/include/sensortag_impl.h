@@ -23,6 +23,9 @@ class sensortag_impl:   public virtual POA_Sensors::sensortag,
                 ACS::ROdouble_ptr light();
                 ACS::ROdouble_ptr humidity();
 
+			void publishTemperature();
+			void publishLight();
+			void publishHumidity();
 		        void on();
 		        void off();		
 
@@ -36,9 +39,13 @@ class sensortag_impl:   public virtual POA_Sensors::sensortag,
                 baci::SmartPropertyPointer<baci::ROdouble> light_m;
                 baci::SmartPropertyPointer<baci::ROdouble> humidity_m;
 
-                mqtt::mqtt_devio * temperature_devio_m;
-                mqtt::mqtt_devio * light_devio_m;
-                mqtt::mqtt_devio * humidity_devio_m;
+                mqtt::mqtt_read * temperature_devio_m;
+                mqtt::mqtt_read * light_devio_m;
+                mqtt::mqtt_read * humidity_devio_m;
+		
+		mqtt::mqtt_write * temperature_devio_w;
+		mqtt::mqtt_write * light_devio_w;
+		mqtt::mqtt_write * humidity_devio_w;
 
                 std::string component_name;
 
