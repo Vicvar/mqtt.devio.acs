@@ -48,6 +48,7 @@ class sensortag_impl:   public virtual POA_Sensors::sensortag,
 		mqtt::mqtt_write * humidity_devio_w;
 
                 std::string component_name;
+		std::string component_broker;
 
                 sensortag_thread * refresh_thread;
 };

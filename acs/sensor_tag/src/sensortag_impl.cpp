@@ -2,7 +2,7 @@
 #include "mqtt_devio.h"
 
 sensortag_impl::sensortag_impl(
-                const ACE_CString name,
+                const ACE_CString name, 
                 maci::ContainerServices *containerServices) :
         CharacteristicComponentImpl(name, containerServices),
         temperature_m(this), light_m(this), humidity_m(this),
@@ -10,6 +10,7 @@ sensortag_impl::sensortag_impl(
 
 {
         component_name = name.c_str();
+	component_broker = "tcp://localhost:1883";
 }
 
 sensortag_impl::~sensortag_impl()
@@ -26,17 +27,17 @@ void sensortag_impl::initialize()
         throw (acsErrTypeLifeCycle::acsErrTypeLifeCycleExImpl)
 {
 //        on();
-        temperature_devio_m = new mqtt::mqtt_read("tcp://localhost:1883", 
+        temperature_devio_m = new mqtt::mqtt_read(component_broker, 
                             (component_name + ":temperature").c_str());
-        light_devio_m = new mqtt::mqtt_read("tcp://localhost:1883", 
+        light_devio_m = new mqtt::mqtt_read(component_broker, 
                             (component_name + ":light").c_str());
-        humidity_devio_m = new mqtt::mqtt_read("tcp://localhost:1883", 
+        humidity_devio_m = new mqtt::mqtt_read(component_broker, 
                             (component_name + ":humidity").c_str());
-	temperature_devio_w = new mqtt::mqtt_write("tcp://localhost:1883", 
+	temperature_devio_w = new mqtt::mqtt_write(component_broker, 
                             (component_name + ":temperature/w").c_str());
-	light_devio_w = new mqtt::mqtt_write("tcp://localhost:1883", 
+	light_devio_w = new mqtt::mqtt_write(component_broker, 
 		                    (component_name + ":light/w").c_str());
-	humidity_devio_w = new mqtt::mqtt_write("tcp://localhost:1883", 
+	humidity_devio_w = new mqtt::mqtt_write(component_broker, 
 		                    (component_name + ":humidity/w").c_str());
 	
         temperature_m =  new baci::ROdouble(

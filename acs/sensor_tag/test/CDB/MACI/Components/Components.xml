@@ -12,7 +12,10 @@
       <_ Name="SensorTagSim"       Code="SensorTagSim"	
                              Type="IDL:example/Sensors/sensortag:1.0"
                              Container="cppSimContainer" ImplLang="cpp" />
-      <_ Name="MOUNT1"       Code="acsexmplMountImpl"	
+<_ Name="MONITOR_COLLECTOR" Code="MonitorCollector" Type="IDL:alma/TMCDB/MonitorCollector:1.0" Container="stContainer" ImplLang="cpp" />
+<_ Name="ARCHIVE/TMCDB/MONITOR_BLOBBER" Code="alma.acs.monitoring.blobber.BlobberHelper" Type="IDL:alma/MonitorArchiver/Blobber:1.0"    Container="frodoContainer" ImplLang="java" />
+	<_ Name="ARCHIVE/TMCDB/MONITOR_CONTROL" Code="alma.acs.monitoring.controller.ControllerHelper" Type="IDL:alma/MonitorArchiver/Controller:1.0"    Container="frodoContainer" ImplLang="java" />
+      <_ Name="MOUNT1"       Code="frodoContainer"	
                              Type="IDL:alma/MOUNT_ACS/Mount:1.0"
                              Container="bilboContainer" ImplLang="cpp" />
       <_ Name="MOUNT2"       Code="acsexmplMountImpl"	
