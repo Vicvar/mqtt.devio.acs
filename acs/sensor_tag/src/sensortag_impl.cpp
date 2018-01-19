@@ -10,7 +10,19 @@ sensortag_impl::sensortag_impl(
 
 {
         component_name = name.c_str();
-	component_broker = "tcp://localhost:1883";
+    try 
+	{
+	CORBA::Any* characteristic = get_characteristic_by_name("broker");
+	if (!(*characteristic>>=component_broker))
+	    {
+	    ACS_SHORT_LOG((LM_ERROR,"Error getting AvailableSlots broker by the CORBA::Any object"));
+	    }
+	}
+    catch (...)
+	{
+	ACS_SHORT_LOG((LM_ERROR,"Error reading the characteristic broker by its name"));
+	}
+	
 }
 
 sensortag_impl::~sensortag_impl()

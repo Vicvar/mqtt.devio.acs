@@ -2,7 +2,8 @@
 <SensorTag xmlns="urn:schemas-cosylab-com:SensorTag:1.0"
        xmlns:baci="urn:schemas-cosylab-com:BACI:1.0"
 	   xmlns:cdb="urn:schemas-cosylab-com:CDB:1.0"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	broker="test.mosquitto.org">
  <temperature default_timer_trig="1.0"
 		description="temperature Prop"
 		units="deg"
@@ -24,5 +25,6 @@
 		graph_max="100"
 		archive_min_int="0"
 		archive_max_int="10" />
+ 
 </SensorTag>
 
