@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<!DOCTYPE hibernate-configuration PUBLIC 
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> 
+
+<hibernate-configuration> 
+	<session-factory> 
+	
+		<!-- Database connection settings (to be provided/overriden dynamically) --> 
+		<property name="dialect">org.hibernate.dialect.HSQLDialect</property> 
+		<property name="connection.driver_class">org.hsqldb.jdbcDriver</property> 
+		<property name="connection.url">jdbc:hsqldb:mem:tmcdb</property> 
+		<property name="connection.username">sa</property> 
+		<property name="connection.password"></property> 
+
+		<!-- JDBC connection pool (use the built-in) --> 
+		<property name="connection.pool_size">1</property> 
+	
+		<!-- Enable Hibernate's automatic session context management --> 
+		<property name="current_session_context_class">thread</property> 
+	
+		<!-- Disable the second-level cache --> 
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property> 
+	
+		<!-- Do not echo all executed SQL to stdout, because we use ACS logging via slf4j --> 
+		<property name="hibernate.show_sql">false</property>
+		
+		<!-- Mappings -->
+		<mapping resource="alma/TMCDB/maci/hibernate-mappings-maci.hbm.xml"/> 
+		<mapping resource="alma/TMCDB/baci/hibernate-mappings-baci.hbm.xml"/>
+
+		<mapping class="alma.acs.tmcdb.AlarmCategory"/>
+		<mapping class="alma.acs.tmcdb.AlarmDefinition"/>
+		<mapping class="alma.acs.tmcdb.AcsService"/>
+		<mapping class="alma.acs.tmcdb.AntennaDelayModel"/>
+		<mapping class="alma.acs.tmcdb.AntennaDelayModelTermId"/>
+		<mapping class="alma.acs.tmcdb.AntennaDelayModelTerm"/>
+		<mapping class="alma.acs.tmcdb.AntennaFocusModel"/>
+		<mapping class="alma.acs.tmcdb.AntennaFocusModelTermId"/>
+		<mapping class="alma.acs.tmcdb.AntennaFocusModelTerm"/>
+		<mapping class="alma.acs.tmcdb.Antenna"/>
+		<mapping class="alma.acs.tmcdb.AntennaPointingModel"/>
+		<mapping class="alma.acs.tmcdb.AntennaPointingModelTermId"/>
+		<mapping class="alma.acs.tmcdb.AntennaPointingModelTerm"/>
+		<mapping class="alma.acs.tmcdb.AntennaToFrontEndId"/>
+		<mapping class="alma.acs.tmcdb.AntennaToFrontEnd"/>
+		<mapping class="alma.acs.tmcdb.AntennaToPadId"/>
+		<mapping class="alma.acs.tmcdb.AntennaToPad"/>
+		<mapping class="alma.acs.tmcdb.Array"/>
+		<mapping class="alma.acs.tmcdb.Assembly"/>
+		<mapping class="alma.acs.tmcdb.AssemblyRole"/>
+		<mapping class="alma.acs.tmcdb.AssemblyStartup"/>
+		<mapping class="alma.acs.tmcdb.AssemblyType"/>
+		<mapping class="alma.acs.tmcdb.AssociatedBaseElementId"/>
+		<mapping class="alma.acs.tmcdb.AssociatedBaseElement"/>
+		<mapping class="alma.acs.tmcdb.BACIProperty"/>
+		<mapping class="alma.acs.tmcdb.BaseElementAssemblyListId"/>
+		<mapping class="alma.acs.tmcdb.BaseElementAssemblyList"/>
+		<mapping class="alma.acs.tmcdb.BaseElement"/>
+		<mapping class="alma.acs.tmcdb.BaseElementOnline"/>
+		<mapping class="alma.acs.tmcdb.BaseElementStartup"/>
+		<mapping class="alma.acs.tmcdb.CentralRack"/>
+		<mapping class="alma.acs.tmcdb.ChannelMapping"/>
+		<mapping class="alma.acs.tmcdb.Component"/>
+		<mapping class="alma.acs.tmcdb.ComponentType"/>
+		<mapping class="alma.acs.tmcdb.Computer"/>
+		<mapping class="alma.acs.tmcdb.Configuration"/>
+		<mapping class="alma.acs.tmcdb.Contact"/>
+		<mapping class="alma.acs.tmcdb.Container"/>
+		<mapping class="alma.acs.tmcdb.ContainerStartupOption"/>
+		<mapping class="alma.acs.tmcdb.CorrelatorBin"/>
+		<mapping class="alma.acs.tmcdb.CorrQuadrant"/>
+		<mapping class="alma.acs.tmcdb.CorrQuadrantRack"/>
+		<mapping class="alma.acs.tmcdb.CorrStationBin"/>
+		<mapping class="alma.acs.tmcdb.DefaultBaciProperty"/>
+		<mapping class="alma.acs.tmcdb.DefaultCanAddress"/>
+		<mapping class="alma.acs.tmcdb.DefaultComponent"/>
+		<mapping class="alma.acs.tmcdb.DefaultMember"/>
+		<mapping class="alma.acs.tmcdb.DefaultMonitorPoint"/>
+		<mapping class="alma.acs.tmcdb.DomainsMapping"/>
+		<mapping class="alma.acs.tmcdb.EventChannel"/>
+		<mapping class="alma.acs.tmcdb.Event"/>
+		<mapping class="alma.acs.tmcdb.FaultCode"/>
+		<mapping class="alma.acs.tmcdb.FaultFamily"/>
+		<mapping class="alma.acs.tmcdb.FaultMember"/>
+		<mapping class="alma.acs.tmcdb.FrontEnd"/>
+		<mapping class="alma.acs.tmcdb.HWConfiguration"/>
+		<mapping class="alma.acs.tmcdb.HwSchemas"/>
+		<mapping class="alma.acs.tmcdb.HolographyTower"/>
+		<mapping class="alma.acs.tmcdb.Location"/>
+		<mapping class="alma.acs.tmcdb.LoggingConfig"/>
+		<mapping class="alma.acs.tmcdb.LRUType"/>
+		<mapping class="alma.acs.tmcdb.Manager"/>
+		<mapping class="alma.acs.tmcdb.MasterClock"/>
+		<mapping class="alma.acs.tmcdb.MasterComponent"/>
+		<mapping class="alma.acs.tmcdb.MonitorDataId"/>
+		<mapping class="alma.acs.tmcdb.MonitorData"/>
+		<mapping class="alma.acs.tmcdb.MonitorPoint"/>
+		<mapping class="alma.acs.tmcdb.NamedLoggerConfig"/>
+		<mapping class="alma.acs.tmcdb.NetworkDevice"/>
+		<mapping class="alma.acs.tmcdb.NetworkDeviceSnmpConfig"/>
+		<mapping class="alma.acs.tmcdb.NetworkPowerstrip"/>
+		<mapping class="alma.acs.tmcdb.NotificationServiceMapping"/>
+		<mapping class="alma.acs.tmcdb.Pad"/>
+		<mapping class="alma.acs.tmcdb.PowerstripSocket"/>
+		<mapping class="alma.acs.tmcdb.ReductionLink"/>
+		<mapping class="alma.acs.tmcdb.ReductionThreshold"/>
+		<mapping class="alma.acs.tmcdb.SBExecutionId"/>
+		<mapping class="alma.acs.tmcdb.SBExecution"/>
+		<mapping class="alma.acs.tmcdb.Schemas"/>
+		<mapping class="alma.acs.tmcdb.SnmpTrapSink"/>
+		<mapping class="alma.acs.tmcdb.Startup"/>
+		<mapping class="alma.acs.tmcdb.SystemCounters"/>
+		<mapping class="alma.acs.tmcdb.TMCDBVersion"/>
+		<mapping class="alma.acs.tmcdb.WeatherStationController"/>
+		<mapping class="alma.acs.tmcdb.WeatherStationToPadId"/>
+		<mapping class="alma.acs.tmcdb.WeatherStationToPad"/>
+
+	</session-factory>
+</hibernate-configuration>
+

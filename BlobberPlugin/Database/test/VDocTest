@@ -1,0 +1,2 @@
+acsStartJava  -noDirectory -endorsed junit.textui.TestRunner alma.archive.database.vdoc.DefinitionTest
+acsStartJava -noDirectory  -endorsed junit.textui.TestRunner alma.archive.database.vdoc.VDocTest

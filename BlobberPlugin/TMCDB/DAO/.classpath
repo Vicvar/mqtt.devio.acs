@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="ACSROOT/lib/TMCDBPersistenceLayer.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ACS_monblobber"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ACS_monicd"/>
+	<classpathentry kind="lib" path="lib/testng-5.8-jdk15.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="lib/dbunit-2.4.4.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/acsASsources.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/acsErrTypeAlarmSourceFactory.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/DAOErrType.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/acserrj.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/acserr.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/jcont.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/acsContainerServices.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/JavaContainerError.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/MonitoringDAO_IF.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/ACSErrTypeCommon.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/acsjlog.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/cdbrdb-pojos.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/TMCDBpojos.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/hibernate3.jar" sourcepath="/RK_TOOLS/hibernate-distribution-3.3.1.GA/project/core/src/main/java"/>
+	<classpathentry kind="var" path="ACSROOT/lib/tmcdbGenerator.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/jACSUtil.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/jms.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/acscommon.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/systementities.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/maci.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/cdbDAL.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/castor.jar"/>
+	<classpathentry kind="lib" path="lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/activemq-core-5.4.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

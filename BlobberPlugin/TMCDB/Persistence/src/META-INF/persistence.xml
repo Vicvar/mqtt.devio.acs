@@ -1,0 +1,78 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<!--
+	   Two different persistence units are defined in this file. The only
+	   difference between them is the driver and dialect settings for
+	   hibernate. The rest of the settings is common.
+
+	   Which persistence unit is chosen by the system depends on the
+	   archive.db.mode property defined in the
+	   $ACSDATA/config/archiveConfig.properties file. When 'operational'
+	   is chosen, Oracle is used; when 'test', HSQLDB.
+	-->
+	<persistence-unit name="TMCDBOwlDaemonHSQLDB">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- Code generated annotated mappings -->
+		<mapping-file>SwCore-orm.xml</mapping-file>
+		<mapping-file>SwExt-orm.xml</mapping-file>
+		<mapping-file>HwConfigMonitoring-orm.xml</mapping-file>
+
+		<!-- Named queries -->
+		<mapping-file>alma/archive/tmcdb/persistence/TMCDB-named-queries.xml</mapping-file>
+
+		<properties>
+			<!-- General settings -->
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="true" />
+
+			<!-- Connection settings -->
+			<property name="hibernate.jdbc.batch_size" value="0" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+			<property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver" />
+
+			<!-- Connection pool settings -->
+			<property name="hibernate.connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider" />
+			<property name="hibernate.c3p0.min_size" value="2" />
+			<property name="hibernate.c3p0.max_size" value="4" />
+			<property name="hibernate.c3p0.timeout" value="300" />
+			<property name="hibernate.c3p0.max_statements" value="50" />
+			<property name="hibernate.c3p0.idle_test_period" value="3000" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="TMCDBOwlDaemonOracle">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- Code generated annotated mappings -->
+		<mapping-file>SwCore-orm.xml</mapping-file>
+		<mapping-file>SwExt-orm.xml</mapping-file>
+		<mapping-file>HwConfigMonitoring-orm.xml</mapping-file>
+
+		<!-- Named queries -->
+		<mapping-file>alma/archive/tmcdb/persistence/TMCDB-named-queries.xml</mapping-file>
+
+		<properties>
+			<!-- General settings -->
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+
+			<!-- Connection settings -->
+			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<!--property name="hibernate.connection.password" value="alma$dba" /-->
+
+ 			<!-- Connection pool settings -->
+ 			<property name="hibernate.connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider" />
+			<property name="hibernate.c3p0.min_size" value="2" />
+			<property name="hibernate.c3p0.max_size" value="4" />
+			<property name="hibernate.c3p0.timeout" value="300" />
+			<property name="hibernate.c3p0.max_statements" value="50" />
+			<property name="hibernate.c3p0.idle_test_period" value="3000" />
+		</properties>
+	</persistence-unit>
+</persistence>

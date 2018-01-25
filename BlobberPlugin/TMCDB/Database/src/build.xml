@@ -1,0 +1,81 @@
+<project>
+
+<property environment="env" />
+
+<macrodef name="findJar">
+	<attribute name="name"/>
+	<sequential>
+		<exec executable="searchFile" outputproperty="@{name}InstDir">
+			<arg value="lib/@{name}.jar"/>
+		</exec>
+		<property name="@{name}" value="${@{name}InstDir}/lib/@{name}.jar"/>
+	</sequential>
+</macrodef>
+
+<findJar name="jta-1.1" />
+<findJar name="commons-logging-1.1.1" />
+<findJar name="dom4j-1.6.1" />
+<findJar name="slf4j-api-1.7.6" />
+<findJar name="slf4j-acs" />
+<findJar name="jboss-logging-3.1.3.GA" />
+<findJar name="acsjlog" />
+<findJar name="logging_idl" />
+<findJar name="maciSchemaBindings" />
+<findJar name="cdbErrType" />
+<findJar name="castor" />
+<findJar name="ACSErrTypeCommon" />
+<findJar name="acserr" />
+<findJar name="jACSUtil" />
+<findJar name="acserrj" />
+<findJar name="hsqldb" />
+<findJar name="hibernate-core-4.3.11.Final.jar" />
+<findJar name="hibernate-jpa-2.1-api-1.0.0.Final.jar" />
+<findJar name="hibernate-tools-4.3.1.Final.jar" />
+<findJar name="hibernate-commons-annotations-4.0.5.Final.jar" />
+<findJar name="freemarker-2.3.23" />
+<findJar name="tmcdbGenerator" />
+<findJar name="TMCDBswconfigStrategy" />
+
+<path id="toolslib">
+	<path location="${JACORB_HOME}/lib/endorsed/jacorb-omgapi-3.6.1.jar"/>
+	<path location="${jta-1.1}"/>
+	<path location="${commons-logging-1.1.1}"/>
+	<path location="${dom4j-1.6.1}"/>
+	<path location="${slf4j-api-1.7.6}"/>
+	<path location="${slf4j-acs}"/>
+	<path location="${jboss-logging-3.1.3.GA}"/>
+	<path location="${acsjlog}"/>
+	<path location="${logging_idl}"/>
+	<path location="${maciSchemaBindings}"/>
+	<path location="${cdbErrType}"/>
+	<path location="${castor}"/>
+	<path location="${ACSErrTypeCommon}"/>
+	<path location="${acserr}"/>
+	<path location="${jACSUtil}"/>
+	<path location="${acserrj}"/>
+	<path location="${hsqldb}"/>
+	<path location="${env.ACSROOT}/lib/hibernate-core-4.3.11.Final.jar"/>
+	<path location="${env.ACSROOT}/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<path location="${env.ACSROOT}/lib/hibernate-tools-4.3.1.Final.jar"/>
+	<path location="${env.ACSROOT}/lib/hibernate-commons-annotations-4.0.5.Final.jar"/>
+	<path location="${env.ACSROOT}/lib/freemarker-2.3.23.jar"/>
+	<path location="${tmcdbGenerator}"/>
+	<path location="${TMCDBswconfigStrategy}"/>
+	<path location="../lib/TMCDBhwconfigmonitoringStrategy.jar" />
+</path>
+
+<taskdef name="hibernatetool"
+         classname="org.hibernate.tool.ant.HibernateToolTask"
+         classpathref="toolslib" />
+
+<target name="generate">
+	<hibernatetool destdir="gen" templatepath="alma/acs/tmcdb">
+		<jdbcconfiguration
+		    packagename="alma.acs.tmcdb"
+		    reversestrategy="alma.acs.tmcdb.translator.TmcdbHwconfigmonitoringStrategy"
+		    configurationfile="generator-hibernate.cfg.xml" />
+		<hbm2java jdk5="true" ejb3="true" />
+	</hibernatetool>
+</target>
+
+</project>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="true"/>
+<stringAttribute key="org.eclipse.debug.ui.target_debug_perspective" value="perspective_default"/>
+<stringAttribute key="org.eclipse.debug.ui.target_run_perspective" value="perspective_default"/>
+<listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry containerPath=&quot;JRE_LIB&quot; path=&quot;2&quot;     sourceAttachmentPath=&quot;JRE_SRC&quot; sourceRootPath=&quot;JRE_SRCROOT&quot; type=&quot;3&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry path=&quot;3&quot; projectName=&quot;MicroArchive&quot; type=&quot;1&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry externalArchive=&quot;/MicroArchive/lib/xindice.jar&quot;     path=&quot;3&quot; type=&quot;2&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry externalArchive=&quot;/MicroArchive/lib/xmldb.jar&quot;     path=&quot;3&quot; type=&quot;2&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry externalArchive=&quot;/MicroArchive/lib/xmldb-sdk.jar&quot;     path=&quot;3&quot; type=&quot;2&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry containerPath=&quot;INTROOT/lib/xmlstore.jar&quot; path=&quot;3&quot; type=&quot;3&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry containerPath=&quot;INTROOT/lib/xmlentity.jar&quot;     path=&quot;3&quot; type=&quot;3&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry containerPath=&quot;ACSROOT/lib/junit.jar&quot; path=&quot;3&quot; type=&quot;3&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry containerPath=&quot;ORBACUS_HOME/local/lib/OB.jar&quot;     path=&quot;3&quot; type=&quot;3&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry containerPath=&quot;INTROOT/lib/acs_x.jar&quot; path=&quot;3&quot; type=&quot;3&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry containerPath=&quot;INTROOT/lib/micarch.jar&quot; path=&quot;3&quot; type=&quot;3&quot;/&gt; "/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;runtimeClasspathEntry containerPath=&quot;ACSROOT/lib/maci.jar&quot; path=&quot;3&quot; type=&quot;3&quot;/&gt; "/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="alma.acs.container.AcsContainerRunner"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-containerName hugoActivator -manager corbaloc::localhost:3000/Manager"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="MicroArchive"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Djava.util.logging.config.file=bin/almalogging.properties"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="jcont"/>
+</launchConfiguration>

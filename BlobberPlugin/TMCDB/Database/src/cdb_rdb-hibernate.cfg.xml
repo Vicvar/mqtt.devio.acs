@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<!DOCTYPE hibernate-configuration PUBLIC 
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> 
+
+<hibernate-configuration> 
+	<session-factory> 
+	
+		<!-- Database connection settings (to be provided/overriden dynamically) --> 
+		<property name="dialect">org.hibernate.dialect.HSQLDialect</property> 
+		<property name="connection.driver_class">org.hsqldb.jdbc.JDBCDriver</property> 
+		<property name="connection.url">jdbc:hsqldb:mem:tmcdb</property> 
+		<property name="connection.username">sa</property> 
+		<property name="connection.password"></property> 
+
+		<!-- JDBC connection pool (use the built-in) --> 
+		<property name="connection.pool_size">1</property> 
+	
+		<!-- Enable Hibernate's automatic session context management --> 
+		<property name="current_session_context_class">thread</property> 
+	
+		<!-- Disable the second-level cache --> 
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property> 
+	
+		<!-- Do not echo all executed SQL to stdout, because we use ACS logging via slf4j --> 
+		<property name="hibernate.show_sql">false</property>
+		
+		<!-- Mappings -->
+		<mapping resource="alma/TMCDB/maci/hibernate-mappings-maci.hbm.xml"/> 
+		<mapping resource="alma/TMCDB/baci/hibernate-mappings-baci.hbm.xml"/>
+		<mapping resource="SwCore-orm.xml"/>
+		<mapping resource="SwExt-orm.xml"/>
+		<mapping resource="HwConfigMonitoring-orm.xml"/>
+
+	</session-factory>
+</hibernate-configuration>
+

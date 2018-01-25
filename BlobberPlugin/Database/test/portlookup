@@ -1,0 +1,5 @@
+#!/bin/sh
+portinfo=`netstat -nlp 2> /dev/null | grep $2`
+echo $portinfo
+pid=`echo $portinfo | perl -e 'while (<>) { m/(\d{1,})\//; print $2; }'`
+ps -ax | grep $pid 2> /dev/null

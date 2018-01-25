@@ -1,0 +1,72 @@
+ngast
+tnsFileDirectory
+exported
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+JacORB
+DAL
+ORBInitRef
+SUP.
+lcuboot: open
+maci::HeartbeatHandler::handle_timeout
+Starting Java/abeans application
+Using endorsed jar files in: 
+ACS Manager: 
+ACS Interface Repository: 
+ACS Name Service: 
+Running the following command:
+java -classpath
+ACS abeans configuration directory
+Time:
+FINEST:
+FINER:
+FINE:
+CONFIG:
+INFO:
+*INFO*
+WARNING:
+SEVERE:
+Jan
+Feb
+Mar 
+Apr
+May
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+Dec
+event_channel created 
+Logging EC registered with the naming service as: 
+Archiving EC registered with the naming service as: 
+Log Factory registered with the naming service as: 
+Log registered with the naming service as: 
+=== Starting the ORB services for this test
+=== Shuting the ORB services down
+Connecting with
+CDB data is in:
+Searching for schema files in:
+\[ POA
+\[ Connected
+switcher class
+^$
+^\.
+Removing
+child
+*--endorsed*
+\[SchemaLoader]
+\[alma.acs.logging
+   - archive.
+java version*
+Java(TM)*
+Java HotSpot*
+noDirectory

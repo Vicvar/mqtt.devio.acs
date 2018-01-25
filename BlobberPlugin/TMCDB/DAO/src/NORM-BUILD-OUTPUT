@@ -1,0 +1,699 @@
+make[1]: Entering directory `/home/almamgr/Desktop/archive/TMCDB/DAO/src'
+Cleaning up . . . . .
+ . . . clean done
+make[1]: Leaving directory `/home/almamgr/Desktop/archive/TMCDB/DAO/src'
+make[1]: Entering directory `/home/almamgr/Desktop/archive/TMCDB/DAO/src'
+== Making Jarfile TMCDBDAOLayer.jar
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:65: error: cannot find symbol
+import alma.acs.tmcdb.Assembly;
+                     ^
+  symbol:   class Assembly
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:66: error: cannot find symbol
+import alma.acs.tmcdb.AssemblyType;
+                     ^
+  symbol:   class AssemblyType
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:70: error: cannot find symbol
+import alma.acs.tmcdb.DefaultBaciProperty;
+                     ^
+  symbol:   class DefaultBaciProperty
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:71: error: cannot find symbol
+import alma.acs.tmcdb.DefaultComponent;
+                     ^
+  symbol:   class DefaultComponent
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:72: error: cannot find symbol
+import alma.acs.tmcdb.DefaultMonitorPoint;
+                     ^
+  symbol:   class DefaultMonitorPoint
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:73: error: cannot find symbol
+import alma.acs.tmcdb.HWConfiguration;
+                     ^
+  symbol:   class HWConfiguration
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:74: error: cannot find symbol
+import alma.acs.tmcdb.MonitorData;
+                     ^
+  symbol:   class MonitorData
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:75: error: cannot find symbol
+import alma.acs.tmcdb.MonitorDataId;
+                     ^
+  symbol:   class MonitorDataId
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:76: error: cannot find symbol
+import alma.acs.tmcdb.MonitorPoint;
+                     ^
+  symbol:   class MonitorPoint
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:77: error: cannot find symbol
+import alma.acs.tmcdb.MonitorPointDatatype;
+                     ^
+  symbol:   class MonitorPointDatatype
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:995: error: cannot find symbol
+	private AssemblyType getAssemblyTypeByLikeAssemblyCode(String assemblyTypeName,
+	        ^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1011: error: cannot find symbol
+	private DefaultComponent getDefaultComponentByLikeAssemblyTypeName(
+	        ^
+  symbol:   class DefaultComponent
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1027: error: cannot find symbol
+	private DefaultBaciProperty getDefaultBACIPropertyByDefaultComponentIdAndPropertyName(
+	        ^
+  symbol:   class DefaultBaciProperty
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1039: error: cannot find symbol
+	private DefaultMonitorPoint getDefaultMonitorPointByDefaultBACIPropId(
+	        ^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1052: error: cannot find symbol
+			AssemblyType assemblyType, Integer hwConfigId,
+			^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1051: error: cannot find symbol
+	private Assembly persistNewAssembly(EntityManager entityManager,
+	        ^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1076: error: cannot find symbol
+			DefaultMonitorPoint defaultMonitorPoint,
+			^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:32: error: cannot find symbol
+import alma.acs.tmcdb.Assembly;
+                     ^
+  symbol:   class Assembly
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:36: error: cannot find symbol
+import alma.acs.tmcdb.HWConfiguration;
+                     ^
+  symbol:   class HWConfiguration
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:37: error: cannot find symbol
+import alma.acs.tmcdb.MonitorPoint;
+                     ^
+  symbol:   class MonitorPoint
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/queries/TimeValuePagerImpl.java:40: error: cannot find symbol
+import alma.acs.tmcdb.MonitorData;
+                     ^
+  symbol:   class MonitorData
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:355: error: cannot find symbol
+			HWConfiguration conf = (HWConfiguration) query.getSingleResult();
+			^
+  symbol:   class HWConfiguration
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:355: error: cannot find symbol
+			HWConfiguration conf = (HWConfiguration) query.getSingleResult();
+			                        ^
+  symbol:   class HWConfiguration
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:372: error: cannot find symbol
+		Assembly assembly = (Assembly) query.getSingleResult();
+		^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:372: error: cannot find symbol
+		Assembly assembly = (Assembly) query.getSingleResult();
+		                     ^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:414: error: cannot find symbol
+		MonitorPoint mp = (MonitorPoint) query.getSingleResult();
+		^
+  symbol:   class MonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:414: error: cannot find symbol
+		MonitorPoint mp = (MonitorPoint) query.getSingleResult();
+		                   ^
+  symbol:   class MonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:779: error: cannot find symbol
+				if (identifier instanceof MonitorData) {
+				                          ^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:780: error: cannot find symbol
+					MonitorData monitorData = (MonitorData) identifier;
+					^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:780: error: cannot find symbol
+					MonitorData monitorData = (MonitorData) identifier;
+					                           ^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:869: error: cannot find symbol
+			AssemblyType assemblyType = getAssemblyTypeByLikeAssemblyCode(assemblyTypeName, entityManager);
+			^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:870: error: cannot find symbol
+			Assembly newAssembly = persistNewAssembly(entityManager, assemblyType, monitorCharacteristicIDs.getHwConfigurationId(), inData);
+			^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:951: error: cannot find symbol
+			DefaultComponent defaultComponent = getDefaultComponentByLikeAssemblyTypeName(entityManager, assemblyTypeName);
+			^
+  symbol:   class DefaultComponent
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:952: error: cannot find symbol
+			DefaultBaciProperty defaultBACIProperty = getDefaultBACIPropertyByDefaultComponentIdAndPropertyName(entityManager,
+			^
+  symbol:   class DefaultBaciProperty
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:954: error: cannot find symbol
+			DefaultMonitorPoint defaultMonitorPoint = getDefaultMonitorPointByDefaultBACIPropId(entityManager,
+			^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1001: error: cannot find symbol
+		AssemblyType assemblyType = (AssemblyType) query.getSingleResult();
+		^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1001: error: cannot find symbol
+		AssemblyType assemblyType = (AssemblyType) query.getSingleResult();
+		                             ^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1017: error: cannot find symbol
+		DefaultComponent defaultComponent = (DefaultComponent) query.getSingleResult();
+		^
+  symbol:   class DefaultComponent
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1017: error: cannot find symbol
+		DefaultComponent defaultComponent = (DefaultComponent) query.getSingleResult();
+		                                     ^
+  symbol:   class DefaultComponent
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1034: error: cannot find symbol
+		DefaultBaciProperty defaultBACIProperty = (DefaultBaciProperty) baciQuery.getSingleResult();
+		^
+  symbol:   class DefaultBaciProperty
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1034: error: cannot find symbol
+		DefaultBaciProperty defaultBACIProperty = (DefaultBaciProperty) baciQuery.getSingleResult();
+		                                           ^
+  symbol:   class DefaultBaciProperty
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1046: error: cannot find symbol
+		DefaultMonitorPoint defaultMonitorPoint = (DefaultMonitorPoint) monitorQuery.getSingleResult();
+		^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1046: error: cannot find symbol
+		DefaultMonitorPoint defaultMonitorPoint = (DefaultMonitorPoint) monitorQuery.getSingleResult();
+		                                           ^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1056: error: cannot find symbol
+		HWConfiguration hwConfig = new HWConfiguration();
+		^
+  symbol:   class HWConfiguration
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1056: error: cannot find symbol
+		HWConfiguration hwConfig = new HWConfiguration();
+		                               ^
+  symbol:   class HWConfiguration
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1059: error: cannot find symbol
+		Assembly assembly = new Assembly();
+		^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1059: error: cannot find symbol
+		Assembly assembly = new Assembly();
+		                        ^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1084: error: cannot find symbol
+		Assembly assembly = new Assembly();
+		^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1084: error: cannot find symbol
+		Assembly assembly = new Assembly();
+		                        ^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1087: error: cannot find symbol
+		MonitorPoint monitorPoint = new MonitorPoint();
+		^
+  symbol:   class MonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1087: error: cannot find symbol
+		MonitorPoint monitorPoint = new MonitorPoint();
+		                                ^
+  symbol:   class MonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1092: error: cannot find symbol
+		monitorPoint.setDataType(MonitorPointDatatype.valueOfForEnum(defaultMonitorPoint.getDataType().toString()));
+		                         ^
+  symbol:   variable MonitorPointDatatype
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1115: error: cannot find symbol
+		MonitorData monitorData = new MonitorData();
+		^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1115: error: cannot find symbol
+		MonitorData monitorData = new MonitorData();
+		                              ^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1117: error: cannot find symbol
+		MonitorDataId monDataId = new MonitorDataId();
+		^
+  symbol:   class MonitorDataId
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1117: error: cannot find symbol
+		MonitorDataId monDataId = new MonitorDataId();
+		                              ^
+  symbol:   class MonitorDataId
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:153: error: cannot find symbol
+			Assembly assembly = (Assembly) query1.getSingleResult();
+			^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:153: error: cannot find symbol
+			Assembly assembly = (Assembly) query1.getSingleResult();
+			                     ^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:162: error: cannot find symbol
+			Integer baciPropertyId = ((MonitorPoint) monitorPoints.get(0))
+			                           ^
+  symbol:   class MonitorPoint
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:204: error: cannot find symbol
+			HWConfiguration hwConf = (HWConfiguration) query0.getSingleResult();
+			^
+  symbol:   class HWConfiguration
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:204: error: cannot find symbol
+			HWConfiguration hwConf = (HWConfiguration) query0.getSingleResult();
+			                          ^
+  symbol:   class HWConfiguration
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:229: error: cannot find symbol
+			Integer assemblyId = ((MonitorPoint) monitorPointList.get(0))
+			                       ^
+  symbol:   class MonitorPoint
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:237: error: cannot find symbol
+			Assembly assembly = (Assembly) query4.getSingleResult();
+			^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:237: error: cannot find symbol
+			Assembly assembly = (Assembly) query4.getSingleResult();
+			                     ^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:272: error: cannot find symbol
+				allSerialNumberArrayList.add(((Assembly) assembly)
+				                               ^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/TimeValuePagerImpl.java:169: error: cannot find symbol
+			String sampleClob = ((MonitorData) clob).getMonitorClob();
+			                      ^
+  symbol:   class MonitorData
+  location: class TimeValuePagerImpl
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+66 errors
+make[2]: *** [/home/almamgr/Desktop/archive/TMCDB/DAO/src/../lib/TMCDBDAOLayer.jar] Error 1
+make[2]: Target `do_all_aux' not remade because of errors.
+make[1]: *** [do_all] Error 2
+make[1]: Target `all' not remade because of errors.
+make[1]: Leaving directory `/home/almamgr/Desktop/archive/TMCDB/DAO/src'
+TMCDB/DAO/src COMPILATION TIME 0:12.23
+### ==> FAILED all ! 
+make[1]: Entering directory `/home/almamgr/Desktop/archive/TMCDB/DAO/src'
+...other files
+	../lib/activemq-core-5.4.3.jar
+	../lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar
+
+ Copying current files 
+        from: /home/almamgr/Desktop/archive/TMCDB/DAO/src
+          to: /alma/ACS-FEB2017/ACSSW/Sources/DAO/src
+        from: /home/almamgr/Desktop/archive/TMCDB/DAO/include
+          to: /alma/ACS-FEB2017/ACSSW/Sources/DAO/include
+                                               . . . done 
+
+.....java:
+installing jarfile TMCDBDAOLayer
+== Making Jarfile TMCDBDAOLayer.jar
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:65: error: cannot find symbol
+import alma.acs.tmcdb.Assembly;
+                     ^
+  symbol:   class Assembly
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:66: error: cannot find symbol
+import alma.acs.tmcdb.AssemblyType;
+                     ^
+  symbol:   class AssemblyType
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:70: error: cannot find symbol
+import alma.acs.tmcdb.DefaultBaciProperty;
+                     ^
+  symbol:   class DefaultBaciProperty
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:71: error: cannot find symbol
+import alma.acs.tmcdb.DefaultComponent;
+                     ^
+  symbol:   class DefaultComponent
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:72: error: cannot find symbol
+import alma.acs.tmcdb.DefaultMonitorPoint;
+                     ^
+  symbol:   class DefaultMonitorPoint
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:73: error: cannot find symbol
+import alma.acs.tmcdb.HWConfiguration;
+                     ^
+  symbol:   class HWConfiguration
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:74: error: cannot find symbol
+import alma.acs.tmcdb.MonitorData;
+                     ^
+  symbol:   class MonitorData
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:75: error: cannot find symbol
+import alma.acs.tmcdb.MonitorDataId;
+                     ^
+  symbol:   class MonitorDataId
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:76: error: cannot find symbol
+import alma.acs.tmcdb.MonitorPoint;
+                     ^
+  symbol:   class MonitorPoint
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:77: error: cannot find symbol
+import alma.acs.tmcdb.MonitorPointDatatype;
+                     ^
+  symbol:   class MonitorPointDatatype
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:995: error: cannot find symbol
+	private AssemblyType getAssemblyTypeByLikeAssemblyCode(String assemblyTypeName,
+	        ^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1011: error: cannot find symbol
+	private DefaultComponent getDefaultComponentByLikeAssemblyTypeName(
+	        ^
+  symbol:   class DefaultComponent
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1027: error: cannot find symbol
+	private DefaultBaciProperty getDefaultBACIPropertyByDefaultComponentIdAndPropertyName(
+	        ^
+  symbol:   class DefaultBaciProperty
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1039: error: cannot find symbol
+	private DefaultMonitorPoint getDefaultMonitorPointByDefaultBACIPropId(
+	        ^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1052: error: cannot find symbol
+			AssemblyType assemblyType, Integer hwConfigId,
+			^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1051: error: cannot find symbol
+	private Assembly persistNewAssembly(EntityManager entityManager,
+	        ^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1076: error: cannot find symbol
+			DefaultMonitorPoint defaultMonitorPoint,
+			^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:32: error: cannot find symbol
+import alma.acs.tmcdb.Assembly;
+                     ^
+  symbol:   class Assembly
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:36: error: cannot find symbol
+import alma.acs.tmcdb.HWConfiguration;
+                     ^
+  symbol:   class HWConfiguration
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:37: error: cannot find symbol
+import alma.acs.tmcdb.MonitorPoint;
+                     ^
+  symbol:   class MonitorPoint
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/queries/TimeValuePagerImpl.java:40: error: cannot find symbol
+import alma.acs.tmcdb.MonitorData;
+                     ^
+  symbol:   class MonitorData
+  location: package alma.acs.tmcdb
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:355: error: cannot find symbol
+			HWConfiguration conf = (HWConfiguration) query.getSingleResult();
+			^
+  symbol:   class HWConfiguration
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:355: error: cannot find symbol
+			HWConfiguration conf = (HWConfiguration) query.getSingleResult();
+			                        ^
+  symbol:   class HWConfiguration
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:372: error: cannot find symbol
+		Assembly assembly = (Assembly) query.getSingleResult();
+		^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:372: error: cannot find symbol
+		Assembly assembly = (Assembly) query.getSingleResult();
+		                     ^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:414: error: cannot find symbol
+		MonitorPoint mp = (MonitorPoint) query.getSingleResult();
+		^
+  symbol:   class MonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:414: error: cannot find symbol
+		MonitorPoint mp = (MonitorPoint) query.getSingleResult();
+		                   ^
+  symbol:   class MonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:779: error: cannot find symbol
+				if (identifier instanceof MonitorData) {
+				                          ^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:780: error: cannot find symbol
+					MonitorData monitorData = (MonitorData) identifier;
+					^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:780: error: cannot find symbol
+					MonitorData monitorData = (MonitorData) identifier;
+					                           ^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:869: error: cannot find symbol
+			AssemblyType assemblyType = getAssemblyTypeByLikeAssemblyCode(assemblyTypeName, entityManager);
+			^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:870: error: cannot find symbol
+			Assembly newAssembly = persistNewAssembly(entityManager, assemblyType, monitorCharacteristicIDs.getHwConfigurationId(), inData);
+			^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:951: error: cannot find symbol
+			DefaultComponent defaultComponent = getDefaultComponentByLikeAssemblyTypeName(entityManager, assemblyTypeName);
+			^
+  symbol:   class DefaultComponent
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:952: error: cannot find symbol
+			DefaultBaciProperty defaultBACIProperty = getDefaultBACIPropertyByDefaultComponentIdAndPropertyName(entityManager,
+			^
+  symbol:   class DefaultBaciProperty
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:954: error: cannot find symbol
+			DefaultMonitorPoint defaultMonitorPoint = getDefaultMonitorPointByDefaultBACIPropId(entityManager,
+			^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1001: error: cannot find symbol
+		AssemblyType assemblyType = (AssemblyType) query.getSingleResult();
+		^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1001: error: cannot find symbol
+		AssemblyType assemblyType = (AssemblyType) query.getSingleResult();
+		                             ^
+  symbol:   class AssemblyType
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1017: error: cannot find symbol
+		DefaultComponent defaultComponent = (DefaultComponent) query.getSingleResult();
+		^
+  symbol:   class DefaultComponent
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1017: error: cannot find symbol
+		DefaultComponent defaultComponent = (DefaultComponent) query.getSingleResult();
+		                                     ^
+  symbol:   class DefaultComponent
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1034: error: cannot find symbol
+		DefaultBaciProperty defaultBACIProperty = (DefaultBaciProperty) baciQuery.getSingleResult();
+		^
+  symbol:   class DefaultBaciProperty
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1034: error: cannot find symbol
+		DefaultBaciProperty defaultBACIProperty = (DefaultBaciProperty) baciQuery.getSingleResult();
+		                                           ^
+  symbol:   class DefaultBaciProperty
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1046: error: cannot find symbol
+		DefaultMonitorPoint defaultMonitorPoint = (DefaultMonitorPoint) monitorQuery.getSingleResult();
+		^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1046: error: cannot find symbol
+		DefaultMonitorPoint defaultMonitorPoint = (DefaultMonitorPoint) monitorQuery.getSingleResult();
+		                                           ^
+  symbol:   class DefaultMonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1056: error: cannot find symbol
+		HWConfiguration hwConfig = new HWConfiguration();
+		^
+  symbol:   class HWConfiguration
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1056: error: cannot find symbol
+		HWConfiguration hwConfig = new HWConfiguration();
+		                               ^
+  symbol:   class HWConfiguration
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1059: error: cannot find symbol
+		Assembly assembly = new Assembly();
+		^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1059: error: cannot find symbol
+		Assembly assembly = new Assembly();
+		                        ^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1084: error: cannot find symbol
+		Assembly assembly = new Assembly();
+		^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1084: error: cannot find symbol
+		Assembly assembly = new Assembly();
+		                        ^
+  symbol:   class Assembly
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1087: error: cannot find symbol
+		MonitorPoint monitorPoint = new MonitorPoint();
+		^
+  symbol:   class MonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1087: error: cannot find symbol
+		MonitorPoint monitorPoint = new MonitorPoint();
+		                                ^
+  symbol:   class MonitorPoint
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1092: error: cannot find symbol
+		monitorPoint.setDataType(MonitorPointDatatype.valueOfForEnum(defaultMonitorPoint.getDataType().toString()));
+		                         ^
+  symbol:   variable MonitorPointDatatype
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1115: error: cannot find symbol
+		MonitorData monitorData = new MonitorData();
+		^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1115: error: cannot find symbol
+		MonitorData monitorData = new MonitorData();
+		                              ^
+  symbol:   class MonitorData
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1117: error: cannot find symbol
+		MonitorDataId monDataId = new MonitorDataId();
+		^
+  symbol:   class MonitorDataId
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/MonitorDAOImpl.java:1117: error: cannot find symbol
+		MonitorDataId monDataId = new MonitorDataId();
+		                              ^
+  symbol:   class MonitorDataId
+  location: class MonitorDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:153: error: cannot find symbol
+			Assembly assembly = (Assembly) query1.getSingleResult();
+			^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:153: error: cannot find symbol
+			Assembly assembly = (Assembly) query1.getSingleResult();
+			                     ^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:162: error: cannot find symbol
+			Integer baciPropertyId = ((MonitorPoint) monitorPoints.get(0))
+			                           ^
+  symbol:   class MonitorPoint
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:204: error: cannot find symbol
+			HWConfiguration hwConf = (HWConfiguration) query0.getSingleResult();
+			^
+  symbol:   class HWConfiguration
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:204: error: cannot find symbol
+			HWConfiguration hwConf = (HWConfiguration) query0.getSingleResult();
+			                          ^
+  symbol:   class HWConfiguration
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:229: error: cannot find symbol
+			Integer assemblyId = ((MonitorPoint) monitorPointList.get(0))
+			                       ^
+  symbol:   class MonitorPoint
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:237: error: cannot find symbol
+			Assembly assembly = (Assembly) query4.getSingleResult();
+			^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:237: error: cannot find symbol
+			Assembly assembly = (Assembly) query4.getSingleResult();
+			                     ^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/QueryDAOImpl.java:272: error: cannot find symbol
+				allSerialNumberArrayList.add(((Assembly) assembly)
+				                               ^
+  symbol:   class Assembly
+  location: class QueryDAOImpl
+alma/archive/tmcdb/DAO/queries/TimeValuePagerImpl.java:169: error: cannot find symbol
+			String sampleClob = ((MonitorData) clob).getMonitorClob();
+			                      ^
+  symbol:   class MonitorData
+  location: class TimeValuePagerImpl
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+66 errors
+make[1]: *** [/home/almamgr/Desktop/archive/TMCDB/DAO/src/../lib/TMCDBDAOLayer.jar] Error 1
+.....exe:
+make[1]: Target `install' not remade because of errors.
+make[1]: Leaving directory `/home/almamgr/Desktop/archive/TMCDB/DAO/src'
+### ==> FAILED install ! 

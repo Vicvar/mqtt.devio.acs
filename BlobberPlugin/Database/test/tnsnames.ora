@@ -1,0 +1,10 @@
+ALMA =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = ora01)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = ALMA.ESO.ORG)
+    )
+  )
+
+

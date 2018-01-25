@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG DAO2Database Suite" verbose="10" parallel="false">
+  <test name="DAO2Database">
+    <!--<parameter name="sqlfile" value="${basedir}"/>-->
+    <groups>
+      <run>
+        <include name="dao2database"/>
+      </run>
+    </groups> 
+    <classes>
+      <class name="alma.archive.tmcdb.DAO.UnitTest.DAOUnitTest"/>
+    </classes>
+  </test>
+</suite>

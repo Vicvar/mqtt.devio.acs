@@ -1,0 +1,8 @@
+export CLASSPATH=$CLASSPATH:$INTROOT/lib/oracle/xmlparserv2.jar:$ACSROOT/lib/oracle/xmlparserv2.jar
+
+export ACS_LOG_STDOUT=1
+export JAVA_OPTIONS="-Darchive.configFile=$PWD/NO-LGPL/archiveConfig.properties"
+
+acsStartJava  -noDirectory junit.textui.TestRunner alma.archive.database.interfaces.CommonInternalIFTest 
+acsStartJava  -noDirectory junit.textui.TestRunner alma.archive.database.oracle.OracleInternalIfImplTest 
+

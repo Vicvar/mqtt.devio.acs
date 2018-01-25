@@ -1,0 +1,31 @@
+make[1]: Entering directory `/home/almamgr/Desktop/archive/TMCDB/Persistence/src'
+Cleaning up . . . . .
+ . . . 'clean' done
+make[1]: Leaving directory `/home/almamgr/Desktop/archive/TMCDB/Persistence/src'
+make[1]: Entering directory `/home/almamgr/Desktop/archive/TMCDB/Persistence/src'
+== Making Jarfile TMCDBPersistenceLayer.jar
+Note: alma/archive/tmcdb/persistence/TMCDBConfig.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+ . . . 'all' done
+make[1]: Leaving directory `/home/almamgr/Desktop/archive/TMCDB/Persistence/src'
+TMCDB/Persistence/src COMPILATION TIME 0:09.31
+make[1]: Entering directory `/home/almamgr/Desktop/archive/TMCDB/Persistence/src'
+...other files
+	../lib/asm-1.5.3.jar
+	../lib/asm-attrs-1.5.3.jar
+	../lib/c3p0-0.9.5.2.jar
+	../lib/hibernate-entitymanager.jar
+	../lib/mchange-commons-java-0.2.11.jar
+
+ Copying current files 
+        from: /home/almamgr/Desktop/archive/TMCDB/Persistence/src
+          to: /alma/ACS-FEB2017/ACSSW/Sources/Persistence/src
+        from: /home/almamgr/Desktop/archive/TMCDB/Persistence/include
+          to: /alma/ACS-FEB2017/ACSSW/Sources/Persistence/include
+                                               . . . done 
+
+.....java:
+installing jarfile TMCDBPersistenceLayer
+.....exe:
+ . . . installation done
+make[1]: Leaving directory `/home/almamgr/Desktop/archive/TMCDB/Persistence/src'
