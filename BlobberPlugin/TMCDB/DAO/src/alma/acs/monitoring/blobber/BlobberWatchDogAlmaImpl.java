@@ -105,13 +105,9 @@ public class BlobberWatchDogAlmaImpl implements BlobberWatchDog, Runnable
 		// Queues cleanup loop
 		while(!shouldTerminateRunLoop) {
 			for (QueueWithInfo qi : myQueues.values()) {
-			System.out.println("Hola"+qi.queue.toString());
-			System.out.println(qi.queueName);
-			System.out.println(qi.queue.size()+"   "+qi.maxSize);
 				if (qi.queue.size() > qi.maxSize - 1000) {
 					this.logger.warning("Capacity of queue '" + qi.queueName + "' is less than 1000. Clearing it!");
 					//TODO: Set alarm
-					System.out.println("Cleanning");
 					qi.queue.clear();
 				}
 			}

@@ -81,9 +81,7 @@ public class MQDAOImpl implements MonitorDAO
 
 		TMCDBConfig config = TMCDBConfig.getInstance(log);
 		mqEnabled = config.isBrokerEnabled();
-		System.out.println("config.isBrokerEnabled()"+config.isBrokerEnabled());
 		broker_url = config.getBrokerURL();
-		System.out.println("config.getBrokerURL()"+config.getBrokerURL());
 		log.info("This mqDAO will use the following settings for storing data: "
 			+ "mqstore_enabled=" + mqEnabled
 			+ ", broker_url=" + broker_url);
@@ -158,7 +156,6 @@ public class MQDAOImpl implements MonitorDAO
 			// Unwind composed baci properties, to get the underlying monitor point(s)
 			message.setLong("monitorPointId", 0L); //TODO: This was (BlobData) inData.monitorPointId, but is not anymore needed, so could be removed from the message.
 			message.setString("monitorPointName", "UNKNOWN"); //TODO: This was (BlobData) inData.monitorPointName. Will be deduced on the consumer side through the index, based on the generated CONTROL XML files.
-System.out.println("aqui se quiere publicar el msg");
 message.toString();
 			topicPublisher.publish(message);
 			log.fine(">>>>>>>>>>>>>>>> message sent to JMS:" + message.getString("componentName") + "/" + message.getString("monitorPointName"));
@@ -211,14 +208,12 @@ message.toString();
 		//}
 
 		// If already connected, do nothing
-		System.out.println("openTransactionStore "+mqEnabled+" "+mqConnected);
 		if (mqEnabled && !mqConnected) {
 			log.info("About to connect to activeMQ ...");
 			location = System.getenv("LOCATION");
 			if (location == null) {
 				location = "GENERIC";
 			}
-			System.out.println("inside openTransactionStore ");
 			try {
 				log.info("Starting JMS connection.");
 				ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory(broker_url);
@@ -275,7 +270,6 @@ message.toString();
 						// @TODO (hso): the possibly blocking call to take() circumvents thread termination based on the shouldTerminate flag.
 						// See MonitorDAOImpl.BlobConsumer#run() for the use of "poll".
 						tempBlobData = myMQDataQueue.take();
-						System.out.println("tempBlobData "+tempBlobData);
 					} catch (InterruptedException ex) {
 						ex.printStackTrace();
 					}

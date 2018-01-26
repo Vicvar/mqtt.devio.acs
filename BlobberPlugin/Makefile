@@ -37,7 +37,7 @@ endef
 SUBSYSTEM = ARCHIVE
 
 
-MODULES =   TMCDB/Database TMCDB/Persistence TMCDB/DAO Database 
+MODULES =   Database TMCDB/Persistence TMCDB/Database TMCDB/DAO  
 #MODULES_TEST = TMCDB/Database TMCDB/Persistence TMCDB/DAO 
 
 MAKE_FLAGS = "-k"
