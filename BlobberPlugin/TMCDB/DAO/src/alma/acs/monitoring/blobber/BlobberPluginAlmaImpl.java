@@ -28,8 +28,8 @@ import alma.ACSErrTypeCommon.wrappers.AcsJCouldntCreateObjectEx;
 import alma.acs.container.ContainerServices;
 import alma.acs.monitoring.DAO.MonitorDAO;
 import alma.acs.monitoring.blobber.mpexpert.MonitorPointExpertImpl;
-import alma.archive.tmcdb.DAO.MonitorDAOImpl;
 import alma.archive.tmcdb.MQDAO.MQDAOImpl;
+import alma.archive.tmcdb.INFLUXDAO.INFLUXDAOImpl;
 import alma.archive.tmcdb.persistence.TMCDBConfig;
 
 /**
@@ -112,8 +112,11 @@ public class BlobberPluginAlmaImpl extends BlobberPlugin
 // HSO: Disabled storing data in Oracle as discussed at http://ictjira.alma.cl/browse/ICT-462?focusedCommentId=44849 
 //			MonitorDAO dbDAO = new MonitorDAOImpl(containerServices, myWatchDog);
 //			myDaoList.add(dbDAO);
-			MonitorDAO mqDAO = new MQDAOImpl(containerServices, myWatchDog);
+			System.out.println("Se va a llamar a INFLUX");
+			MonitorDAO mqDAO = new INFLUXDAOImpl(containerServices, myWatchDog);
 			myDaoList.add(mqDAO);
+			//MonitorDAO mqDAO = new MQDAOImpl(containerServices, myWatchDog);
+			//myDaoList.add(mqDAO);
 
 			if ( logger.isLoggable(Level.FINER) )
 				logger.finer("Instantiated blobber plugin (" + mqDAO.getClass().getName()
