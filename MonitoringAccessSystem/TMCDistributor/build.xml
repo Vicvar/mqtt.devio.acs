@@ -88,8 +88,8 @@
         <copy file="${basedir}/src/TMCTTArchiver.sh" tofile="${install.dir}/bin/TMCTTArchiver" overwrite="true"/>
         <copy file="${basedir}/src/TMCTTArchiverPart.sh" tofile="${install.dir}/bin/TMCTTArchiverPart" overwrite="true"/>
         <copy file="${basedir}/src/TMCTTArchiverSuite.sh" tofile="${install.dir}/bin/TMCTTArchiverSuite" overwrite="true"/>
- 	<copy file="${basedir}/config/config_archiver.properties" tofile="${install.dir}/config/config_archiver.properties " overwrite="true"/>
-        <copy file="${basedir}/config/log4j.properties " tofile="${install.dir}/config/log4j.properties " overwrite="true"/>
+ 	<copy file="${basedir}/config/config_archiver.properties" tofile="${install.dir}/config/config_archiver.properties" overwrite="true"/>
+        <copy file="${basedir}/config/log4j.xml" tofile="${install.dir}/config/log4j.xml" overwrite="true"/>
 
         <!-- Replace of path -->
         <replace file="${install.dir}/bin/TMCTTArchiver" token="opt/tmcs" value="introots"/>
