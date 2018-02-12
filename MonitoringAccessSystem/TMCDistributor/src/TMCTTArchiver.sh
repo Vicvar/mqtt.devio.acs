@@ -6,7 +6,7 @@ export CLASSPATH=/opt/tmcs/TMCS/lib/TMCTTArchiver.jar:/opt/tmcs/TMCS/lib/TMCStat
 
 JAVA_OPTS="-Djava.rmi.server.hostname=`hostname -f`"
 JAVA_OPTS="${JAVA_OPTS} -javaagent:/opt/tmcs/TMCS/lib/TMCAgent.jar"
-JAVA_OPTS="${JAVA_OPTS} -Dlog4j.debug -Dlog4j.configuration=file:/opt/tmcs/TMCS/log4j/log4j.xml"
+JAVA_OPTS="${JAVA_OPTS} -Dlog4j.debug -Dlog4j.configuration=file:/opt/tmcs/TMCS/config/log4j.xml"
 JAVA_OPTS="${JAVA_OPTS} -Xms5000m -Xmx5000m -XX:MaxPermSize=2000m -Xss228k"
 JAVA_OPTS="${JAVA_OPTS} -Darchive.tmcdb.monitoring.rmiregistry.port=11000 -Darchive.tmcdb.monitoring.rmiserver.port=10999"
 JAVA_OPTS="${JAVA_OPTS} -Denv=Prod"
