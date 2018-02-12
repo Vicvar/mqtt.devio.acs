@@ -1,0 +1,16 @@
+#!/bin/bash
+# This batch remove old logs
+date=$(date)
+echo "Star remove logs ${date}" > /opt/tmcs/TMCS/logs/RemoveLogs.log
+
+year=$(date +'%Y')
+path="/var/log/"
+count_before=$(ls -l ${path} | wc -l)
+size_before=$(du -sh ${path})
+echo "Before of remove" >> /opt/tmcs/TMCS/logs/RemoveLogs.log
+echo "Count: ${count_before} Size: ${size_before}" >> /opt/tmcs/TMCS/logs/RemoveLogs.log
+find ${path} -type f -name '*'${year}'*' -delete
+
+/sbin/service httpd restart
+
+echo "End remove logs ${date}" >> /opt/tmcs/TMCS/logs/RemoveLogs.log

@@ -1,0 +1,880 @@
+<?xml version="1.0" ?>
+<lru-type>
+    <name>CMPR</name>
+    <fullname>Compressor</fullname>
+    <icd>ALMA-40.04.05.00-70.35.25.00-A-ICD</icd>
+    <icd-date>4733683200000000000</icd-date>
+    <description>The Compressor is part of the cooling system in the ALMA antenna front end.</description>
+    <assembly-type>
+        <name>CMPR</name>
+        <dev-name>Compressor</dev-name>
+        <description>The Compressor is part of the cooling system in the ALMA antenna front end.</description>
+        <default-role>
+            <node>parm</node>
+            <base-address>none</base-address>
+            <channel>parm</channel>
+        </default-role>
+
+        <baci-property>
+            <propertyname>COMPRESSOR_TEMP_1</propertyname>
+            <description>PT-100 sensor 1 used in ALMA-J ICCU Enclosure to determine if enclosure temperature is within the valid operating range for the Compressor,5 to 28 deg C. It is part of the interlock circuit between the Compressor M and C Module and ICCU Enclosure</description>
+            <format>3.3f</format>
+            <units>Celsius</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>-50</graph-min>
+            <graph-max>80</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMPRESSOR_TEMP_1</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.0</offset>
+                <minrange>243.0</minrange>
+                <maxrange>333.0</maxrange>
+                <description>PT-100 sensor 1 used in ALMA-J ICCU Enclosure to determine if enclosure temperature is within the valid operating range for the Compressor,5 to 28 deg C. It is part of the interlock circuit between the Compressor M and C Module and ICCU Enclosure</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMPRESSOR_TEMP_2</propertyname>
+            <description>PT-100 sensor 2. Support for additional sensor.</description>
+            <format>3.3f</format>
+            <units>Celsius</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>-50</graph-min>
+            <graph-max>80</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMPRESSOR_TEMP_2</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00002</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.0</offset>
+                <minrange>243.0</minrange>
+                <maxrange>333.0</maxrange>
+                <description>PT-100 sensor 2. Support for additional sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMPRESSOR_TEMP_3</propertyname>
+            <description>PT-100 sensor 3. Support for additional sensor.</description>
+            <format>3.3f</format>
+            <units>Celsius</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>-50</graph-min>
+            <graph-max>80</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMPRESSOR_TEMP_3</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00003</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.0</offset>
+                <minrange>243.0</minrange>
+                <maxrange>333.0</maxrange>
+                <description>PT-100 sensor 3. Support for additional sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMPRESSOR_TEMP_4</propertyname>
+            <description>PT-100 sensor 4. Support for additional sensor.</description>
+            <format>3.3f</format>
+            <units>Celsius</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>-50</graph-min>
+            <graph-max>80</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMPRESSOR_TEMP_4</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.0</offset>
+                <minrange>243.0</minrange>
+                <maxrange>333.0</maxrange>
+                <description>PT-100 sensor 4. Support for additional sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMPRESSOR_RET_PRESSURE</propertyname>
+            <description>Pressure in return line. Pressure transducer provides 4-20mA signal where 4mA = 0 MPa, 20mA = 4 MPa</description>
+            <format>3.3f</format>
+            <units>milliampere</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>30</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMPRESSOR_RET_PRESSURE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00005</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>ampere</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>4.0000000000000001E-3</minrange>
+                <maxrange>0.02</maxrange>
+                <description>Pressure in return line. Pressure transducer provides 4-20mA signal where 4mA = 0 MPa, 20mA = 4 MPa</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMPRESSOR_AUX_2</propertyname>
+            <description>Auxiliary 4-20mA input 2</description>
+            <format>7.2f</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>-1</graph-min>
+            <graph-max>7</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMPRESSOR_AUX_2</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00006</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>5.0</maxrange>
+                <description>Auxiliary 4-20mA input 2</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMPRESSOR_SUPPLY_PRESSURE</propertyname>
+            <description>Pressure in supply line. Pressure transducer provides 4-20mA signal where 4mA = 0 MPa, 20mA = 4 MPa.</description>
+            <format>7.2f</format>
+            <units>milliampere</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>30</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMPRESSOR_SUPPLY_PRESSURE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00007</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>ampere</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>4.0000000000000001E-3</minrange>
+                <maxrange>0.02</maxrange>
+                <description>Pressure in supply line. Pressure transducer provides 4-20mA signal where 4mA = 0 MPa, 20mA = 4 MPa.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>SERIAL_NUMBER</propertyname>
+            <description>Generic Monitor Point. Serial number of the device.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>0</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>1</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>SERIAL_NUMBER</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Serial number of the device.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PROTOCOL_REV_LEVEL</propertyname>
+            <description>Generic Monitor Point. Protocol revision level.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>0</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>1</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PROTOCOL_MAJOR_REV_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Protocol major revision level.</description>
+            </monitor-point>
+
+            <monitor-point>
+                <monitorpointname>PROTOCOL_MINOR_REV_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Protocol minor revision Level.</description>
+            </monitor-point>
+
+            <monitor-point>
+                <monitorpointname>PROTOCOL_PATCH_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Protocol patch revision level.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CAN_ERROR</propertyname>
+            <description>Generic Monitor Point. CAN-bus errors since power up and error code of the last error.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>0</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>1</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CAN_ERROR_COUNT</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Number of CAN errors since last power up or last reset.</description>
+            </monitor-point>
+
+            <monitor-point>
+                <monitorpointname>INTERNAL_SLAVE_ERROR_CODE</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Internal slave error code</description>
+            </monitor-point>
+
+            <monitor-point>
+                <monitorpointname>ERROR_CODE_LAST_CAN_ERROR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Error code of last CAN error. Codes are those defined by the INTEL 82527 CAN Controller status.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>SW_REV_LEVEL</propertyname>
+            <description>Generic Monitor Point. Revision level of the embedded code. This is the software embedded in the AMBSI or the programmable device that is handling the AMB communications.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>0</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>1</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>MAJOR_REV_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Major Revision level</description>
+            </monitor-point>
+
+            <monitor-point>
+                <monitorpointname>MINOR_REV_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Minor Revision Level</description>
+            </monitor-point>
+
+            <monitor-point>
+                <monitorpointname>PATCH_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Patch revision level</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>AMBIENT_TEMPERATURE</propertyname>
+            <description>Generic Monitor Point. Temperature measured by the DS1820 chip.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>MAGNITUDE_CELSIUS_OP</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30003</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Magnitude for degrees Celsius</description>
+            </monitor-point>
+
+            <monitor-point>
+                <monitorpointname>SIGN_OP</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30003</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Temperature sign.</description>
+            </monitor-point>
+
+            <monitor-point>
+                <monitorpointname>COUNT_REMAINING_OP</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30003</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Counts remaining.</description>
+            </monitor-point>
+
+            <monitor-point>
+                <monitorpointname>COUNT_PER_C_OP</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30003</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Counts per degree Celsius.</description>
+            </monitor-point>
+
+        </baci-property>
+        <baci-property>
+            <propertyname>COMPRESSOR_DRIVE_INDICATION_ON</propertyname>
+            <description>Drive Indication; Range: Bit 0 = 0: Off, Bit 0 = 1: On</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMPRESSOR_DRIVE_INDICATION_ON</monitorpointname>
+                <datatype>boolean</datatype>
+                <rca>0x0000A</rca>
+                <terelated>0</terelated>
+                <rawdatatype>bit</rawdatatype>
+                <worlddatatype>bool</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Drive Indication; Range: Bit 0 = 0: Off, Bit 0 = 1: On</description>
+            </monitor-point>
+
+        </baci-property>
+    </assembly-type>
+</lru-type>

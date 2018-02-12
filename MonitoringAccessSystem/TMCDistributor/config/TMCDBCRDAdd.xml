@@ -1,0 +1,1363 @@
+<?xml version="1.0" ?>
+<lru-type>
+    <name>CRD</name>
+    <fullname>Central Reference Distributor</fullname>
+    <icd>ALMA-55.02.00.00-70.35.30.00-B-ICD</icd>
+    <icd-date>4735065600000000000</icd-date>
+    <description>Define the interface between the Central Reference Distributor and the Computing Monitor and Control software.</description>
+    <assembly-type>
+        <name>CRD</name>
+        <dev-name>Central Reference Distributor</dev-name>
+        <description>Define the interface between the Central Reference Distributor and the Computing Monitor and Control software.</description>
+        <default-role>
+            <node>0x20</node>
+            <base-address>none</base-address>
+            <channel>parm</channel>
+        </default-role>
+
+        <baci-property>
+            <propertyname>RESET_TIME</propertyname>
+            <description>This is an 8-byte register, (zeroed by the MASER_COUNTER_RESET control), that the ARTM can read and write to via the CAN bus. It is used by the ARTM to record the time of the most recent reset. This time is obtained from the GPS and aligned with the maser clock at the instance of reset. Using this register, the reset time is only lost if the CRG is shutdown. Without this register, the ARTM would need to perform a reset each time it is started in order to know the reset time. Having the MASER_COUNTER_RESET command clear this register provides an easy way for a reader to know the register has not been properly set.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>3600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>RESET_TIME</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint64</rawdatatype>
+                <worlddatatype>unsigned long long</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>This is an 8-byte register, (zeroed by the MASER_COUNTER_RESET control), that the ARTM can read and write to via the CAN bus. It is used by the ARTM to record the time of the most recent reset. This time is obtained from the GPS and aligned with the maser clock at the instance of reset. Using this register, the reset time is only lost if the CRG is shutdown. Without this register, the ARTM would need to perform a reset each time it is started in order to know the reset time. Having the MASER_COUNTER_RESET command clear this register provides an easy way for a reader to know the register has not been properly set.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>MASER_VS_GPS_COUNTER</propertyname>
+            <description>125 MHz (Coherent to the Hydrogen Maser or Rubidium Oscillator) counter latched on 1 PPS from GPS receiver. An 8-byte integer from a 64-bit counter inside the FPGA. In one-second intervals, (based on the 1 PPS timing signal from the GPS receiver) the 64-bits from the counter are latched and loaded to shift registers (all internal to the FPGA). This count data is updated once every second (1 PPS).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>MASER_VS_GPS_COUNTER</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint64</rawdatatype>
+                <worlddatatype>unsigned long long</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>125 MHz (Coherent to the Hydrogen Maser or Rubidium Oscillator) counter latched on 1 PPS from GPS receiver. An 8-byte integer from a 64-bit counter inside the FPGA. In one-second intervals, (based on the 1 PPS timing signal from the GPS receiver) the 64-bits from the counter are latched and loaded to shift registers (all internal to the FPGA). This count data is updated once every second (1 PPS).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>MASER_COUNTER</propertyname>
+            <description>125 MHz (Coherent to the Hydrogen Maser or Rubidium Oscillator) counter. An 8-byte integer from a 64-bit counter inside the FPGA. This is the same counter as the MASER_VS_GPS_COUNTER. The difference is that this monitor point is not latched, i.e. it returns the current contents of the 125 MHz counter.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>MASER_COUNTER</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00005</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint64</rawdatatype>
+                <worlddatatype>unsigned long long</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>125 MHz (Coherent to the Hydrogen Maser or Rubidium Oscillator) counter. An 8-byte integer from a 64-bit counter inside the FPGA. This is the same counter as the MASER_VS_GPS_COUNTER. The difference is that this monitor point is not latched, i.e. it returns the current contents of the 125 MHz counter.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>EFC_5_MHZ</propertyname>
+            <description>Electronic Frequency Control (tuning) voltage of 5 MHz PLL. In normal operation this voltage should be relatively stable.</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>3600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>10</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>EFC_5_MHZ</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x00006</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>volt</units>
+                <scale>4.8840048840048797E-3</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>10.0</maxrange>
+                <description>Electronic Frequency Control (tuning) voltage of 5 MHz PLL. In normal operation this voltage should be relatively stable.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PWR_5_MHZ</propertyname>
+            <description>5 MHz RF output power level from the CRG module. The output power is nominally in dBm but the conversion factor between volts and power is variable. Nominally it is ??</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0.1</graph-min>
+            <graph-max>2</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PWR_5_MHZ</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x00007</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>volt</units>
+                <scale>4.8840048840048797E-3</scale>
+                <offset>0.0</offset>
+                <minrange>0.1</minrange>
+                <maxrange>2.0</maxrange>
+                <description>5 MHz RF output power level from the CRG module. The output power is nominally in dBm but the conversion factor between volts and power is variable. Nominally it is ??</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PWR_10_MHZ</propertyname>
+            <description>10 MHz RF output power level from the CRG module. The output power is nominally in dBm but the conversion factor between volts and power is variable. Nominally it is ??</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>3600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0.1</graph-min>
+            <graph-max>2</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PWR_10_MHZ</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x00008</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>volt</units>
+                <scale>4.8840048840048797E-3</scale>
+                <offset>0.0</offset>
+                <minrange>0.1</minrange>
+                <maxrange>2.0</maxrange>
+                <description>10 MHz RF output power level from the CRG module. The output power is nominally in dBm but the conversion factor between volts and power is variable. Nominally it is ??</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PWR_125_MHZ</propertyname>
+            <description>125 MHz RF output power level from the CRG module. The output power is nominally in dBm but the conversion factor between volts and power is variable. Nominally it is ??</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0.1</graph-min>
+            <graph-max>2</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PWR_125_MHZ</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x00009</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>volt</units>
+                <scale>4.8840048840048797E-3</scale>
+                <offset>0.0</offset>
+                <minrange>0.1</minrange>
+                <maxrange>2.0</maxrange>
+                <description>125 MHz RF output power level from the CRG module. The output power is nominally in dBm but the conversion factor between volts and power is variable. Nominally it is ??</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PWR_2_GHZ</propertyname>
+            <description>2 GHz RF output power level from the CRG module. The output power is nominally in dBm but the conversion factor between volts and power is variable. Nominally it is ??</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>3600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0.1</graph-min>
+            <graph-max>2</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PWR_2_GHZ</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0000a</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>volt</units>
+                <scale>4.8840048840048797E-3</scale>
+                <offset>0.0</offset>
+                <minrange>0.1</minrange>
+                <maxrange>2.0</maxrange>
+                <description>2 GHz RF output power level from the CRG module. The output power is nominally in dBm but the conversion factor between volts and power is variable. Nominally it is ??</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LASER_CURRENT</propertyname>
+            <description>Laser diode current in the LO reference laser in the CRD module.</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>3600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0.04</graph-min>
+            <graph-max>0.1</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LASER_CURRENT</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0000c</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>ampere</units>
+                <scale>4.8840048840048797E-4</scale>
+                <offset>0.0</offset>
+                <minrange>0.04</minrange>
+                <maxrange>0.1</maxrange>
+                <description>Laser diode current in the LO reference laser in the CRD module.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>VDC_MINUS_7</propertyname>
+            <description>Minus 5 VDC voltage regulator output monitor.</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>3600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>-8</graph-min>
+            <graph-max>-6</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>VDC_MINUS_7</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0000d</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>volt</units>
+                <scale>4.8840048840048797E-3</scale>
+                <offset>0.0</offset>
+                <minrange>-8.0</minrange>
+                <maxrange>-6.0</maxrange>
+                <description>Minus 5 VDC voltage regulator output monitor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>VDC_15</propertyname>
+            <description>15 VDC voltage regulator output monitor. The 15 V runs through a 1/2 voltage divider to accommodate the ADC range.</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>3600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>14.5</graph-min>
+            <graph-max>15.5</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>VDC_15</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0000e</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>volt</units>
+                <scale>9.7680097680097593E-3</scale>
+                <offset>0.0</offset>
+                <minrange>14.0</minrange>
+                <maxrange>16.0</maxrange>
+                <description>15 VDC voltage regulator output monitor. The 15 V runs through a 1/2 voltage divider to accommodate the ADC range.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STATUS</propertyname>
+            <description>This monitor point provides a number of status bits that summarize the operation of critical parts of the CRD. Bit 0 indicates if the XILINX FPGA has had a problem downloading the code from the onboard PROM. If set, the FPGA should be commanded to reload the code using the XILINIX_PROM_RESET command. Bit 1 LO reference laser over-current flag. This flag indicates an over-current condition in the Local Oscillator transmit laser in the CRD module. The logic level will be pulled low when the laser is functioning properly. If the laser diode current exceeds the threshold of 100 mA then the bit will be high to indicate a laser malfunction. Bit 2 indicates if the PLL is associated with the 5MHz output is locked. All other outputs are derived, by frequency multiplication, from the 5MHz signal so this bit also indicates if any of the other frequencies is out of lock. Bits 3-7 are not used and will always be set to zero.</description>
+            <format>1u</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>7</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STATUS</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0000f</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>7</maxrange>
+                <description>This monitor point provides a number of status bits that summarize the operation of critical parts of the CRD. Bit 0 indicates if the XILINX FPGA has had a problem downloading the code from the onboard PROM. If set, the FPGA should be commanded to reload the code using the XILINIX_PROM_RESET command. Bit 1 LO reference laser over-current flag. This flag indicates an over-current condition in the Local Oscillator transmit laser in the CRD module. The logic level will be pulled low when the laser is functioning properly. If the laser diode current exceeds the threshold of 100 mA then the bit will be high to indicate a laser malfunction. Bit 2 indicates if the PLL is associated with the 5MHz output is locked. All other outputs are derived, by frequency multiplication, from the 5MHz signal so this bit also indicates if any of the other frequencies is out of lock. Bits 3-7 are not used and will always be set to zero.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CRG_VDC_12</propertyname>
+            <description>CRG 12 VDC voltage regulator output monitor. The 12 V runs through a divid-by-2 voltage divider to accommodate the ADC range.</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>3600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>11</graph-min>
+            <graph-max>13</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CRG_VDC_12</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x00010</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>volt</units>
+                <scale>9.7680097680097593E-3</scale>
+                <offset>0.0</offset>
+                <minrange>11.0</minrange>
+                <maxrange>13.0</maxrange>
+                <description>CRG 12 VDC voltage regulator output monitor. The 12 V runs through a divid-by-2 voltage divider to accommodate the ADC range.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>VDC_7</propertyname>
+            <description>7 VDC voltage input monitor.</description>
+            <format>7.2f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>3600</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>6</graph-min>
+            <graph-max>8</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>VDC_7</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x00012</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>volt</units>
+                <scale>4.8840048840048797E-3</scale>
+                <offset>0.0</offset>
+                <minrange>6.0</minrange>
+                <maxrange>8.0</maxrange>
+                <description>7 VDC voltage input monitor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CRD_MODULE_CODES</propertyname>
+            <description>Module codes for the CRD.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CRD_MODULE_CODES</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Module codes for the CRD.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>SERIAL_NUMBER</propertyname>
+            <description>Generic Monitor Point. Serial number of the device.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>SERIAL_NUMBER</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Serial number of the device.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PROTOCOL_REV_LEVEL</propertyname>
+            <description>Generic Monitor Point. Protocol revision level.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PROTOCOL_REV_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Protocol revision level.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CAN_ERROR</propertyname>
+            <description>Generic Monitor Point. CAN-bus errors since power up and error code of the last error.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CAN_ERROR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. CAN-bus errors since power up and error code of the last error.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CAN_ERROR_COUNT</propertyname>
+            <description>Number of CAN errors since last power up or last reset.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CAN_ERROR_COUNT</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Number of CAN errors since last power up or last reset.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTERNAL_SLAVE_ERROR_CODE</propertyname>
+            <description>Internal slave error code</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTERNAL_SLAVE_ERROR_CODE</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Internal slave error code</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ERROR_CODE_LAST_CAN_ERROR</propertyname>
+            <description>Error code of last CAN error. Codes are those defined by the INTEL 82527 CAN Controller status.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ERROR_CODE_LAST_CAN_ERROR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Error code of last CAN error. Codes are those defined by the INTEL 82527 CAN Controller status.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TRANS_NUM</propertyname>
+            <description>Generic Monitor Point. Number of transactions handled by the slave node since power up.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TRANS_NUM</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30002</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint32</rawdatatype>
+                <worlddatatype>unsigned long long</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Number of transactions handled by the slave node since power up.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>SW_REV_LEVEL</propertyname>
+            <description>Generic Monitor Point. Revision level of the embedded code. This is the software embedded in the AMBSI or the programmable device that is handling the AMB communications.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>SW_REV_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Revision level of the embedded code. This is the software embedded in the AMBSI or the programmable device that is handling the AMB communications.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>AMBIENT_TEMPERATURE</propertyname>
+            <description>Generic Monitor Point. Temperature measured by the DS1820 chip.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>AMBIENT_TEMPERATURE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x30003</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Temperature measured by the DS1820 chip.</description>
+            </monitor-point>
+
+        </baci-property>
+
+    </assembly-type>
+</lru-type>

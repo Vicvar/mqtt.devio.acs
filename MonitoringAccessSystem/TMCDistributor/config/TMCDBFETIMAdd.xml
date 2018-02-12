@@ -1,0 +1,1307 @@
+<?xml version="1.0" ?>
+<lru-type>
+    <name>FETIM</name>
+    <fullname>Front End Thermal Interlock Module</fullname>
+    <icd>ALMA-40.00.00.00-75.35.25.00-C-ICD</icd>
+    <icd-date>4815244800000000000</icd-date>
+    <description>Front End Thermal Interlock Module</description>
+    <assembly-type>
+        <name>FETIM</name>
+        <dev-name>Front End Thermal Interlock Module</dev-name>
+        <description>Front End Thermal Interlock Module</description>
+        <default-role>
+            <node>0x13</node>
+            <base-address>0x00000</base-address>
+            <channel>1</channel>
+        </default-role>
+
+        <baci-property>
+            <propertyname>INTRLK_SENS_INT_TEMP0_TEMP</propertyname>
+            <description>Get the temperature reading for the thermal interlock internal temperature sensor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_SENS_INT_TEMP0_TEMP</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.15</offset>
+                <minrange>0.0</minrange>
+                <maxrange>1000.0</maxrange>
+                <description>Get the temperature reading for the thermal interlock internal temperature sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_SENS_INT_TEMP1_TEMP</propertyname>
+            <description>Get the temperature reading for the thermal interlock internal temperature sensor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_SENS_INT_TEMP1_TEMP</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.15</offset>
+                <minrange>0.0</minrange>
+                <maxrange>1000.0</maxrange>
+                <description>Get the temperature reading for the thermal interlock internal temperature sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_SENS_INT_TEMP2_TEMP</propertyname>
+            <description>Get the temperature reading for the thermal interlock internal temperature sensor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_SENS_INT_TEMP2_TEMP</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e002</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.15</offset>
+                <minrange>0.0</minrange>
+                <maxrange>1000.0</maxrange>
+                <description>Get the temperature reading for the thermal interlock internal temperature sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_SENS_INT_TEMP3_TEMP</propertyname>
+            <description>Get the temperature reading for the thermal interlock internal temperature sensor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_SENS_INT_TEMP3_TEMP</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.15</offset>
+                <minrange>0.0</minrange>
+                <maxrange>1000.0</maxrange>
+                <description>Get the temperature reading for the thermal interlock internal temperature sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_SENS_FLOW_SENS0_FLOW</propertyname>
+            <description>Get the flow reading for the thermal interlock airflow sensor. This currently implemented as a flow sitch rather tan a sensor so the returned value will be toggle between OK (5V) and ERROR (0V). The return value is left as a float to allow the future implementation of an actual sensor.</description>
+            <format>none</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_SENS_FLOW_SENS0_FLOW</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e008</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>5.0</maxrange>
+                <description>Get the flow reading for the thermal interlock airflow sensor. This currently implemented as a flow sitch rather tan a sensor so the returned value will be toggle between OK (5V) and ERROR (0V). The return value is left as a float to allow the future implementation of an actual sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_SENS_FLOW_SENS1_FLOW</propertyname>
+            <description>Get the flow reading for the thermal interlock airflow sensor. This currently implemented as a flow sitch rather tan a sensor so the returned value will be toggle between OK (5V) and ERROR (0V). The return value is left as a float to allow the future implementation of an actual sensor.</description>
+            <format>none</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_SENS_FLOW_SENS1_FLOW</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e00c</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>5.0</maxrange>
+                <description>Get the flow reading for the thermal interlock airflow sensor. This currently implemented as a flow sitch rather tan a sensor so the returned value will be toggle between OK (5V) and ERROR (0V). The return value is left as a float to allow the future implementation of an actual sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_SENS_SINGLE_FAIL</propertyname>
+            <description>Return an indication that one of the interlocks sensors (temeprature or flow) has failed. 0 (OK), 1 (Error).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_SENS_SINGLE_FAIL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e010</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Return an indication that one of the interlocks sensors (temeprature or flow) has failed. 0 (OK), 1 (Error).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_STATE_GLITCH_VALUE</propertyname>
+            <description>Get the load percentage of the interlock glitch integrator. Once the integrator reaches a predefined threshold the status of the glitch counter is changed to triggered.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_STATE_GLITCH_VALUE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e020</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>100.0</maxrange>
+                <description>Get the load percentage of the interlock glitch integrator. Once the integrator reaches a predefined threshold the status of the glitch counter is changed to triggered.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_STATE_GLITCH_CNT_TRIG</propertyname>
+            <description>Return the triggered status of the interlock glitch indicator. 0 (OK) , 1 (Triggered)</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_STATE_GLITCH_CNT_TRIG</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e022</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Return the triggered status of the interlock glitch indicator. 0 (OK) , 1 (Triggered)</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_STATE_SENS_MULT_FAIL</propertyname>
+            <description>Return the indication that multiple interlock sensors (temperature or flow) have failed. 0 (OK), 1 (Triggered).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_STATE_SENS_MULT_FAIL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e024</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Return the indication that multiple interlock sensors (temperature or flow) have failed. 0 (OK), 1 (Triggered).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_STATE_SENS_INT_TEMP_ORR</propertyname>
+            <description>Return the indication that at least one of the thermal interlock internal temperature sensor is out of the preset temperature range. 0 (OK), 1 (Error).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_STATE_SENS_INT_TEMP_ORR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e028</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Return the indication that at least one of the thermal interlock internal temperature sensor is out of the preset temperature range. 0 (OK), 1 (Error).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_STATE_SENS_FLOW_ORR</propertyname>
+            <description>Return the indication that at least one interlock flow sensor is out of the preset flow range. 0 (OK), 1 (Error).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_STATE_SENS_FLOW_ORR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e02c</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Return the indication that at least one interlock flow sensor is out of the preset flow range. 0 (OK), 1 (Error).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_STATE_DELAY_TRIG</propertyname>
+            <description>Return the indication that the delay shutdown counter has been triggered. 0 (OK), 1 (Triggered)</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>1</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_STATE_DELAY_TRIG</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e030</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Return the indication that the delay shutdown counter has been triggered. 0 (OK), 1 (Triggered)</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTRLK_STATE_SHUTDOWN_TRIG</propertyname>
+            <description>Return the indication that the final shutdown counter has been triggered. The power supply will cut power within 32 s after this counter has been triggered. This shutdown CANNOT be cancelled. 0 (OK), 1 (Triggered).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>1</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTRLK_STATE_SHUTDOWN_TRIG</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e034</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Return the indication that the final shutdown counter has been triggered. The power supply will cut power within 32 s after this counter has been triggered. This shutdown CANNOT be cancelled. 0 (OK), 1 (Triggered).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMP_EXT_TEMP_SENS0_TEMP</propertyname>
+            <description>Get the temperature reading for the compressor interlock external temperature sensor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMP_EXT_TEMP_SENS0_TEMP</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e040</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.15</offset>
+                <minrange>0.0</minrange>
+                <maxrange>1000.0</maxrange>
+                <description>Get the temperature reading for the compressor interlock external temperature sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMP_EXT_TEMP_SENS1_TEMP</propertyname>
+            <description>Get the temperature reading for the compressor interlock external temperature sensor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMP_EXT_TEMP_SENS1_TEMP</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e048</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>kelvin</units>
+                <scale>1.0</scale>
+                <offset>273.15</offset>
+                <minrange>0.0</minrange>
+                <maxrange>1000.0</maxrange>
+                <description>Get the temperature reading for the compressor interlock external temperature sensor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMP_EXT_TEMP_SENS0_OOR</propertyname>
+            <description>Get the indication that the compressor interlock external temperature sensor is outside a predetermined range. 0 (OK), 1 (Error).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMP_EXT_TEMP_SENS0_OOR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e044</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Get the indication that the compressor interlock external temperature sensor is outside a predetermined range. 0 (OK), 1 (Error).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMP_EXT_TEMP_SENS1_OOR</propertyname>
+            <description>Get the indication that the compressor interlock external temperature sensor is outside a predetermined range. 0 (OK), 1 (Error).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMP_EXT_TEMP_SENS1_OOR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e04c</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Get the indication that the compressor interlock external temperature sensor is outside a predetermined range. 0 (OK), 1 (Error).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMP_HE2_PRESS_PRESS</propertyname>
+            <description>Get the pressure reading for the He2 buffer tank.</description>
+            <format>none</format>
+            <units>pascal</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMP_HE2_PRESS_PRESS</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0e050</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>pascal</units>
+                <scale>1.0E-3</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>1000.0</maxrange>
+                <description>Get the pressure reading for the He2 buffer tank.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMP_HE2_PRESS_OOR</propertyname>
+            <description>Get the indication that the pressure of the He2 buffer tank is outside a predetermined reange. 0 (OK), 1 (Error).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMP_HE2_PRESS_OOR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e054</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Get the indication that the pressure of the He2 buffer tank is outside a predetermined reange. 0 (OK), 1 (Error).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMP_FE_STATUS</propertyname>
+            <description>This value is actually generate within the FEMC module and is provided to the compressor interlock. It is an indication that the conditions of the cryogenic system, as monitored by the FEMC, are such that the pumping/cooling system can be started. 0 (OK), 1 (NOT READY)</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMP_FE_STATUS</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e058</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>This value is actually generate within the FEMC module and is provided to the compressor interlock. It is an indication that the conditions of the cryogenic system, as monitored by the FEMC, are such that the pumping/cooling system can be started. 0 (OK), 1 (NOT READY)</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMP_INTRLK_STATUS</propertyname>
+            <description>Get the indication of the current state of the compressor interlock. 0 (OK), 1 (Triggered).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMP_INTRLK_STATUS</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e060</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Get the indication of the current state of the compressor interlock. 0 (OK), 1 (Triggered).</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>COMP_CABLE_STATUS</propertyname>
+            <description>Get the indication of the physical cable conection status between the FETIM system and the actual compressor MC module. 0 (OK), 1 (Error).</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>COMP_CABLE_STATUS</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0e068</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Get the indication of the physical cable conection status between the FETIM system and the actual compressor MC module. 0 (OK), 1 (Error).</description>
+            </monitor-point>
+
+        </baci-property>
+
+    </assembly-type>
+</lru-type>

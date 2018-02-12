@@ -1,0 +1,3939 @@
+<?xml version="1.0" ?>
+<lru-type>
+    <name>NUTATOR</name>
+    <fullname>Nutator</fullname>
+    <icd>ALMA-36.20.00.00-70.35.20.00-E-ICD</icd>
+    <icd-date>4797100800000000000</icd-date>
+    <description>Control and monitor the Nutator</description>
+    <assembly-type>
+        <name>NUTATOR</name>
+        <dev-name>Nutator</dev-name>
+        <description>Control and monitor the Nutator</description>
+        <default-role>
+            <node>0x21</node>
+            <base-address>0x0</base-address>
+            <channel>parm</channel>
+        </default-role>
+
+        <baci-property>
+            <propertyname>STATUS</propertyname>
+            <description>Current Nutator status.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STATUS</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Current Nutator status.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PROGRAM_VALIDITY</propertyname>
+            <description>Determine if standby program is valid.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PROGRAM_VALIDITY</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00007</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Determine if standby program is valid.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOAD_STANDBY_PROGRAM</propertyname>
+            <description>Determine if program is loaded and is valid.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOAD_STANDBY_PROGRAM</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00008</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Determine if program is loaded and is valid.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LINAMP_STATUS</propertyname>
+            <description>Linear amplifier status</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LINAMP_STATUS</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00009</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Linear amplifier status</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>SELFTEST</propertyname>
+            <description>Return selftest most recen result.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>SELFTEST</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0000A</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Return selftest most recen result.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>POSITION</propertyname>
+            <description>Current Nutator position.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>POSITION</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0000B</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Current Nutator position.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_0</propertyname>
+            <description>Monitor temperature probe 0. Controller .</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_0</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00010</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>323.15</maxrange>
+                <description>Monitor temperature probe 0. Controller .</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_1</propertyname>
+            <description>Monitor temperature probe 1. Mirror T1 amplifier.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_1</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00011</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>323.15</maxrange>
+                <description>Monitor temperature probe 1. Mirror T1 amplifier.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_2</propertyname>
+            <description>Monitor temperature probe 2. Mirror T2 amplifier.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_2</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00012</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>323.15</maxrange>
+                <description>Monitor temperature probe 2. Mirror T2 amplifier.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_3</propertyname>
+            <description>Monitor temperature probe 3.Rocker amplifier.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_3</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00013</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>323.15</maxrange>
+                <description>Monitor temperature probe 3.Rocker amplifier.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_4</propertyname>
+            <description>Monitor temperature probe 4. Apex controller.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_4</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00014</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>323.15</maxrange>
+                <description>Monitor temperature probe 4. Apex controller.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_5</propertyname>
+            <description>Monitor temperature probe 5. Apex mechanical housing.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_5</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00015</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>323.15</maxrange>
+                <description>Monitor temperature probe 5. Apex mechanical housing.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_6</propertyname>
+            <description>Monitor temperature probe 6. Left mirror motor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_6</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00016</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>353.15</maxrange>
+                <description>Monitor temperature probe 6. Left mirror motor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_7</propertyname>
+            <description>Monitor temperature probe 7. Right mirror motor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_7</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00017</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>353.15</maxrange>
+                <description>Monitor temperature probe 7. Right mirror motor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_8</propertyname>
+            <description>Monitor temperature probe 8. Left rocker motor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_8</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00018</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>353.15</maxrange>
+                <description>Monitor temperature probe 8. Left rocker motor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE_9</propertyname>
+            <description>Monitor temperature probe 9. Right rocker motor.</description>
+            <format>none</format>
+            <units>kelvin</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE_9</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00019</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int16</rawdatatype>
+                <worlddatatype>short</worlddatatype>
+                <units>kelvin</units>
+                <scale>0.5</scale>
+                <offset>273.15</offset>
+                <minrange>253.15</minrange>
+                <maxrange>353.15</maxrange>
+                <description>Monitor temperature probe 9. Right rocker motor.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>FEEDFORWARD_GAIN_VEL</propertyname>
+            <description>Velocity feed forward gain of main loop.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>FEEDFORWARD_GAIN_VEL</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00020</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Velocity feed forward gain of main loop.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>FEEDFORWARD_GAIN_ACC</propertyname>
+            <description>Acceleration feed forward gain of main loop.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>FEEDFORWARD_GAIN_ACC</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00021</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Acceleration feed forward gain of main loop.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP1_P_R_F</propertyname>
+            <description>Main loop transition time Proportional coefficient.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP1_P_R_F</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00022</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Main loop transition time Proportional coefficient.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP1_I_R_F</propertyname>
+            <description>Main loop transition time Integral coefficient.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP1_I_R_F</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00023</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Main loop transition time Integral coefficient.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP1_I_D_F</propertyname>
+            <description>Main loop transition time Derivative coefficient.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP1_I_D_F</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00024</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Main loop transition time Derivative coefficient.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP1_P</propertyname>
+            <description>Main loop proportional coefficient.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP1_P</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00025</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Main loop proportional coefficient.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP1_I</propertyname>
+            <description>Main loop Integral coefficient.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP1_I</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00026</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Main loop Integral coefficient.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP1_D</propertyname>
+            <description>Main loop Derivative coefficient.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP1_D</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00027</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Main loop Derivative coefficient.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP2_P</propertyname>
+            <description>Auxiliary loop proportional coefficient.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP2_P</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00028</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Auxiliary loop proportional coefficient.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP2_I</propertyname>
+            <description>Auxiliary loop integral coefficient.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP2_I</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00029</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Auxiliary loop integral coefficient.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP2_D</propertyname>
+            <description>Auxiliary loop derivative coefficient.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP2_D</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0002A</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Auxiliary loop derivative coefficient.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>MIRROR_POSITION_MIN</propertyname>
+            <description>Mirror position limit.(min)</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>MIRROR_POSITION_MIN</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00030</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Mirror position limit.(min)</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>MIRROR_POSITION_MAX</propertyname>
+            <description>Mirror position limit.(max)</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>MIRROR_POSITION_MAX</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00031</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Mirror position limit.(max)</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ROCKER_POSITION_MIN</propertyname>
+            <description>Rocker position limit.(min)</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ROCKER_POSITION_MIN</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00032</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Rocker position limit.(min)</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ROCKER_POSITION_MAX</propertyname>
+            <description>Rocker position limit.(max)</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ROCKER_POSITION_MAX</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00033</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Rocker position limit.(max)</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP1_AO_LIMIT</propertyname>
+            <description>Main loop analog output limit in volt.</description>
+            <format>none</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP1_AO_LIMIT</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00034</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Main loop analog output limit in volt.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>LOOP2_AO_LIMIT</propertyname>
+            <description>Auxiliary loop analog output limit in volt.</description>
+            <format>none</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>LOOP2_AO_LIMIT</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00035</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Auxiliary loop analog output limit in volt.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>NUTATOR_ID</propertyname>
+            <description>Nutator ID. Each nutator has a different name.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>NUTATOR_ID</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00036</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Nutator ID. Each nutator has a different name.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>EXT48MS_SYNC</propertyname>
+            <description>Internal or External timing events, Default is External.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>EXT48MS_SYNC</monitorpointname>
+                <datatype>boolean</datatype>
+                <rca>0x00037</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>bool</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Internal or External timing events, Default is External.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_00</propertyname>
+            <description>Active program segment 0</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_00</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00040</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 0</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_01</propertyname>
+            <description>Active program segment 1</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_01</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00041</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 1</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_02</propertyname>
+            <description>Active program segment 2</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_02</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00042</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 2</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_03</propertyname>
+            <description>Active program segment 3</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_03</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00043</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 3</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_04</propertyname>
+            <description>Active program segment 4</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_04</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00044</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 4</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_05</propertyname>
+            <description>Active program segment 5</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_05</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00045</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 5</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_06</propertyname>
+            <description>Active program segment 6</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_06</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00046</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 6</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_07</propertyname>
+            <description>Active program segment 7</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_07</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00047</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 7</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_08</propertyname>
+            <description>Active program segment 8</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_08</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00048</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 8</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_09</propertyname>
+            <description>Active program segment 9</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_09</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00049</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 9</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_10</propertyname>
+            <description>Active program segment 10</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_10</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0004A</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 10</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_11</propertyname>
+            <description>Active program segment 11</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_11</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0004B</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 11</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_12</propertyname>
+            <description>Active program segment 12</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_12</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0004C</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 12</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_13</propertyname>
+            <description>Active program segment 13</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_13</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0004D</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 13</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_14</propertyname>
+            <description>Active program segment 14</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_14</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0004E</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program segment 14</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ACTIVE_PROG_SEG_I</propertyname>
+            <description>Active program initial segment. The initial segment is used when starting the program.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ACTIVE_PROG_SEG_I</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0004F</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Active program initial segment. The initial segment is used when starting the program.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_00</propertyname>
+            <description>Standby program segment 0</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_00</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00050</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 0</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_01</propertyname>
+            <description>Standby program segment 1</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_01</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00051</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 1</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_02</propertyname>
+            <description>Standby program segment 2</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_02</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00052</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 2</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_03</propertyname>
+            <description>Standby program segment 3</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_03</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00053</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 3</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_04</propertyname>
+            <description>Standby program segment 4</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_04</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00054</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 4</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_05</propertyname>
+            <description>Standby program segment 5</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_05</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00055</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 5</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_06</propertyname>
+            <description>Standby program segment 6</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_06</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00056</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 6</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_07</propertyname>
+            <description>Standby program segment 7</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_07</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00057</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 7</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_08</propertyname>
+            <description>Standby program segment 8</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_08</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00058</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 8</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_09</propertyname>
+            <description>Standby program segment 9</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_09</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00059</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 9</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_10</propertyname>
+            <description>Standby program segment 10</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_10</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0005A</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 10</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_11</propertyname>
+            <description>Standby program segment 11</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_11</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0005B</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 11</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_12</propertyname>
+            <description>Standby program segment 12</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_12</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0005C</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 12</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_13</propertyname>
+            <description>Standby program segment 13</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_13</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0005D</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 13</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_14</propertyname>
+            <description>Standby program segment 14</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_14</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0005E</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program segment 14</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>STANDBY_PROG_SEG_I</propertyname>
+            <description>Standby program initial segment. The initial segment is used when starting the program.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>STANDBY_PROG_SEG_I</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0005F</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Standby program initial segment. The initial segment is used when starting the program.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>DEBUG_NOP</propertyname>
+            <description>Returns fixed message 0x5A</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>DEBUG_NOP</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00060</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Returns fixed message 0x5A</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>MODE_OPERATION</propertyname>
+            <description>Operation mode includes two position switching, multi step switching, triangular trajectory, sinusoidal trajectory modes.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>MODE_OPERATION</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00061</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Operation mode includes two position switching, multi step switching, triangular trajectory, sinusoidal trajectory modes.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>RELAYS_CNTRL</propertyname>
+            <description>The controller uses 4 Relays to isolate amplifiers output driving signals to motors. They are Mirror Relay in Controller (M1-Relay), Mirror Relay in Apex Side (M2-Relay), Rocker Relay in Controller (R1-Relay), Rocker Relay in Apex Side (R2-Relay)</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>RELAYS_CNTRL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00062</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>The controller uses 4 Relays to isolate amplifiers output driving signals to motors. They are Mirror Relay in Controller (M1-Relay), Mirror Relay in Apex Side (M2-Relay), Rocker Relay in Controller (R1-Relay), Rocker Relay in Apex Side (R2-Relay)</description>
+            </monitor-point>
+
+        </baci-property>
+
+    </assembly-type>
+</lru-type>

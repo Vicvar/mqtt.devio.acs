@@ -1,0 +1,5 @@
+v.1.0.0 (Patricio Merino)
+========================
+
+2013-02-19: Patricio Merino
+ - First version

@@ -1,0 +1,299 @@
+<?xml version="1.0" ?>
+<lru-type>
+    <name>OpticalTelescope</name>
+    <fullname>Optical Telescope</fullname>
+    <icd>ALMA-36.01.00.00-70.35.40.00-B-ICD</icd>
+    <icd-date>4745260800000000000</icd-date>
+    <description>Production Optical Telescope</description>
+    <assembly-type>
+        <name>OpticalTelescope</name>
+        <dev-name>Optical Telescope</dev-name>
+        <description>Production Optical Telescope</description>
+        <default-role>
+            <node>none</node>
+            <base-address>none</base-address>
+            <channel>none</channel>
+        </default-role>
+
+        <baci-property>
+            <propertyname>QueryCenThresh</propertyname>
+            <description>Centroid SNR threshold for the brightest star in the field.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>QueryCenThresh</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>none</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Centroid SNR threshold for the brightest star in the field.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>QueryExpTime</propertyname>
+            <description>Default exposure time.</description>
+            <format>none</format>
+            <units>seconds</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>QueryExpTime</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>seconds</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Default exposure time.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>QueryFlatField</propertyname>
+            <description>Current flat field option in effect.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>QueryFlatField</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int</rawdatatype>
+                <worlddatatype>int</worlddatatype>
+                <units>none</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Current flat field option in effect.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>QueryFocusPos</propertyname>
+            <description>The position of the focus mechanism.</description>
+            <format>none</format>
+            <units>meters</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>QueryFocusPos</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>meters</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>0</minrange>
+                <maxrange>0.01</maxrange>
+                <description>The position of the focus mechanism.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>QuerySeqNo</propertyname>
+            <description>Sequence number of the last image which has been read out.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>QuerySeqNo</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>int</rawdatatype>
+                <worlddatatype>int</worlddatatype>
+                <units>none</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Sequence number of the last image which has been read out.</description>
+            </monitor-point>
+
+        </baci-property>
+
+    </assembly-type>
+</lru-type>

@@ -1,0 +1,1475 @@
+<?xml version="1.0" ?>
+<lru-type>
+    <name>FLOOG</name>
+    <fullname>Fine Tune Synthesizer First Local Oscillator</fullname>
+    <icd>ALMA-55.07.00.00-70.35.30.00-C-ICD</icd>
+    <icd-date>4715712000000000000</icd-date>
+    <description>Of these functions, fine tuning will be implemented using the FTS in the second LO, fringe rotation and sideband separation will be implemented using the FTS in both the first and second LOs and phase switching and side band suppression will be implemented using the FTS of the first LO.</description>
+    <assembly-type>
+        <name>FLOOG</name>
+        <dev-name>Fine Tune Synthesizer First Local Oscillator</dev-name>
+        <description>Of these functions, fine tuning will be implemented using the FTS in the second LO, fringe rotation and sideband separation will be implemented using the FTS in both the first and second LOs and phase switching and side band suppression will be implemented using the FTS of the first LO.</description>
+        <default-role>
+            <node>0x32</node>
+            <base-address>none</base-address>
+            <channel>0</channel>
+        </default-role>
+
+        <baci-property>
+            <propertyname>FREQ</propertyname>
+            <description>This is a read back of the SET_FREQ command. It is used to verify that the FTS has received the previous SET_FREQ command. It will return zero if the SET_FREQ command has never been called. The default output frequency upon power up of the FTS is DC or zero hertz.</description>
+            <format>2d</format>
+            <units>megahertz</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>5</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>20</graph-min>
+            <graph-max>45</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>FREQ</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x00001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint48</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>hertz</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>20000000.0</minrange>
+                <maxrange>45000000.0</maxrange>
+                <description>This is a read back of the SET_FREQ command. It is used to verify that the FTS has received the previous SET_FREQ command. It will return zero if the SET_FREQ command has never been called. The default output frequency upon power up of the FTS is DC or zero hertz.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PHASE_VALS</propertyname>
+            <description>This is a read back of the SET_PHASE_VALS command. It is used to verify that the FTS has received the previous SET_PHASE_VALS command. It will return all zeros if the SET_PHASE_VALS command has never been called.</description>
+            <format>none</format>
+            <units>radian</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>6.28</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PHASE_VALS</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00002</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint16</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>radian</units>
+                <scale>3.8349519697141002E-4</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>3.14159265358979</maxrange>
+                <description>This is a read back of the SET_PHASE_VALS command. It is used to verify that the FTS has received the previous SET_PHASE_VALS command. It will return all zeros if the SET_PHASE_VALS command has never been called.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PHASE_SEQ1</propertyname>
+            <description>This is a read back of the SET_PHASE_SEQ1 command. It is used to verify that the FTS has received the previous SET_PHASE_SEQ1 command. It will return all zeros if the SET_PHASE_SEQ1 command has never been called.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PHASE_SEQ1</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00003</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0x0000000000000000</minrange>
+                <maxrange>0xFF</maxrange>
+                <description>This is a read back of the SET_PHASE_SEQ1 command. It is used to verify that the FTS has received the previous SET_PHASE_SEQ1 command. It will return all zeros if the SET_PHASE_SEQ1 command has never been called.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PHASE_SEQ2</propertyname>
+            <description>This is a read back of the SET_PHASE_SEQ2 command. It is used to verify that the FTS has received the previous SET_PHASE_SEQ2 command. It will return all zeros if the SET_PHASE_SEQ2 command has never been called.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PHASE_SEQ2</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0x0000000000000000</minrange>
+                <maxrange>0xFF</maxrange>
+                <description>This is a read back of the SET_PHASE_SEQ2 command. It is used to verify that the FTS has received the previous SET_PHASE_SEQ2 command. It will return all zeros if the SET_PHASE_SEQ2 command has never been called.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CLOCK_COUNTS</propertyname>
+            <description>This monitor point provides the counts number of clock cycles between the previous TE and the preceding TE for both inverted and non-inverted clocks. It can be used to verify that the number of clock cycles between timing events is exactly 6 million. This monitor point should be used for debugging purposes. For operational purposes use the GET_FTS_STATUS command.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CLOCK_COUNTS</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00005</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint32</rawdatatype>
+                <worlddatatype>unsigned int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>6000000</maxrange>
+                <description>This monitor point provides the counts number of clock cycles between the previous TE and the preceding TE for both inverted and non-inverted clocks. It can be used to verify that the number of clock cycles between timing events is exactly 6 million. This monitor point should be used for debugging purposes. For operational purposes use the GET_FTS_STATUS command.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>FTS_STATUS</propertyname>
+            <description>Status of the output RF power level of the FTS. One bit will latch if a transient problem in the FTS output RF power level is detected. Status of clock cycles between timing events. One of two bits is latched high if the number of clock cycles between TE is not exactly 6000000. The number of clock cycles between TE is counted for both inverted and non-inverted clocks. All latched bits except bit 5 can be unlatched using the RESET_FTS_STATUS command. Bit 5 can be changed with the SET_CLOCK_INVERSION command.</description>
+            <format>none</format>
+            <units>pattern</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>5</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>FTS_STATUS</monitorpointname>
+                <datatype>boolean</datatype>
+                <rca>0x00006</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>bool</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Status of the output RF power level of the FTS. One bit will latch if a transient problem in the FTS output RF power level is detected. Status of clock cycles between timing events. One of two bits is latched high if the number of clock cycles between TE is not exactly 6000000. The number of clock cycles between TE is counted for both inverted and non-inverted clocks. All latched bits except bit 5 can be unlatched using the RESET_FTS_STATUS command. Bit 5 can be changed with the SET_CLOCK_INVERSION command.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PHASE_OFFSET</propertyname>
+            <description>This is the read back of SET_PHASE_OFFSET.  It is the amount by which the phase switching is delayed.  The delay the first phase switching value is a minimum of 8 ms and a maximum of 15.9996 ms with 8 ns of resolution.</description>
+            <format>2d</format>
+            <units>millisecond</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>5</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>8</graph-min>
+            <graph-max>15.999599999999999</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PHASE_OFFSET</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00007</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint24</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>second</units>
+                <scale>7.9999999999999988E-9</scale>
+                <offset>8.0000000000000002E-3</offset>
+                <minrange>8.0000000000000002E-3</minrange>
+                <maxrange>1.6E-2</maxrange>
+                <description>This is the read back of SET_PHASE_OFFSET.  It is the amount by which the phase switching is delayed.  The delay the first phase switching value is a minimum of 8 ms and a maximum of 15.9996 ms with 8 ns of resolution.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>MODULE_CODES</propertyname>
+            <description>8 bytes: Byte 0: 0x55 (Product Tree Digit 1: Product Tree Digit 2) Byte 1: 0x40 (Product Tree Digit 4: Product Tree Digit 6) Byte 2: Firmware Revision 0.0 to 15.15 Byte 3: Firmware Date (Day) Byte 4: Firmware Date (Month) Byte 5: Firmware Date (Year, 2000 0x00) Byte 6, 7: These will always be 0xFF</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>MODULE_CODES</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>8 bytes: Byte 0: 0x55 (Product Tree Digit 1: Product Tree Digit 2) Byte 1: 0x40 (Product Tree Digit 4: Product Tree Digit 6) Byte 2: Firmware Revision 0.0 to 15.15 Byte 3: Firmware Date (Day) Byte 4: Firmware Date (Month) Byte 5: Firmware Date (Year, 2000 0x00) Byte 6, 7: These will always be 0xFF</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PRODUCT_TREE_DIGIT_ONE</propertyname>
+            <description>Product Tree Digit 1</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PRODUCT_TREE_DIGIT_ONE</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Product Tree Digit 1</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PRODUCT_TREE_DIGIT_TWO</propertyname>
+            <description>Product Tree Digit 2</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PRODUCT_TREE_DIGIT_TWO</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Product Tree Digit 2</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PRODUCT_TREE_DIGIT_FOUR</propertyname>
+            <description>Product Tree Digit 4</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PRODUCT_TREE_DIGIT_FOUR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Product Tree Digit 4</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PRODUCT_TREE_DIGIT_SIX</propertyname>
+            <description>Product Tree Digit 6</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PRODUCT_TREE_DIGIT_SIX</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Product Tree Digit 6</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>FIRMWARE_REVISION_MINOR</propertyname>
+            <description>Firmware Minor Revision 0 to 15</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>FIRMWARE_REVISION_MINOR</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>15.0</maxrange>
+                <description>Firmware Minor Revision 0 to 15</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>FIRMWARE_REVISION_MAJOR</propertyname>
+            <description>Firmware Major Revision 0 to 15</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>FIRMWARE_REVISION_MAJOR</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>15.0</maxrange>
+                <description>Firmware Major Revision 0 to 15</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>FIRMWARE_DAY</propertyname>
+            <description>Firmware Day</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>FIRMWARE_DAY</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Firmware Day</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>FIRMWARE_MONTH</propertyname>
+            <description>Firmware Month</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>FIRMWARE_MONTH</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Firmware Month</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>FIRMWARE_YEAR</propertyname>
+            <description>Firmware Year</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>FIRMWARE_YEAR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00079</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>int</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>2000</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Firmware Year</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>SERIAL_NUMBER</propertyname>
+            <description>Generic Monitor Point. Serial number of the device.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>SERIAL_NUMBER</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x00000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Serial number of the device.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PROTOCOL_REV_LEVEL</propertyname>
+            <description>Generic Monitor Point. Protocol revision level.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PROTOCOL_REV_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Protocol revision level.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CAN_ERROR</propertyname>
+            <description>Generic Monitor Point. CAN-bus errors since power up and error code of the last error.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CAN_ERROR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. CAN-bus errors since power up and error code of the last error.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CAN_ERROR_COUNT</propertyname>
+            <description>Number of CAN errors since last power up or last reset.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CAN_ERROR_COUNT</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned short</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Number of CAN errors since last power up or last reset.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>INTERNAL_SLAVE_ERROR_CODE</propertyname>
+            <description>Internal slave error code</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>INTERNAL_SLAVE_ERROR_CODE</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Internal slave error code</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>ERROR_CODE_LAST_CAN_ERROR</propertyname>
+            <description>Error code of last CAN error. Codes are those defined by the INTEL 82527 CAN Controller status.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>ERROR_CODE_LAST_CAN_ERROR</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Error code of last CAN error. Codes are those defined by the INTEL 82527 CAN Controller status.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TRANS_NUM</propertyname>
+            <description>Generic Monitor Point. Number of transactions handled by the slave node since power up.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TRANS_NUM</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30002</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint32</rawdatatype>
+                <worlddatatype>unsigned long long</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Number of transactions handled by the slave node since power up.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>SW_REV_LEVEL</propertyname>
+            <description>Generic Monitor Point. Revision level of the embedded code. This is the software embedded in the AMBSI or the programmable device that is handling the AMB communications.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>SW_REV_LEVEL</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x30004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Revision level of the embedded code. This is the software embedded in the AMBSI or the programmable device that is handling the AMB communications.</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>AMBIENT_TEMPERATURE</propertyname>
+            <description>Generic Monitor Point. Temperature measured by the DS1820 chip.</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>AMBIENT_TEMPERATURE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x30003</rca>
+                <terelated>0</terelated>
+                <rawdatatype>uint8</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>0</maxrange>
+                <description>Generic Monitor Point. Temperature measured by the DS1820 chip.</description>
+            </monitor-point>
+
+        </baci-property>
+
+    </assembly-type>
+</lru-type>

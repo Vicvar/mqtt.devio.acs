@@ -1,0 +1,803 @@
+<?xml version="1.0" ?>
+<lru-type>
+    <name>PowerDist</name>
+    <fullname>Power Distribution in the Front-End</fullname>
+    <icd>ALMA-40.00.00.00-75.35.25.00-B-ICD</icd>
+    <icd-date>4688928000000000000</icd-date>
+    <description>Control and monitor a genericpower distribution assembly in the Front-End.</description>
+    <assembly-type>
+        <name>PowerDist</name>
+        <dev-name>Power Distribution in the Front-End</dev-name>
+        <description>Control and monitor a genericpower distribution assembly in the Front-End.</description>
+        <default-role>
+            <node>0x13</node>
+            <base-address>0x0</base-address>
+            <channel>1</channel>
+        </default-role>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_ENABLE</propertyname>
+            <description>Get the power supply state for the cartridge for band10</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_ENABLE</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0a00c</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Get the power supply state for the cartridge for band10</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL0_CURRENT</propertyname>
+            <description>Get the power supply current for the cartridge for band10 and channel 0</description>
+            <format>8.3f</format>
+            <units>ampere</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>2</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL0_CURRENT</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a000</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>ampere</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>0.0</maxrange>
+                <description>Get the power supply current for the cartridge for band10 and channel 0</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL1_CURRENT</propertyname>
+            <description>Get the power supply current for the cartridge for band10 and channel 1</description>
+            <format>8.3f</format>
+            <units>ampere</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>1</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL1_CURRENT</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a002</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>ampere</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>0.0</maxrange>
+                <description>Get the power supply current for the cartridge for band10 and channel 1</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL2_CURRENT</propertyname>
+            <description>Get the power supply current for the cartridge for band10 and channel 2</description>
+            <format>8.3f</format>
+            <units>ampere</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>2</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL2_CURRENT</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a004</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>ampere</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>0.0</maxrange>
+                <description>Get the power supply current for the cartridge for band10 and channel 2</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL3_CURRENT</propertyname>
+            <description>Get the power supply current for the cartridge for band10 and channel 3</description>
+            <format>8.3f</format>
+            <units>ampere</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>1</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL3_CURRENT</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a006</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>ampere</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>0.0</maxrange>
+                <description>Get the power supply current for the cartridge for band10 and channel 3</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL4_CURRENT</propertyname>
+            <description>Get the power supply current for the cartridge for band10 and channel 4</description>
+            <format>8.3f</format>
+            <units>ampere</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>1</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL4_CURRENT</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a008</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>ampere</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>0.0</maxrange>
+                <description>Get the power supply current for the cartridge for band10 and channel 4</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL5_CURRENT</propertyname>
+            <description>Get the power supply current for the cartridge for band10 and channel 5</description>
+            <format>8.3f</format>
+            <units>ampere</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>1</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL5_CURRENT</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a00a</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>ampere</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0.0</minrange>
+                <maxrange>0.0</maxrange>
+                <description>Get the power supply current for the cartridge for band10 and channel 5</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL0_VOLTAGE</propertyname>
+            <description>Get the power supply voltage for the cartridge for band10 and channel 0</description>
+            <format>8.3f</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>6</graph-min>
+            <graph-max>6.5</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL0_VOLTAGE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a001</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>6.0</minrange>
+                <maxrange>6.5</maxrange>
+                <description>Get the power supply voltage for the cartridge for band10 and channel 0</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL1_VOLTAGE</propertyname>
+            <description>Get the power supply voltage for the cartridge for band10 and channel 1</description>
+            <format>8.3f</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>6</graph-min>
+            <graph-max>6.5</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL1_VOLTAGE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a003</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>6.0</minrange>
+                <maxrange>6.5</maxrange>
+                <description>Get the power supply voltage for the cartridge for band10 and channel 1</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL2_VOLTAGE</propertyname>
+            <description>Get the power supply voltage for the cartridge for band10 and channel 2</description>
+            <format>8.3f</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>6</graph-min>
+            <graph-max>6.5</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL2_VOLTAGE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a005</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>6.0</minrange>
+                <maxrange>6.5</maxrange>
+                <description>Get the power supply voltage for the cartridge for band10 and channel 2</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL3_VOLTAGE</propertyname>
+            <description>Get the power supply voltage for the cartridge for band10 and channel 3</description>
+            <format>8.3f</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>6</graph-min>
+            <graph-max>6.5</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL3_VOLTAGE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a007</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>6.0</minrange>
+                <maxrange>6.5</maxrange>
+                <description>Get the power supply voltage for the cartridge for band10 and channel 3</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL4_VOLTAGE</propertyname>
+            <description>Get the power supply voltage for the cartridge for band10 and channel 4</description>
+            <format>8.3f</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>6</graph-min>
+            <graph-max>6.5</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL4_VOLTAGE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a009</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>6.0</minrange>
+                <maxrange>6.5</maxrange>
+                <description>Get the power supply voltage for the cartridge for band10 and channel 4</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>CARTRIDGE_CHANNEL5_VOLTAGE</propertyname>
+            <description>Get the power supply voltage for the cartridge for band10 and channel 5</description>
+            <format>8.3f</format>
+            <units>volt</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>30</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>6</graph-min>
+            <graph-max>6.5</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>CARTRIDGE_CHANNEL5_VOLTAGE</monitorpointname>
+                <datatype>float</datatype>
+                <rca>0x0a00b</rca>
+                <terelated>0</terelated>
+                <rawdatatype>float</rawdatatype>
+                <worlddatatype>float</worlddatatype>
+                <units>volt</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>6.0</minrange>
+                <maxrange>6.5</maxrange>
+                <description>Get the power supply voltage for the cartridge for band10 and channel 5</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>POWERED_MODULES</propertyname>
+            <description>Get the number of powered modules</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>POWERED_MODULES</monitorpointname>
+                <datatype>integer</datatype>
+                <rca>0x0a0a0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>ubyte</rawdatatype>
+                <worlddatatype>unsigned char</worlddatatype>
+                <units>none</units>
+                <scale>1.0</scale>
+                <offset>0.0</offset>
+                <minrange>0</minrange>
+                <maxrange>3</maxrange>
+                <description>Get the number of powered modules</description>
+            </monitor-point>
+
+        </baci-property>
+
+    </assembly-type>
+</lru-type>
