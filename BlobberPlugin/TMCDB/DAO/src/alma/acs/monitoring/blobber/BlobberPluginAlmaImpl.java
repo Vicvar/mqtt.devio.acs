@@ -112,11 +112,8 @@ public class BlobberPluginAlmaImpl extends BlobberPlugin
 // HSO: Disabled storing data in Oracle as discussed at http://ictjira.alma.cl/browse/ICT-462?focusedCommentId=44849 
 //			MonitorDAO dbDAO = new MonitorDAOImpl(containerServices, myWatchDog);
 //			myDaoList.add(dbDAO);
-			System.out.println("Se va a llamar a INFLUX");
-			MonitorDAO mqDAO = new INFLUXDAOImpl(containerServices, myWatchDog);
+			MonitorDAO mqDAO = new MQDAOImpl(containerServices, myWatchDog);
 			myDaoList.add(mqDAO);
-			//MonitorDAO mqDAO = new MQDAOImpl(containerServices, myWatchDog);
-			//myDaoList.add(mqDAO);
 
 			if ( logger.isLoggable(Level.FINER) )
 				logger.finer("Instantiated blobber plugin (" + mqDAO.getClass().getName()
