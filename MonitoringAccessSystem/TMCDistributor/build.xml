@@ -92,9 +92,9 @@
         <copy file="${basedir}/config/log4j.xml" tofile="${install.dir}/config/log4j.xml" overwrite="true"/>
 
         <!-- Replace of path -->
-        <replace file="${install.dir}/bin/TMCTTArchiver" token="opt/tmcs" value="introots"/>
-        <replace file="${install.dir}/bin/TMCTTArchiverPart" token="opt/tmcs" value="introots"/>
-        <replace file="${install.dir}/bin/TMCTTArchiverSuite" token="opt/tmcs" value="introots"/>
+        <replace file="${install.dir}/bin/TMCTTArchiver" token="/opt/tmcs/TMCS" value="${env.INTROOT}"/>
+        <replace file="${install.dir}/bin/TMCTTArchiverPart" token="/opt/tmcs/TMCS" value="${env.INTROOT}"/>
+        <replace file="${install.dir}/bin/TMCTTArchiverSuite" token="/opt/tmcs/TMCS" value="${env.INTROOT}"/>
 
         <exec executable="/bin/chmod"> 
             <arg value="-R"/>
