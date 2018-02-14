@@ -9,20 +9,33 @@ sensortag_impl::sensortag_impl(
         refresh_thread(NULL)
 
 {
-        component_name = name.c_str();
+        
     try 
 	{
 	CORBA::Any* characteristic = get_characteristic_by_name("broker");
 	if (!(*characteristic>>=component_broker))
 	    {
-	    ACS_SHORT_LOG((LM_ERROR,"Error getting AvailableSlots broker by the CORBA::Any object"));
+	    ACS_SHORT_LOG((LM_ERROR,"Error getting broker by the CORBA::Any object"));
 	    }
 	}
     catch (...)
 	{
 	ACS_SHORT_LOG((LM_ERROR,"Error reading the characteristic broker by its name"));
 	}
-	
+
+    try 
+	{
+	CORBA::Any* characteristic = get_characteristic_by_name("client_id");
+	if (!(*characteristic>>=client_name))
+	    {
+	    ACS_SHORT_LOG((LM_ERROR,"Error getting client_name by the CORBA::Any object"));
+	    }
+	}
+    catch (...)
+	{
+	ACS_SHORT_LOG((LM_ERROR,"Error reading the characteristic broker by its name"));
+	}
+	component_name = name.c_str();
 }
 
 sensortag_impl::~sensortag_impl()
@@ -40,17 +53,17 @@ void sensortag_impl::initialize()
 {
 //        on();
         temperature_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name + ":temperature").c_str());
+                            (component_name + "_" + client_name + ":temperature").c_str(), client_name);
         light_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name + ":light").c_str());
+                            (component_name + "_" + client_name + ":light").c_str(), client_name);
         humidity_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name + ":humidity").c_str());
+                            (component_name + "_" + client_name + ":humidity").c_str(), client_name);
 	temperature_devio_w = new mqtt::mqtt_write(component_broker, 
-                            (component_name + ":temperature/w").c_str());
+                            (component_name + "_" + client_name + ":temperature/w").c_str(), client_name);
 	light_devio_w = new mqtt::mqtt_write(component_broker, 
-		                    (component_name + ":light/w").c_str());
+		                    (component_name + "_" + client_name + ":light/w").c_str(), client_name);
 	humidity_devio_w = new mqtt::mqtt_write(component_broker, 
-		                    (component_name + ":humidity/w").c_str());
+		                    (component_name + "_" + client_name + ":humidity/w").c_str(), client_name);
 	
         temperature_m =  new baci::ROdouble(
 			(component_name + ":temperature").c_str(),

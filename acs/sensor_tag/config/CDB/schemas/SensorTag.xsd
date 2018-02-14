@@ -18,6 +18,7 @@
 
     </xs:sequence>
 	<xs:attribute name="broker" type="xs:string" use="required" />
+	<xs:attribute name="client_id" type="xs:string" use="required" />
     </xs:extension>
   </xs:complexContent>
   </xs:complexType>

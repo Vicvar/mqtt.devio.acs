@@ -35,7 +35,7 @@ namespace mqtt
         friend class acs_callback;
         public:
         mqtt_devio(const std::string& mqtt_brk_addr,
-                const std::string& topic);
+                const std::string& topic, const std::string& client_name);
         virtual ~mqtt_devio();
 
         virtual bool initializeValue();
@@ -60,14 +60,14 @@ namespace mqtt
     class mqtt_read: public mqtt_devio
     {
 	public:
-	mqtt_read(const std::string& mqtt_brk_addr, const std::string& topic);
+	mqtt_read(const std::string& mqtt_brk_addr, const std::string& topic, const std::string& client_name);
 	virtual ~mqtt_read();
 
     };
     class mqtt_write:  public mqtt_devio
     {
 	public:
-	mqtt_write(const std::string& mqtt_brk_addr, const std::string& topic);
+	mqtt_write(const std::string& mqtt_brk_addr, const std::string& topic, const std::string& client_name);
 	virtual ~mqtt_write();
 	void publish(const std::string& msg);
 
