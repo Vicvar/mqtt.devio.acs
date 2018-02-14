@@ -48,6 +48,7 @@
 #
 
 # Import the acspy.PySimpleClient class
+import time
 from Acspy.Clients.SimpleClient import PySimpleClient
 
 
@@ -55,35 +56,20 @@ from Acspy.Clients.SimpleClient import PySimpleClient
 simpleClient = PySimpleClient()
 
 # Print information about the available COBs
-components = simpleClient.availableComponents()
-
-simpleClient.getLogger().logInfo("COBs available are: ")
-for cob in components:
-    simpleClient.getLogger().logInfo(cob.name + " of type " + cob.type)
 
 # Do something on a device.
 simpleClient.getLogger().logInfo("We can directly manipulate a device once we get it, which is easy.")
 try:
     # Get the standard MOUNT1 Mount device
-    ws = simpleClient.getComponent("WeatherStation")
+    ws = simpleClient.getComponent("MONITOR_COLLECTOR")
 
     # Get the humidity
-    humidity = ws.getHumidity()
+    ws.registerMonitoredDevice("SensorTag","1")
     # Print value 
-    simpleClient.getLogger().logInfo("Current Humidity: " + str(humidity))
-
-    # Get the temperature
-    temperature = ws.getTemperature()
-    # Print value 
-    simpleClient.getLogger().logInfo("Current Temperature: " + str(temperature))
-
-    # Get the humidity
-    light = ws.getLight()
-    # Print value 
-    simpleClient.getLogger().logInfo("Current Light: " + str(light))
-
+    ws.startMonitoring("SensorTag");
+    raw_input("##################Press enter to quit#########################")
     # Release it
-    simpleClient.releaseComponent("WeatherStation")
+    simpleClient.releaseComponent("MONITOR_COLLECTOR")
 
 except Exception, e:
     simpleClient.getLogger().logCritical("Sorry, I expected there to be a Mount in the system and there isn't.")
