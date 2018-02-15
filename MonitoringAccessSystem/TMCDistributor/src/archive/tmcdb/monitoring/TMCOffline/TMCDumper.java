@@ -376,15 +376,17 @@ public class TMCDumper {
             String mm = yearMonthDay.substring(5, 7);
             String[] channelNameArray = channelName.split("\\:");
             String componentName = "";
+	    String topicName ="";
 
             if (channelNameArray != null && channelNameArray.length == 3)
               componentName = channelNameArray[1].replaceAll("/", "_");
+	      topicName = channelNameArray[0].replaceAll("/", "_");
             else if (channelNameArray == null)
               logger.error("From the getFolderName, channelNameArray is null. That is strange");
             else
               logger.error("From the getFolderName, channelNameArray.length(" + channelNameArray.length + ") is not 3. That is strange");
 
-            return pathDumper + yyyy + "/" + mm + "/" + yearMonthDay + "/" + componentName;
+            return pathDumper + yyyy + "/" + mm + "/" + yearMonthDay + "/" + topicName + "/" + componentName;
         }
         else {
             logger.error("yearMonthDay or channelName is empty. This is strange.");
