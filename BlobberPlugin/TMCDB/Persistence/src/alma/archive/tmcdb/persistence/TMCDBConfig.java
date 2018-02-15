@@ -51,11 +51,8 @@ public class TMCDBConfig {
 	private String dbConnectionEnabled="true";
 	private String monitoringOnlyEnabled = "false";
 	private String simulatedAntennas = null;
-	private String influx_dbname = "MONITOR_COLLECTOR";
-	private String aRetentionPolicy = "aRetentionPolicy";
-	private String influx_user = "root";
-	private String influx_password = "root";
-	private String influx_measurement = "test";
+	private String topic = "tmc";
+	private String reference = "ACS";
 	private boolean profilingEnabled = false;
 	private int collector_interval = 60;
 	private final Logger logger;
@@ -102,26 +99,15 @@ public class TMCDBConfig {
 		return broker_url;
 	}
 
-	public String getRetentionPolicy() {
-		return aRetentionPolicy;
+	public String getReference() {
+		return reference;
 	}
 
-	public String getInfluxDBName() {
-		return influx_dbname;
+	public String getTopic() {
+		return topic;
 	}
 
-	public String getInfluxUser() {
-		return influx_user;
-	}
-
-	public String getInfluxPassword() {
-		return influx_password;
-	}
-
-	public String getInfluxMeasurement() {
-		return influx_measurement;
-	}
-
+	
 	public boolean isDBConnectionEnabled(){
 		if (dbConnectionEnabled.equalsIgnoreCase("false")) {
 			return false;
@@ -213,25 +199,13 @@ public class TMCDBConfig {
 		if (broker_url == null) {
 			broker_url = "tcp://localhost:61616";
 		}
-		aRetentionPolicy = dbConfig.get("archive.tmcdb.monitoring.aRetentionPolicy");
-		if (aRetentionPolicy == null) {
-			aRetentionPolicy = "aRetentionPolicy";
+		reference = dbConfig.get("archive.tmcdb.monitoring.reference");
+		if (reference == null) {
+			reference = "ACS";
 		}
-		influx_dbname = dbConfig.get("archive.tmcdb.monitoring.influx_dbname");
-		if (influx_dbname == null) {
-			influx_dbname = "MONITOR_COLLECTOR";
-		}
-		influx_user = dbConfig.get("archive.tmcdb.monitoring.influx_dbuser");
-		if (influx_user == null) {
-			influx_user = "root";
-		}
-		influx_password = dbConfig.get("archive.tmcdb.monitoring.influx_password");
-		if (influx_password == null) {
-			influx_password = "root";
-		}
-		influx_measurement = dbConfig.get("archive.tmcdb.monitoring.influx_measurement");
-		if (influx_measurement == null) {
-			influx_measurement = "test";
+		topic = dbConfig.get("archive.tmcdb.monitoring.topic");
+		if (topic == null) {
+			topic = "tmc";
 		}
 		monitoringOnlyEnabled = dbConfig.get("archive.tmcdb.monitoring.only");
 		if (monitoringOnlyEnabled == null) {

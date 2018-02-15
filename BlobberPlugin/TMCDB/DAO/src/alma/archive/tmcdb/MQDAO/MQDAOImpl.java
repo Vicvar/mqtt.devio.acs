@@ -68,6 +68,7 @@ public class MQDAOImpl implements MonitorDAO
 	// MQ attributes
 	private String location;
 	private String broker_url;
+	private String topic_name;
 	private TopicConnection topicConnection;
 	private TopicSession topicSession;
 	private TopicPublisher topicPublisher;
@@ -82,9 +83,11 @@ public class MQDAOImpl implements MonitorDAO
 		TMCDBConfig config = TMCDBConfig.getInstance(log);
 		mqEnabled = config.isBrokerEnabled();
 		broker_url = config.getBrokerURL();
+		topic_name = config.getTopic();
 		log.info("This mqDAO will use the following settings for storing data: "
 			+ "mqstore_enabled=" + mqEnabled
-			+ ", broker_url=" + broker_url);
+			+ ", broker_url=" + broker_url
+			+ ", topic=" + topic_name);
 
 		HashSet<String> tmpSimulatedAntennaHashSet = config.getAntennaSimulatedSet(); // need this to allow declaring simulatedAntennaHashSet as final field
 		if (tmpSimulatedAntennaHashSet == null) {
@@ -224,7 +227,7 @@ message.toString();
 				// We should also consider to add a re-connection attempt in case of failure.
 				topicConnection.start();
 				topicSession = topicConnection.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
-				Topic topic = topicSession.createTopic("tmc");
+				Topic topic = topicSession.createTopic(topic_name);
 				topicPublisher = topicSession.createPublisher(topic);
 			} catch (JMSException ex) {
 				mqEnabled = false;

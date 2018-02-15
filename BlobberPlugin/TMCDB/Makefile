@@ -28,7 +28,7 @@ SUBSYSTEM = "ARCHIVE/TMCDB"
 
 GROUPS = 
 
-MODULES = Database Persistence DAO MDGuiApi
+MODULES = Database Persistence DAO
 
 
 # --------------- Standard Makefile Beyond this Point -----------------
