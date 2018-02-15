@@ -312,12 +312,12 @@ public class TMCDumper {
             String[] channelNameArray = channelName.split("\\:");
             String monitorPointName = "";
 
-            if (channelNameArray != null && channelNameArray.length == 3)
-              monitorPointName = channelNameArray[2];
+            if (channelNameArray != null && channelNameArray.length == 4)
+              monitorPointName = channelNameArray[3];
             else if (channelNameArray == null)
               logger.error("From the getFileName, channelNameArray is null. That is strange");
             else
-              logger.error("From the getFileName, channelNameArray.length(" + channelNameArray.length + ") is not 3. That is strange");
+              logger.error("From the getFileName, channelNameArray.length(" + channelNameArray.length + ") is not 4. That is strange");
 
             return monitorPointName + "." + extensionFile;
         }
@@ -378,13 +378,13 @@ public class TMCDumper {
             String componentName = "";
 	    String topicName ="";
 
-            if (channelNameArray != null && channelNameArray.length == 3){
-              componentName = channelNameArray[1].replaceAll("/", "_");
-	      topicName = channelNameArray[0].replaceAll("/", "_");
+            if (channelNameArray != null && channelNameArray.length == 4){
+              componentName = channelNameArray[2].replaceAll("/", "_");
+	      topicName = channelNameArray[1].replaceAll("/", "_");
             }else if (channelNameArray == null)
               logger.error("From the getFolderName, channelNameArray is null. That is strange");
             else
-              logger.error("From the getFolderName, channelNameArray.length(" + channelNameArray.length + ") is not 3. That is strange");
+              logger.error("From the getFolderName, channelNameArray.length(" + channelNameArray.length + ") is not 4. That is strange");
             return pathDumper + yyyy + "/" + mm + "/" + yearMonthDay + "/" + topicName + "/" + componentName;
         }
         else {
