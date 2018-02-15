@@ -405,8 +405,9 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
             nfe.printStackTrace();
             return;
           }
-          this.mpName = this.mpResolver.getMonitorPointName(propertyName, indexInt);
-          if (this.unknownMpName.equalsIgnoreCase(this.mpName)) {
+          //this.mpName = this.mpResolver.getMonitorPointName(propertyName, indexInt);
+        this.mpName=propertyName+"_"+indexInt;  
+	if (this.unknownMpName.equalsIgnoreCase(this.mpName)) {
             String reason = "Unknown monitor point name. Bad data, drop it. componentName=" + componentName + ";" + "baci=" + propertyName + ";" + "index=" + indexString + ";" + "monitorPointName=" + this.mpName;
 
             if (log.isInfoEnabled())
@@ -426,7 +427,6 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
           }
 
           this.mpId = TMCUtils.generateKey(this.applicationName, componentName, this.mpName);
-
           String clob = data.getString("clob");
           temp = clob.replaceAll("\n", "|").split("\\|");
           for (int i = temp.length - 1; i > 0; i -= 2) {
