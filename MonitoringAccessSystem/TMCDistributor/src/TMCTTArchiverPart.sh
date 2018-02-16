@@ -6,7 +6,7 @@ export CLASSPATH=/opt/tmcs/TMCS/lib/TMCTTArchiver.jar:/opt/tmcs/TMCS/lib/TMCStat
 
 JAVA_OPTS="-Djava.rmi.server.hostname=`hostname -f`"
 JAVA_OPTS="${JAVA_OPTS} -Dlog4j.debug -Dlog4j.configuration=file:/opt/tmcs/TMCS/config/log4j.xml"
-JAVA_OPTS="${JAVA_OPTS} -Xms5000m -Xmx5000m -XX:MaxPermSize=100m"
+JAVA_OPTS="${JAVA_OPTS} -Xms5000m -Xmx5000m"
 JAVA_OPTS="${JAVA_OPTS} -Denv=Dev"
 
 export JAVA_OPTS
