@@ -53,17 +53,17 @@ void sensortag_impl::initialize()
 {
 //        on();
         temperature_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name + "_" + client_name + ":temperature").c_str(), client_name);
+                            (component_name + "/temperature").c_str(), client_name);
         light_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name + "_" + client_name + ":light").c_str(), client_name);
+                            (component_name "/light").c_str(), client_name);
         humidity_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name + "_" + client_name + ":humidity").c_str(), client_name);
+                            (component_name  + "/humidity").c_str(), client_name);
 	temperature_devio_w = new mqtt::mqtt_write(component_broker, 
-                            (component_name + "_" + client_name + ":temperature/w").c_str(), client_name);
+                            ("w/" + component_name + "/temperature").c_str(), client_name);
 	light_devio_w = new mqtt::mqtt_write(component_broker, 
-		                    (component_name + "_" + client_name + ":light/w").c_str(), client_name);
+		                    ("w/" + component_name + "/light").c_str(), client_name);
 	humidity_devio_w = new mqtt::mqtt_write(component_broker, 
-		                    (component_name + "_" + client_name + ":humidity/w").c_str(), client_name);
+		                    ("w/" + component_name + "/humidity").c_str(), client_name);
 	
         temperature_m =  new baci::ROdouble(
 			(component_name + ":temperature").c_str(),
