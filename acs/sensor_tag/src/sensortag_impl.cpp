@@ -55,7 +55,7 @@ void sensortag_impl::initialize()
         temperature_devio_m = new mqtt::mqtt_read(component_broker, 
                             (component_name + "/temperature").c_str(), client_name);
         light_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name "/light").c_str(), client_name);
+                            (component_name +  "/light").c_str(), client_name);
         humidity_devio_m = new mqtt::mqtt_read(component_broker, 
                             (component_name  + "/humidity").c_str(), client_name);
 	temperature_devio_w = new mqtt::mqtt_write(component_broker, 
