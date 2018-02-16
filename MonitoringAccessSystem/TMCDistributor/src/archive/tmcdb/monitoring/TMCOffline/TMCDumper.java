@@ -379,7 +379,7 @@ public class TMCDumper {
 	    String topicName ="";
 
             if (channelNameArray != null && channelNameArray.length == 4){
-              componentName = channelNameArray[2].replaceAll("/", "_");
+              componentName = channelNameArray[2];
 	      topicName = channelNameArray[1].replaceAll("/", "_");
             }else if (channelNameArray == null)
               logger.error("From the getFolderName, channelNameArray is null. That is strange");
