@@ -422,6 +422,7 @@ public class TMCDumper {
           List<String> dataList = this.dataList.subList(start, end);
           buffer = new StringBuffer();
           for (String data : dataList) {
+	System.out.println(">>>>>>>"+data);
             String[] fields = data.split("\\;");
 
             if (fields != null && fields.length == 5) {

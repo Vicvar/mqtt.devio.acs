@@ -49,12 +49,6 @@ import redis.clients.jedis.exceptions.JedisDataException;
  * @author pmerino@alma.cl
  */
 public class TMCTTEventConsumer implements TMCEventConsumer {
-    /** The topic name by default */
-    private static final String TOPIC_NAME_DEFAULT = "UNSET";
-
-   /** The application name by default */
-    private static final String APPLICATION_NAME_DEFAULT = "UNSET";
-
     /** The monitor point name by default */
     private static final String MP_NAME_DEFAULT = "UNSET";
 
@@ -63,6 +57,12 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
 
     /** The unknown monitor point name by default */
     private static final String UNKNOWN_MP_NAME_DEFAULT = "UNKNOWN";
+
+    /** The topic name */
+    private String topicName = "TOPIC_NAME_DEFAULT";
+
+    /** The application name by default */
+    private static final String APPLICATION_NAME_DEFAULT = "TMCS";
 
     /** Max permitted CLOB size by default */
     private static final int MAX_CLOB_SIZE_DEFAULT = 1000;
@@ -100,12 +100,6 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
     /** TMC properties */
     private TMCProperties tmcProperties;
 
-    /** The topic name */
-    private String topicName = "TOPIC_NAME_DEFAULT";
-
-    /** The application name */
-    private String applicationName = "APPLICATION_NAME_DEFAULT";
-
     /** The monitor point name */
     private String mpName = MP_NAME_DEFAULT;
 
@@ -114,6 +108,9 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
 
     /** The monitor point unknown */
     private String unknownMpName = UNKNOWN_MP_NAME_DEFAULT;
+
+    /** The application name */
+    private String applicationName = APPLICATION_NAME_DEFAULT;
 
     /** The max clob size */
     private int maxClobSize = MAX_CLOB_SIZE_DEFAULT;
@@ -140,7 +137,7 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
             mpId = tmcProperties.getProperties().getProperty(TMCConstants.UNSET_VALUE);
             unknownMpName = tmcProperties.getProperties().getProperty(TMCConstants.UNKNOWN_MONITOR_POINT_NAME);
             topicName = tmcProperties.getProperties().getProperty(TMCConstants.TOPIC_NAME);
-	    applicationName = tmcProperties.getProperties().getProperty(TMCConstants.APPLICATION_NAME);
+            applicationName = tmcProperties.getProperties().getProperty(TMCConstants.APPLICATION_NAME);
 
             try {
                 maxClobSize = (new Integer(tmcProperties.getProperties().getProperty(TMCConstants.MAX_CLOB_SIZE))).intValue();
@@ -174,6 +171,7 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
                 log.debug("mpId=" + mpId);
                 log.debug("unknownMpName=" + unknownMpName);
                 log.debug("topicName=" + topicName);
+                log.debug("applicationName=" + applicationName);
                 log.debug("maxClobSize=" + maxClobSize);
                 log.debug("timeLimit=" + timeLimit);
                 log.debug("timeDelta=" + timeDelta);
@@ -412,9 +410,8 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
             nfe.printStackTrace();
             return;
           }
-          //this.mpName = this.mpResolver.getMonitorPointName(propertyName, indexInt);
-        this.mpName=propertyName+"_"+indexInt;  
-	if (this.unknownMpName.equalsIgnoreCase(this.mpName)) {
+          this.mpName = propertyName+"_"+indexInt;
+          if (this.unknownMpName.equalsIgnoreCase(this.mpName)) {
             String reason = "Unknown monitor point name. Bad data, drop it. componentName=" + componentName + ";" + "baci=" + propertyName + ";" + "index=" + indexString + ";" + "monitorPointName=" + this.mpName;
 
             if (log.isInfoEnabled())
@@ -431,9 +428,9 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
 
           if ((componentName != null) && (componentName.contains("AOSTiming"))) {
             componentName = componentName + "_" + data.getString("serialNumber");
-         }
-          this.mpId = TMCUtils.generateKey(this.applicationName, this.topicName + ":" + componentName, this.mpName);
-          System.out.println(">>>>>>>>>>>>>>>>>>>>>mpId es "+ this.mpId);
+          }	
+          this.mpId = TMCUtils.generateKey(this.applicationName, topicName + ":" + componentName, this.mpName);
+
           String clob = data.getString("clob");
           temp = clob.replaceAll("\n", "|").split("\\|");
           for (int i = temp.length - 1; i > 0; i -= 2) {

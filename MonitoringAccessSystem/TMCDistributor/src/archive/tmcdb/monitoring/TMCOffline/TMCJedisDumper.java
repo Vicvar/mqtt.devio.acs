@@ -121,7 +121,8 @@ public class TMCJedisDumper {
           Iterator it = keys.iterator();
           while (it.hasNext()) {
             String channel = (String)it.next();
-            TMCSyncDumper dumper = new TMCSyncDumper(channel, TMCJedisSingleton.getJedis().lrange(channel, 0L, -1L), tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
+           // TMCSyncDumper dumper = new TMCSyncDumper(channel, TMCJedisSingleton.getJedis().lrange(channel, 0L, -1L), tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
+	  TMCSyncInfluxDumper dumper = new TMCSyncInfluxDumper(channel, TMCJedisSingleton.getJedis().lrange(channel, 0L, -1L), tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
 
             if (logger.isInfoEnabled()) {
               logger.info("Cleaning channel " + channel);
