@@ -3,7 +3,12 @@
        xmlns:cdb="urn:schemas-cosylab-com:CDB:1.0" 
        xmlns:baci="urn:schemas-cosylab-com:BACI:1.0" 
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <_ Name="SensorTag"       Code="SensorTagImpl"	
+      <!--<_ Name="SensorTag"       Code="SensorTagImpl"	
+                             Type="IDL:example/Sensors/sensortag:1.0"
+                             Container="stContainer" ImplLang="cpp"
+			     Autostart="true" 
+			     Default="true" />-->
+      <_ Name="System/Subsystem/SensorTag_01"       Code="SensorTagImpl"	
                              Type="IDL:example/Sensors/sensortag:1.0"
                              Container="stContainer" ImplLang="cpp"
 			     Autostart="true" 
