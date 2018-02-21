@@ -39,6 +39,12 @@ public class TMCJedisDumper {
     /** The application name by default */
     private static final String APPLICATION_NAME_DEFAULT = "TMCS";
 
+    /** The influxDB status by default */
+    private static final String INFLUX_STATUS_DEFAULT = "true";
+
+    /** The archiver status by default */
+    private static final String ARCHIVER_STATUS_DEFAULT = "true";
+
     /** The logger */
     private static final Logger logger = Logger.getLogger(TMCJedisDumper.class);
 
@@ -60,6 +66,11 @@ public class TMCJedisDumper {
     /** The application name */
     private String applicationName = APPLICATION_NAME_DEFAULT;
 
+    /** The influxDB status */
+    private String influxStatus = INFLUX_STATUS_DEFAULT;
+
+    /** The archiver status*/
+    private String archiverStatus = ARCHIVER_STATUS_DEFAULT;
     /**
      * Sets the startupDate
      *
@@ -106,6 +117,8 @@ public class TMCJedisDumper {
 
         if (tmcProperties != null) {
           this.applicationName = TMCProperties.getProperties().getProperty("application_name");
+	  this.influxStatus = TMCProperties.getProperties().getProperty("influx_status");
+	  this.archiverStatus = TMCProperties.getProperties().getProperty("archiver_status");
         }
         if (TMCJedisSingleton.getJedis() != null) {
           if (!TMCJedisSingleton.getJedis().isConnected()) {
@@ -121,13 +134,20 @@ public class TMCJedisDumper {
           Iterator it = keys.iterator();
           while (it.hasNext()) {
             String channel = (String)it.next();
-           // TMCSyncDumper dumper = new TMCSyncDumper(channel, TMCJedisSingleton.getJedis().lrange(channel, 0L, -1L), tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
-	  TMCSyncInfluxDumper dumper = new TMCSyncInfluxDumper(channel, TMCJedisSingleton.getJedis().lrange(channel, 0L, -1L), tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
-
+	    if (this.archiverStatus.equals("true")){
+	       TMCSyncDumper dumperArchiver = new TMCSyncDumper(channel, TMCJedisSingleton.getJedis().lrange(channel, 0L, -1L), tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
+	       dumperArchiver.run();
+	    }
+	    if (this.influxStatus.equals("true")){
+	       TMCSyncInfluxDumper dumperInflux = new TMCSyncInfluxDumper(channel, TMCJedisSingleton.getJedis().lrange(channel, 0L, -1L), tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
+	       dumperInflux.run();
+ 	    }
             if (logger.isInfoEnabled()) {
               logger.info("Cleaning channel " + channel);
+	      logger.info("influxStatus " + influxStatus);
+	      logger.info("archiverStatus " + archiverStatus);
             }
-            dumper.run();
+            
           }
 
           TMCJedisSingleton.getJedis().flushAll();

@@ -57,6 +57,12 @@ public class TMCJedisPublisher {
     /** Thread sleep by default */
     private static final int THREAD_SLEEP_DEFAULT = 1000;
 
+    /** The influxDB status by default */
+    private static final String INFLUX_STATUS_DEFAULT = "true";
+
+    /** The archiver status by default */
+    private static final String ARCHIVER_STATUS_DEFAULT = "true";
+
     /** Redis max limit date (600000 milsec = 10 min) */
     private static final int LIMIT_DEFAULT = 600000;
 
@@ -98,6 +104,12 @@ public class TMCJedisPublisher {
 
     /** The initial date */
     private long initialDate = INITIAL_DATE_DEFAULT;
+
+    /** The influxDB status */
+    private String influxStatus = INFLUX_STATUS_DEFAULT;
+
+    /** The archiver status*/
+    private String archiverStatus = ARCHIVER_STATUS_DEFAULT;
 
     /**
      * Constructor
@@ -154,6 +166,22 @@ public class TMCJedisPublisher {
           }
           catch (Exception e) {
               logger.error("Error reading initialDate");
+              logger.error(e);
+              e.printStackTrace();
+          }
+          try {
+            this.influxStatus = TMCProperties.getProperties().getProperty("influx_status");
+          }
+          catch (Exception e) {
+              logger.error("Error reading influxStatus");
+              logger.error(e);
+              e.printStackTrace();
+          }
+          try {
+            this.archiverStatus = TMCProperties.getProperties().getProperty("archiver_status");
+          }
+          catch (Exception e) {
+              logger.error("Error reading archiverStatus");
               logger.error(e);
               e.printStackTrace();
           }
@@ -310,12 +338,16 @@ public class TMCJedisPublisher {
                 // TODO: Possible concurrency issue here with the "Monitor Points Force" application.
                 List listToRemove = TMCJedisSingleton.getJedis().lrange(channel, 0L, removeFromListSwap - 1L);
                 TMCJedisSingleton.getJedis().ltrim(channel, removeFromListSwap, -1L);
-                /*TMCAsyncDumper tmcAsyncDumper = new TMCAsyncDumper(channel, listToRemove, this.tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
-                Thread newThread = new Thread(tmcAsyncDumper);
-                newThread.start();*/
-		TMCAsyncInfluxDumper tmcAsyncInfluxDumper = new TMCAsyncInfluxDumper(channel, listToRemove, this.tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
-                Thread newInfluxThread = new Thread(tmcAsyncInfluxDumper);
-                newInfluxThread.start();
+	        if (archiverStatus.equals("true")){
+		  TMCAsyncDumper tmcAsyncDumper = new TMCAsyncDumper(channel, listToRemove, this.tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
+                  Thread newThread = new Thread(tmcAsyncDumper);
+                  newThread.start();
+                }
+	        if (influxStatus.equals("true")){
+		   TMCAsyncInfluxDumper tmcAsyncInfluxDumper = new TMCAsyncInfluxDumper(channel, listToRemove, this.tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
+                   Thread newInfluxThread = new Thread(tmcAsyncInfluxDumper);
+                   newInfluxThread.start();
+		}
               }
               catch (java.lang.OutOfMemoryError e) {
                   logger.error("Out of memory, cannot spawn a new tread ... ");
