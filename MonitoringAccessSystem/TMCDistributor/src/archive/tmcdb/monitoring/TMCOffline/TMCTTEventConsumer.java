@@ -129,6 +129,8 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
 
     /**
      * Constructor
+     * initializes attributes with the values of  configuration file
+     * mpName and mpId are then resolved as a combination of other constants
      */
     public TMCTTEventConsumer(TMCProperties tmcProperties) {
         setTmcProperties(tmcProperties);
@@ -410,6 +412,7 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
             nfe.printStackTrace();
             return;
           }
+          /* here is set mpName, later it will represent the name of the generated file   */
           this.mpName = propertyName+"_"+indexInt;
           if (this.unknownMpName.equalsIgnoreCase(this.mpName)) {
             String reason = "Unknown monitor point name. Bad data, drop it. componentName=" + componentName + ";" + "baci=" + propertyName + ";" + "index=" + indexString + ";" + "monitorPointName=" + this.mpName;
@@ -429,6 +432,11 @@ public class TMCTTEventConsumer implements TMCEventConsumer {
           if ((componentName != null) && (componentName.contains("AOSTiming"))) {
             componentName = componentName + "_" + data.getString("serialNumber");
           }	
+	  /**
+          * here is set mpId, this corresponds to the redis channel, example "TMCS:tmc:System/Subsystem/SensorTag_01:baci_0"
+	  * where ":" will be used as a separator to generate an array an array of 4 elements
+          * If the amount of ":" is modified, it will be necessary to modify the Dumper codes
+	  */
           this.mpId = TMCUtils.generateKey(this.applicationName, topicName + ":" + componentName, this.mpName);
 
           String clob = data.getString("clob");

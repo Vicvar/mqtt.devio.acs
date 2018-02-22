@@ -338,6 +338,7 @@ public class TMCJedisPublisher {
                 // TODO: Possible concurrency issue here with the "Monitor Points Force" application.
                 List listToRemove = TMCJedisSingleton.getJedis().lrange(channel, 0L, removeFromListSwap - 1L);
                 TMCJedisSingleton.getJedis().ltrim(channel, removeFromListSwap, -1L);
+		/* here it is published in influx or to the file */
 	        if (archiverStatus.equals("true")){
 		  TMCAsyncDumper tmcAsyncDumper = new TMCAsyncDumper(channel, listToRemove, this.tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
                   Thread newThread = new Thread(tmcAsyncDumper);

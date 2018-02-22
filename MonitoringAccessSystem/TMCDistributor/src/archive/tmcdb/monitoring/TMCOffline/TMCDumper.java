@@ -303,7 +303,7 @@ public class TMCDumper {
 
     /**
      * Returns the file name, based in the channel name. For example:
-     * when the channel is "TMCS:CONTROL/DV01/IFProc0:ARP_FULL", it returns ARP_FULL.txt 
+     * when the channel is "TMCS:TOPIC:CONTROL/DV01/IFProc0:ARP_FULL", it returns ARP_FULL.txt 
      *
      * @return The file name
      */
@@ -367,7 +367,7 @@ public class TMCDumper {
      * Returns the folder name
      *
      * @param yearMonthDay Date in YYYYMMDD format
-     * @return The folder name in format <PATH_DUMPER>/<YYYY>/<MM>/<YYYY-MM-DD>/<COMPONENT_NAME>
+     * @return The folder name in format <PATH_DUMPER>/<YYYY>/<MM>/<YYYY-MM-DD>/<TOPIC>/<COMPONENT_NAME>
      *         For example: /var/opt/alma/monitordata/current/2014/08/2014-09-08/CONTROL_DV01_IFProc0
      */
     public String getFolderName(String yearMonthDay) {
@@ -422,7 +422,6 @@ public class TMCDumper {
           List<String> dataList = this.dataList.subList(start, end);
           buffer = new StringBuffer();
           for (String data : dataList) {
-	System.out.println(">>>>>>>"+data);
             String[] fields = data.split("\\;");
 
             if (fields != null && fields.length == 5) {

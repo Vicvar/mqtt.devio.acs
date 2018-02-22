@@ -9,7 +9,7 @@ sensortag_impl::sensortag_impl(
         refresh_thread(NULL)
 
 {
-        
+    /* get broker url from CDB */    
     try 
 	{
 	CORBA::Any* characteristic = get_characteristic_by_name("broker");
@@ -22,7 +22,7 @@ sensortag_impl::sensortag_impl(
 	{
 	ACS_SHORT_LOG((LM_ERROR,"Error reading the characteristic broker by its name"));
 	}
-
+    /* get client_id from CDB */
     try 
 	{
 	CORBA::Any* characteristic = get_characteristic_by_name("client_id");
@@ -51,7 +51,11 @@ sensortag_impl::~sensortag_impl()
 void sensortag_impl::initialize()
         throw (acsErrTypeLifeCycle::acsErrTypeLifeCycleExImpl)
 {
-//        on();
+	/* 
+	* Subscription to topics
+	* client name is configurable in CDB 
+	* two or more subscriptions to the same topic can not be made with the same client name
+	*/
         temperature_devio_m = new mqtt::mqtt_read(component_broker, 
                             (component_name + "/temperature").c_str(), client_name);
         light_devio_m = new mqtt::mqtt_read(component_broker, 

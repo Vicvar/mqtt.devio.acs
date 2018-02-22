@@ -134,6 +134,10 @@ public class TMCJedisDumper {
           Iterator it = keys.iterator();
           while (it.hasNext()) {
             String channel = (String)it.next();
+	/*
+	* If there is data not published after finishing a previous process, they are published
+	* For each baci runs on a different thread
+	*/
 	    if (this.archiverStatus.equals("true")){
 	       TMCSyncDumper dumperArchiver = new TMCSyncDumper(channel, TMCJedisSingleton.getJedis().lrange(channel, 0L, -1L), tmcProperties, this.writerStats, this.diskWriteTime, this.startupDate);
 	       dumperArchiver.run();

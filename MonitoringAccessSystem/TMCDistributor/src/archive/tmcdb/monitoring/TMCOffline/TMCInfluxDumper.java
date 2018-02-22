@@ -220,8 +220,7 @@ public class TMCInfluxDumper {
 
     /**
      * Set InfluxDB connection
-     *
-     * @param dataList The dataList
+     *t
      */
 
     public void setInfluxDBConnection(String influx_url, String influx_user, String influx_password) {
@@ -232,7 +231,7 @@ public class TMCInfluxDumper {
     /**
      * Set InfluxDB database
      *
-     * @param dataList The dataList
+     * If the database does not exist it is possible to create it, but there are problems with the retention policy
      */
 
     public void setInfluxDBDatabase(String influx_dbname){
@@ -245,7 +244,6 @@ public class TMCInfluxDumper {
     /**
      * Set InfluxDB retention policy
      *
-     * @param dataList The dataList
      */
 
     public void setInfluxDBRetentionPolicy(String aRetentionPolicy){
@@ -279,7 +277,7 @@ public class TMCInfluxDumper {
     }
 
     /**
-     * Write the data list to text file
+     * Write the data in influxdb
      */
     public void writeData() {
         long startTime = System.nanoTime();
@@ -376,10 +374,10 @@ public class TMCInfluxDumper {
     }
 
     /**
-     * Returns the file name, based in the channel name. For example:
+     * Returns the mqtt topic, based in the channel name. For example:
      * when the channel is "TMCS:TOPIC:CONTROL/DV01/IFProc0:ARP_FULL", it returns TOPIC 
      *
-     * @return The baci name
+     * @return The database name
      */
     public String getDatabaseName() {
         if (channelName != null && !"".equals(channelName.trim())) {
@@ -435,7 +433,8 @@ public class TMCInfluxDumper {
     }
 
     /**
-     * Returns the component name
+     * Returns the component name, based in the channel name. For example:
+     * when the channel is "TMCS:TOPIC:CONTROL/DV01/IFProc0:ARP_FULL", it returns CONTROL_DV01_IFProc0 
      *
      */
     public String getMeasurement() {
@@ -521,8 +520,9 @@ public class TMCInfluxDumper {
                             value = "" + valueDouble.doubleValue();
                           data_value = value;
                         }
-			
-			//this.publish(getMeasurement(),  (currentTimeStamp - 122192928000000000L)/10000, getMonitorPointName(), data_value);			
+			/* it is possible to transform currentTime to epoch
+			 * this.publish(getMeasurement(),  (currentTimeStamp - 122192928000000000L)/10000, getMonitorPointName(), data_value);
+			 */	
 			this.publish(getMeasurement(),  currentTime, getMonitorPointName(), data_value);
                       }
                       catch (NumberFormatException nfe) {
@@ -538,13 +538,11 @@ public class TMCInfluxDumper {
                       logger.error(msg);
                     }
 
-                    // currentTimeStamp < previousTimeLong
                     if (previousTimeLong != -1 && currentTimeStamp != -1 && currentTimeStamp < previousTimeLong) {
                       String msg = "Out of sequence. previousTime[" + previousTimeLong + " " + previousTime + "] is more than currentTime[" + currentTimeStamp + " " + currentTime + "]. " +
                                    "However, the data will be stored. channelName: " + channelName;
                       logger.error(msg);
                     }
-                    // currentTimeStamp == previousTimeLong
                     else if (previousTimeLong != -1 && currentTimeStamp != -1 && currentTimeStamp == previousTimeLong) {
                       String msg = "Repeated sequence. previousTime[" + previousTimeLong + " " + previousTime + "] is equal to currentTime[" + currentTimeStamp + " " + currentTime + "]. " +
                                    "However, the data will be stored. channelName: " + channelName;
@@ -593,11 +591,13 @@ public class TMCInfluxDumper {
      */
 
     private void publish(String measurement, String time, String property, String value) {
-    	/*this.influxDB.write(Point.measurement(measurement)
-					.time(time, TimeUnit.MILLISECONDS)
+    	/* It is also possible to publish with a time in epoch format
+	   this.influxDB.write(Point.measurement(measurement)
+	 				.time(time, TimeUnit.MILLISECONDS)
 					.addField("baciName", property)
 					.addField("value", value)
-					.build());*/
+					.build());
+	*/
 	this.influxDB.write(Point.measurement(measurement)
 					.addField("time", property)
 					.addField("baciName", property)
