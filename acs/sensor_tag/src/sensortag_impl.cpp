@@ -57,17 +57,17 @@ void sensortag_impl::initialize()
 	* two or more subscriptions to the same topic can not be made with the same client name
 	*/
         temperature_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name + "/temperature").c_str(), client_name);
+                            (component_name + "/temperature").c_str(), client_name + "/temperature/r");
         light_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name +  "/light").c_str(), client_name);
+                            (component_name +  "/light").c_str(), client_name +  "/light/r");
         humidity_devio_m = new mqtt::mqtt_read(component_broker, 
-                            (component_name  + "/humidity").c_str(), client_name);
+                            (component_name  + "/humidity").c_str(), client_name + "/humidity/w");
 	temperature_devio_w = new mqtt::mqtt_write(component_broker, 
-                            ("w/" + component_name + "/temperature").c_str(), client_name);
+                            ("w/" + component_name + "/temperature").c_str(), client_name + "/temperature/w");
 	light_devio_w = new mqtt::mqtt_write(component_broker, 
-		                    ("w/" + component_name + "/light").c_str(), client_name);
+		                    ("w/" + component_name + "/light").c_str(), client_name +  "/light/w");
 	humidity_devio_w = new mqtt::mqtt_write(component_broker, 
-		                    ("w/" + component_name + "/humidity").c_str(), client_name);
+		                    ("w/" + component_name + "/humidity").c_str(), client_name + "/humidity/w");
 	
         temperature_m =  new baci::ROdouble(
 			(component_name + ":temperature").c_str(),
