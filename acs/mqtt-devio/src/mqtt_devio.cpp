@@ -53,7 +53,7 @@ mqtt_devio::mqtt_devio(const std::string& mqtt_brk_addr, const std::string& baci
     connOpts.set_clean_session(false);
     connOpts.set_automatic_reconnect(true);
 
-    client_ = new mqtt::async_client(mqtt_brk_addr, topic);
+    client_ = new mqtt::async_client(mqtt_brk_addr, client_name);
     cb_ = new acs_callback(*client_, topic, this);
     client_->set_callback(*cb_);
 

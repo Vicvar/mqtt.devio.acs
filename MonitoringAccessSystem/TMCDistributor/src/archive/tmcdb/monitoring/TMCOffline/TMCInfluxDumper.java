@@ -599,7 +599,7 @@ public class TMCInfluxDumper {
 					.build());
 	*/
 	this.influxDB.write(Point.measurement(measurement)
-					.addField("time", property)
+					.addField("time", time)
 					.addField("baciName", property)
 					.addField("value", value)
 					.build());
