@@ -385,7 +385,7 @@ public class TMCDumper {
               logger.error("From the getFolderName, channelNameArray is null. That is strange");
             else
               logger.error("From the getFolderName, channelNameArray.length(" + channelNameArray.length + ") is not 4. That is strange");
-            return pathDumper + yyyy + "/" + mm + "/" + yearMonthDay + "/" + topicName + "/" + componentName;
+            return pathDumper + "/" + topicName + "/" + yyyy + "/" + mm + "/" + yearMonthDay + "/" + componentName;
         }
         else {
             logger.error("yearMonthDay or channelName is empty. This is strange.");
