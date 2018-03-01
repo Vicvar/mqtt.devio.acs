@@ -520,10 +520,10 @@ public class TMCInfluxDumper {
                             value = "" + valueDouble.doubleValue();
                           data_value = value;
                         }
-			/* it is possible to transform currentTime to epoch
-			 * this.publish(getMeasurement(),  (currentTimeStamp - 122192928000000000L)/10000, getMonitorPointName(), data_value);
-			 */	
-			this.publish(getMeasurement(),  currentTime, getMonitorPointName(), data_value);
+			
+			 this.publish(getMeasurement(),  (currentTimeStamp - 122192928000060000L)/10000, getMonitorPointName(), data_value);
+			 	
+			
                       }
                       catch (NumberFormatException nfe) {
                         String msg = "Problems trying to convert clobArray[" + (i + 1) + "] to a valid number. " +
@@ -590,19 +590,14 @@ public class TMCInfluxDumper {
      * 
      */
 
-    private void publish(String measurement, String time, String property, String value) {
-    	/* It is also possible to publish with a time in epoch format
+    private void publish(String measurement, long time, String property, String value) {
+    	
 	   this.influxDB.write(Point.measurement(measurement)
 	 				.time(time, TimeUnit.MILLISECONDS)
-					.addField("baciName", property)
+					.tag("baciName", property)
 					.addField("value", value)
 					.build());
-	*/
-	this.influxDB.write(Point.measurement(measurement)
-					.addField("time", time)
-					.addField("baciName", property)
-					.addField("value", value)
-					.build());
+	
 	if (logger.isDebugEnabled()) {
 	  logger.debug("send data to influx");
           logger.debug("measurement=" + measurement + "; time=" + time + "; property=" + property + "; value=" + value);
