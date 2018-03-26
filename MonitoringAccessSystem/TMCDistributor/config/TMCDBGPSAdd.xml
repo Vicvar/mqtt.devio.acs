@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lru-type>
+    <name>GPS</name> 
+    <fullname>GPS</fullname> 
+    <icd>-</icd> 
+    <icd-date>0</icd-date>
+    <description>GPS</description> 
+    <assembly-type>
+        <name>GPS</name>
+        <dev-name>GPS</dev-name>
+        <description>GPS</description>
+        <default-role>
+            <node>none</node>
+            <base-address>none</base-address>
+            <channel>none</channel>
+        </default-role>
+
+        <baci-property>
+            <propertyname>Antenna_State</propertyname>
+            <description>Antenna state</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>2</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription>ANT_OK, ANT_OPEN, ANT_SHORTED</statedescription>
+            <condition>!</condition>
+            <alarm-on>!</alarm-on>
+            <alarm-off>!</alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>Antenna_State</monitorpointname>
+                <datatype>string</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>string</rawdatatype>
+                <worlddatatype>string</worlddatatype>
+                <units>none</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange></minrange>
+                <maxrange></maxrange>
+                <description>Antenna state</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>GPS_Locked</propertyname>
+            <description>GPS locked</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>1</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription>True, False</statedescription>
+            <condition>!</condition>
+            <alarm-on>!</alarm-on>
+            <alarm-off>!</alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>GPS_Locked</monitorpointname>
+                <datatype>bool</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>bool</rawdatatype>
+                <worlddatatype>bool</worlddatatype>
+                <units>none</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange></minrange>
+                <maxrange></maxrange>
+                <description>GPS locked</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>GPS_Time</propertyname>
+            <description>GPS Time</description>
+            <format>%d</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>18446744073709552000</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>GPS_Time</monitorpointname>
+                <datatype>long long</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>long long</rawdatatype>
+                <worlddatatype>long long</worlddatatype>
+                <units>none</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange></minrange>
+                <maxrange></maxrange>
+                <description>GPS Time</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PLL_Locked</propertyname>
+            <description>PLL locked</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>1</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription>True, False</statedescription>
+            <condition>!</condition>
+            <alarm-on>!</alarm-on>
+            <alarm-off>!</alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PLL_Locked</monitorpointname>
+                <datatype>bool</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>bool</rawdatatype>
+                <worlddatatype>bool</worlddatatype>
+                <units>none</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange></minrange>
+                <maxrange></maxrange>
+                <description>PLL locked</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>RS232_OK</propertyname>
+            <description>RS232 OK</description>
+            <format>none</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>1</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription>True, False</statedescription>
+            <condition>!</condition>
+            <alarm-on>!</alarm-on>
+            <alarm-off>!</alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>RS232_OK</monitorpointname>
+                <datatype>bool</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>bool</rawdatatype>
+                <worlddatatype>bool</worlddatatype>
+                <units>none</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange></minrange>
+                <maxrange></maxrange>
+                <description>RS232 OK</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>Time_Error</propertyname>
+            <description>Time error</description>
+            <format>%9.4f</format>
+            <units>none</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>-2147483648</graph-min>
+            <graph-max>2147483647</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>Time_Error</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>none</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange></minrange>
+                <maxrange></maxrange>
+                <description>Time error</description>
+            </monitor-point>
+
+        </baci-property>
+
+    </assembly-type>
+</lru-type>

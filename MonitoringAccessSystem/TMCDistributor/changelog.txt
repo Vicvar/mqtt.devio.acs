@@ -1,0 +1,461 @@
+v.1.2.13 (Patricio Merino) ?
+====================================
+
+2016-05-10: Patricio Merino
+- ICT-7249: Prevent memory issues of TMCTextArchiver by usage of Redis
+
+2016-04-22: Patricio Merino
+- ICT-6245: Provide a method to force update MonitorData Service data available on website
+  - Refactor in TMCJedisPublisher
+
+v.1.2.10 (Patricio Merino) 2014-09-08
+====================================
+
+2014-09-08: Patricio Merino
+- Setting the right default constants values in TMCJedisPublisher.
+- ICT-3121: Improvement for "Time-of-day distribution" problem
+  - Adding new logic in TMCDumper: validation of startDate each configured time.
+- Changing privileges for apache.apache in MoveLastOldData.sh
+
+2014-09-05: Patricio Merino
+- ICT-3391: Improve the way the text files in the buffer area are transferred to the historical area
+
+v.1.2.9 (Patricio Merino) 2014-08-05
+====================================
+
+2014-08-05: Patricio Merino
+- ICT-3158: Adding millisecond to the time-stamp (Redis and text files)
+
+v.1.2.8.5 (Patricio Merino) 2014-07-27
+======================================
+
+2014-07-27: Patricio Merino
+- Bug fixed. java.io.FileNotFoundException: /var/opt/alma/monitordata/current/2014/07/2014-07-27/CONTROL_DA43_SAS/POL1_TEMP.txt (No such file or directory)
+             Adding protection of file's creation in TMCDumper.java
+
+v.1.2.8.4 (Patricio Merino) 2014-07-01
+======================================
+
+2014-07-01: Patricio Merino
+- Bug fixed. Changing the time-stamp of TMCTextArchiver. Now is using the real.
+- Bug fixed. ICT-3154: Investigate truncated data from CLOBs.
+
+v.1.2.8.3 (Patricio Merino) 2014-06-17
+======================================
+
+2014-06-17: Patricio Merino
+- Urgent fix for TMCJedisPublisher: Wrong startTime.
+  redis 127.0.0.1:6379> lrange "TMCS:CONTROL/CM01/DTXBBpr3:FR_CW_CH1_FRAME_DATA" -1 -1
+  1) "4318708-12-15 08:08:11|136223123962091650;136223124162699930;1403019523711;136223123237117150|0\n;0.0"
+
+2014-06-16: Patricio Merino
+- ICT-3121: Large numbers such as "-46454067206373245000000" appears in the file in misleading integer-like format, now should be written as doubles, e.g. "-4.6454067206373245E22".
+
+v.1.2.8.2 (Patricio Merino) 2014-06-15
+======================================
+
+2014-06-15: Patricio Merino
+- Adding more logs
+
+v.1.2.8.1 (Patricio Merino) 2014-06-14
+======================================
+
+2014-06-14: Patricio Merino
+- Fixing error log Out of sequence
+
+v.1.2.8 (Patricio Merino) 2014-06-11
+====================================
+
+2014-06-11: Patricio Merino
+- ICT-3121: Removing truncated values
+            Visible truncation issues were resolved adding "E" notation to the values with the last character "-".
+            If in a timestamps some columns is not present for multi-valued or can not be converted to number, it will be discarted.
+            Files with wrong-timestamps will be discarded.
+            Now we are switching between the ACS startTime (default) and the current time, because in some times of previous versions we received a wrong "1696" "1582" year in the ACS startTime (AIV-13974).
+
+v.1.2.7 (Patricio Merino) 2014-04-19
+====================================
+
+2014-04-17: Patricio Merino
+- ICT-2854: Removing filter for "LA" components
+- Roll back of TMCDumper, TMCEventProducer, TMCJedisDumper, TMCJedisPublisher, TMCTimeConverter and TMCTTEventConsumer (from v.1.2.6)
+
+2014-02-09: Patricio Merino
+- Improvement of MoveLastOldData
+
+2014-02-22: Patricio Merino
+- TMCDumper: Bug fixed
+   NumberFormatException: For input string: ""
+   at archive.tmcdb.monitoring.TMCOffline.TMCDumper.getDataListAsString(TMCDumper.java:326)
+
+2013-12-09: Patricio Merino
+- TMCTimeConverter: Performance tunning of transformations
+- TMCJedisPublisher: Adding more logs to java.lang.OutOfMemoryError.
+- TMCDumper: Fixing "Is other day. The writerStats will be reseted".
+
+v.1.2.6 (Patricio Merino) 2013-12-01
+====================================
+
+2013-12-01: Patricio Merino
+- Fixing bug of isOtherDay.
+  The writerStats was reseted many times.
+
+v.1.2.5 (Patricio Merino) 2013-12-01
+====================================
+
+2013-12-01: Patricio Merino
+- Adding a new parameter to the TMCEventProducer constructor.
+  For see from where the "The limit was exceeded" is logged.
+  Because, Mongo and Archiver are using the same class TMCEventProducer and it is logging in the same file tmcoffline.log 
+
+v.1.2.4 (Patricio Merino) 2013-11-28
+====================================
+
+2013-11-28: Patricio Merino
+- Debugging of is other day function. For see when it is executed.
+
+v.1.2.3 (Patricio Merino) 2013-11-27
+====================================
+
+2013-11-27: Patricio Merino
+- Debugging of isLimit function
+
+v.1.2.2 (Patricio Merino) 2013-11-26
+====================================
+
+2013-11-26: Patricio Merino
+- Default initialization of startupDate for all the application classes.
+- Fixing the stats of Writer. Now are per day.
+- Increase the log level from INFO to ERROR when "Removing messages from the queue. The limit was exceeded."
+- More information of message "Removing messages from the queue".
+
+v.1.2.1 (Patricio Merino) 2013-11-12
+====================================
+
+2013-11-12: Patricio Merino
+- Fine tunning of configuration file and parameters of JVM
+
+2013-11-11: Patricio Merino
+- Refactoring of TMCTTEventConsumer
+  - Removing unused imports
+- Refactoring of TMCTTArchiverImpl
+  - Removing unused imports
+- Refactoring of TMCTTAbstractArchiver
+  - Removing unused imports
+- Refactoring of TMCJedisPublisher
+  - Removing unused imports
+- Refactoring of TMCDumper
+  - Removing unused imports
+- Refactoring of TMCTTEventConsumer:
+  - Some methods were removed
+  - Replacing the clob
+- Fine tunning of the size of the stack per thread (Xss parameter)
+- Adding the clob to logs of "Error parsing the time" problem.
+
+v.1.2.0 (Patricio Merino) 2013-11-02
+====================================
+
+2013-11-02: Patricio Merino
+- ltrim was moved
+- Change of JMX stats. Now, the stats are per day
+- Improvement of identation
+- Improvement of memory
+  MaxPermSize was incremented since 256m to 2000m
+- Improvement of number of threads
+  max_total_threads from 100.000 to 1.000
+
+v.1.1.15 (Patricio Merino)
+=========================
+
+2013-10-20: Patricio Merino
+- Reducing the level log for message: "Error parsing the value"
+- The total max thread was increased from 100 to 100.000
+
+v.1.1.14 (Patricio Merino)
+=========================
+
+2013-10-19: Patricio Merino
+- Adding new method to the Utility class
+
+v.1.1.13 (Patricio Merino)
+=========================
+
+2013-08-11: Patricio Merino
+- The check frequency validation was disabled, because it is too slow
+
+v.1.1.12 (Patricio Merino)
+=========================
+
+2013-08-09: Patricio Merino
+- Improvement of logs
+
+v.1.1.11 (Patricio Merino)
+=========================
+
+2013-06-26: Patricio Merino
+- Fixing the following problem
+  ERROR TMCOffline.TMCTTEventConsumer - Error of index of bound when parse the time
+  ERROR TMCOffline.TMCTTEventConsumer - (i-1)=-1 temp.length=3
+  ERROR TMCOffline.TMCTTEventConsumer - java.lang.ArrayIndexOutOfBoundsException: -1
+- Improvement of logs for see when a gap appears.
+
+v.1.1.10 (Patricio Merino)
+=========================
+
+2013-06-29: Patricio Merino
+- Fixing boundary problem
+
+v.1.1.9 (Patricio Merino)
+=========================
+
+2013-06-28: Patricio Merino
+- AIV-13974: Fixing problem of old dates
+
+v.1.1.8 (Patricio Merino)
+=========================
+
+2013-06-27: Patricio Merino
+- Improvement of try-catch Jedis
+
+v.1.1.7 (Patricio Merino)
+=========================
+
+2013-06-24: Patricio Merino
+- News bash process were added
+- Removing the while true loop from TMCTTAbstractArchiver
+- Exit of the program when the Redis connection is refused
+- Improvements of build.xml
+- Cleaning properties
+- Cleaning constants
+- Loading properties in the startup
+- Adding some extra logs for strange cases
+- Adding some news null pointer protections to TMCJedisPublisher
+- Time less than 135762911990000000 '2012-12-31T23:59:59' is discarded. In the input (TMCEventConsumer) and in the output (TMCDumper)
+- The MONITOR_POINT_NAME constant was removed.
+
+v.1.1.6 (Patricio Merino)
+=========================
+
+2013-06-13: Patricio Merino
+- Improvement of tests. New tests were added.
+
+v.1.1.5 (Patricio Merino)
+=========================
+
+2013-06-01: Patricio Merino
+- Reduction of logs multiples values
+- Reduction of logs of the bash process
+
+v.1.1.4 (Patricio Merino)
+=========================
+
+2013-06-01: Patricio Merino
+- Printing the stack trace of the exception
+- Improvement of logs for exceptions
+
+v.1.1.3 (Patricio Merino)
+=========================
+
+2013-05-31: Patricio Merino
+- More protections for uncontrolled exception ArrayIndexOutOfBoundsException
+
+v.1.1.2 (Patricio Merino)
+=========================
+
+2013-05-30: Patricio Merino
+- Protections for uncontrolled exception
+
+v.1.1.1 (Patricio Merino)
+=========================
+
+2013-02-07: Patricio Merino
+- COMP-9276: Old dates on text files for Mount component
+- Protection for Redis connection
+
+v.1.1.0 (Patricio Merino)
+=========================
+
+2013-02-04: Patricio Merino
+- Fixing problem 1582 folder problem
+
+v.1.0.5 (Patricio Merino)
+=========================
+
+2013-02-19: Patricio Merino
+- Final implementation of JMX with JMXAgent
+
+v.1.0.4 (Patricio Merino)
+=========================
+
+2013-02-08: Patricio Merino
+- Enhancements of JMX
+- JMXAgent was added
+
+v.1.0.3 (Patricio Merino)
+=========================
+
+2013-02-07: Patricio Merino
+- Adding more logs in debug for the message listener
+
+v.1.0.2 (Patricio Merino)
+=========================
+
+2013-01-24: Patricio Merino
+- Desacoupling interface and implementation
+- Enhancements of stats
+
+v.1.0.1 (Patricio Merino)
+=========================
+
+2013-01-21: Patricio Merino
+- Identing sources
+- Adding total max thread protection
+
+v.1.0.0 (Patricio Merino)
+=========================
+
+2013-01-08: Patricio Merino
+- Adding stats for flush data queue
+- Changing the structure of directories
+
+v.0.0.19 (Patricio Merino)
+=========================
+
+2012-12-30: Patricio Merino
+- Adding new operation to JMX
+
+v.0.0.18 (Patricio Merino)
+=========================
+
+2012-12-26: Patricio Merino
+- Fixing problem with AOSTiming monitor points
+
+v.0.0.17 (Patricio Merino)
+=========================
+
+2012-12-14: Patricio Merino
+- Add cleaner of data on the start
+- Add flushQueueData method on JMX
+- Now, in the boundary condition of the queue size, all queue size is cleaned
+
+v.0.0.16 (Patricio Merino)
+=========================
+
+2012-12-12: Patricio Merino
+- Adding boundary condition of the queue size
+
+v.0.0.15 (Patricio Merino)
+=========================
+
+2012-12-10: Patricio Merino
+- Removing the property name of the redis structure
+- Removing the property name of the file name
+
+v.0.0.14 (Patricio Merino)
+=========================
+
+2012-12-02: Patricio Merino
+- Fixing the clob size stats
+- Catch for parse-catch
+
+v.0.0.13 (Patricio Merino)
+=========================
+
+2012-12-02: Patricio Merino
+- Adding enabled is very old param
+
+v.0.0.12 (Patricio Merino)
+=========================
+
+2012-11-19: Patricio Merino
+- Bug fix: Tunning the cpu% use
+
+v.0.0.11 (Patricio Merino)
+=========================
+
+2012-11-18: Patricio Merino
+- Bug fix: Tunning the date limit in the generated text files
+
+v.0.0.10 (Patricio Merino)
+=========================
+
+2012-11-17: Patricio Merino
+- Bug fix: Date limit in the generated text files
+
+v.0.0.9 (Patricio Merino)
+=========================
+
+2012-11-29: Patricio Merino
+- Move method registerBean to impl class
+
+2012-11-05: Patricio Merino
+- Refactor of properties
+
+2012-11-04: Patricio Merino
+- More refactor of consumers
+- Enhancements of logs
+
+2012-11-03: Patricio Merino
+- Optimization of refactor of consumers
+
+2012-10-02: Patricio Merino
+- Refactor of consumers
+
+v.0.0.8 (Patricio Merino)
+=========================
+
+2012-10-29: Patricio Merino
+- Bug Fix: Double slash
+- Bug Fix: Data with different date in file of others date
+
+v.0.0.7 (Patricio Merino)
+=========================
+
+2012-10-20: Patricio Merino
+ - Compile one time and run in any environment
+
+v.0.0.6 (Patricio Merino)
+=========================
+
+2012-10-20: Patricio Merino
+ - Enhancements of configuration
+ - New lines with \r
+
+v.0.0.5 (Patricio Merino)
+=========================
+
+2012-10-19: Patricio Merino
+ - Uncouple of stats
+ - Remove garbage classes
+
+2012-10-14: Tzu-Chiang
+ - Improvements of logic (More details in Kanban card: Review of TMCTTArchiver)
+
+v.0.0.4 (Patricio Merino)
+=========================
+
+2012-10-17: Patricio Merino
+ - Improvements, enhancements and bug fixing
+
+2012-10-15: Patricio Merino
+ - Improvements of source
+
+v.0.0.3 (Patricio Merino)
+=========================
+
+2012-10-07: Patricio Merino
+ - Improvements of performance
+ - Improvements of configuration
+
+v.0.0.2 (Patricio Merino)
+========================
+
+2012-10-07: Patricio Merino
+ - Fix of date format
+
+v.0.0.1 (Patricio Merino)
+========================
+
+2012-10-06: Patricio Merino
+ - Fix of stats
+ - Enhancements of design

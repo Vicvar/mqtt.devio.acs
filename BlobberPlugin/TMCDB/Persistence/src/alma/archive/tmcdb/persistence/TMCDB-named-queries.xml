@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+
+	<package>alma.acs.tmcdb</package>
+
+	<!-- CONFIGURATION queries -->
+	<named-query name="findConfigurationByName">
+		<query>SELECT c FROM Configuration c WHERE c.configurationName = :configurationName</query>
+	</named-query>
+
+	<!-- HWCONFIGURATION queries -->
+	<named-query name="findHwConfBySwConfigId">
+		<query>SELECT c FROM HWConfiguration c WHERE c.configuration.configurationId= :swConfigurationId</query>
+	</named-query>
+
+	<!-- COMPONENTTYPE queries -->
+	<named-query name="findComponentTypeBylikeIDL">
+		<query>SELECT ct FROM ComponentType ct WHERE ct.IDL like :IDL</query>
+	</named-query>
+
+	<!-- COMPONENT queries -->
+	<named-query name="findAllComponentsByConfigurationId">
+		<query>SELECT c FROM Component c WHERE c.configuration.configurationId=:configurationId</query>
+	</named-query>
+	<named-query name="findComponentByComponentName">
+		<query>SELECT c FROM Component c WHERE c.componentName =:componentName AND c.path =:path AND c.configuration.configurationId=:configurationId</query>
+	</named-query>
+
+	<!-- BACIPROPERTY queries -->
+	<named-query name="findBACIPropertyIdByPropertyNameANDComponentId">
+		<query>SELECT b FROM BACIProperty b WHERE b.component.componentId =:componentId AND b.propertyName=:propertyName</query>
+	</named-query>
+
+	<!-- ASSEMBLYTYPE queries -->
+	<named-query name="findAssemblyTypeByLikeAssemblyCode">
+		<query>SELECT c FROM AssemblyType c WHERE c.assemblyTypeName like :assemblyTypeName</query>
+	</named-query>
+
+	<!-- ASSEMBLY queries -->
+	<named-query name="findAssemblyByAssemblyIdAndConfigurationId">
+		<query>SELECT a FROM Assembly a WHERE a.assemblyId = :assemblyId AND a.HWConfiguration.configurationId= :hwConfigurationId</query>
+	</named-query>
+	<named-query name="findAssemblyBySerialNumberAndConfigurationId">
+		<query>SELECT a FROM Assembly a WHERE UPPER(a.serialNumber) = :serialNumber AND a.HWConfiguration.configurationId= :hwConfigurationId</query>
+	</named-query>
+
+	<!-- DEFAULTCOMPONENT queries -->
+	<named-query name="findDefaultComponentByLikeAssemblyTypeName">
+		<query>SELECT c FROM DefaultComponent c WHERE c.assemblyType.assemblyTypeName like :assemblyTypeName</query>
+	</named-query>
+
+	<!-- DEFAULTBACIPROPERTY queries -->
+	<named-query name="findDefaultBACIPropertyByDefaultComponentId">
+		<query>SELECT b FROM DefaultBaciProperty b WHERE b.defaultComponent.defaultComponentId =:defaultComponentId AND b.propertyName =:propertyName</query>
+	</named-query>
+
+	<!-- DEFAULTMONITORPOINT queries -->
+	<named-query name="findDefaultMonitorPointListByDefaultBACIPropId">
+		<query>SELECT m FROM DefaultMonitorPoint m WHERE m.defaultBaciProperty.defaultBaciPropId = :defaultBaciPropId AND m.indice =:indice</query>
+	</named-query>
+
+	<!-- MONITORPOINT queries -->
+	<named-query name="findDatatypeGivenMonitorPointId">
+		<query>SELECT m.dataType FROM MonitorPoint m WHERE m.monitorPointId= :monitorPointId</query>
+	</named-query>
+	<named-query name="findMonitorPointIdByAssemblyIdANDBACIPropertyId">
+		<query>SELECT m FROM MonitorPoint m WHERE m.assembly.assemblyId = :assemblyId AND m.BACIProperty.BACIPropertyId = :BACIPropertyId</query>
+	</named-query>
+	<named-query name="findMonitorPointIdByAssemblyIdANDBACIPropertyIdANDIndex">
+		<query>SELECT m FROM MonitorPoint m WHERE m.assembly.assemblyId = :assemblyId AND m.BACIProperty.BACIPropertyId = :BACIPropertyId AND m.indice= :indice</query>
+	</named-query>
+	<named-query name="findMonitorPointNameGivenMonitorPointId">
+		<query>SELECT m.monitorPointName FROM MonitorPoint m WHERE m.monitorPointId= :monitorPointId</query>
+	</named-query>
+
+	<!-- MONITORDATA queries -->
+	<named-query name="findMonitorDataByMonitorPointIdAndTimestampRange">
+		<query><![CDATA[SELECT m FROM MonitorData m WHERE m.monitorPoint.monitorPointId =:monitorPointId AND m.id.monitorTS> :startTimestamp AND m.id.monitorTS< :stopTimestamp]]></query>
+	</named-query>
+	<named-query name="getMaxRowResultsMonitorData">
+		<query><![CDATA[SELECT COUNT(m) FROM MonitorData m WHERE m.monitorPoint.monitorPointId =:monitorPointId AND m.id.monitorTS> :startTimestamp AND m.id.monitorTS< :stopTimestamp]]></query>
+	</named-query>
+	<named-query name="getMaxSampleResultsMonitorData">
+		<query><![CDATA[SELECT SUM(m.sampleSize) FROM MonitorData m WHERE m.monitorPoint.monitorPointId =:monitorPointId AND m.id.monitorTS> :startTimestamp AND m.id.monitorTS< :stopTimestamp]]></query>
+	</named-query>
+
+</entity-mappings>

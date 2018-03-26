@@ -9,15 +9,20 @@
   <xs:import namespace="urn:schemas-cosylab-com:BACI:1.0" schemaLocation="BACI.xsd"/>
   <xs:complexType name="SensorTagT">
     <xs:complexContent>
+
     <xs:extension base="baci:CharacteristicComponent">
     <xs:sequence>
       <xs:element name="temperature" type="baci:ROdouble"/>
       <xs:element name="light" type="baci:ROdouble"/>
       <xs:element name="humidity" type="baci:ROdouble"/>
+
     </xs:sequence>
+	<xs:attribute name="broker" type="xs:string" use="required" />
+	<xs:attribute name="client_id" type="xs:string" use="required" />
     </xs:extension>
   </xs:complexContent>
   </xs:complexType>
+
   <xs:element name="SensorTag" type="SensorTagT"/>
 </xs:schema>
 

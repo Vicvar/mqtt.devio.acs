@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+    <!-- Properties for beans -->
+    <bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="file:${CONFIG_ARCHIVER_FILE}" />
+    </bean>
+
+    <!-- Properties for the application -->
+    <bean id="tmcProperties" class="archive.tmcdb.monitoring.TMCOffline.TMCProperties">
+        <constructor-arg value="CONFIG_ARCHIVER_FILE" />
+    </bean>
+
+    <!-- The writer stats -->
+    <bean id="writerStats" class="archive.tmcdb.monitoring.TMCStats.TMCProducerStatsImpl">
+        <constructor-arg value="WriterThroughput" />
+    </bean>
+
+    <!-- The disk write time stat -->
+    <bean id="diskWriteTime" class="archive.tmcdb.monitoring.TMCStats.TMCTimeStatisticImpl">
+        <constructor-arg value="DiskWriteTime" />
+    </bean>
+
+    <!-- The Jedis dumper -->
+    <bean id="tmcJedisDumper" class="archive.tmcdb.monitoring.TMCOffline.TMCJedisDumper">
+        <constructor-arg index="0" ref="tmcProperties"/>
+        <property name="writerStats" ref="writerStats"/>
+        <property name="diskWriteTime" ref="diskWriteTime"/>
+        <property name="startupDate" value="${startupDate}"/>		
+    </bean>
+
+    <!-- Factory of ActiveMQ -->
+    <bean id="factory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <constructor-arg value="${broker_url}" />
+    </bean>
+
+    <!-- Data Queue -->
+    <bean id="dataQueue" class="java.util.concurrent.LinkedBlockingQueue">
+        <constructor-arg value="${max_data_queue}" />
+    </bean>
+
+    <!-- The producer stats -->
+    <bean id="producerStats" class="archive.tmcdb.monitoring.TMCStats.TMCProducerStatsImpl">
+        <constructor-arg value="ProducerStats" />
+    </bean>
+
+    <!-- The drop stats -->
+    <bean id="dropStats" class="archive.tmcdb.monitoring.TMCStats.TMCProducerStatsImpl">
+        <constructor-arg value="DropStats" />
+    </bean>
+
+    <!-- The flush stats -->
+    <bean id="flushStats" class="archive.tmcdb.monitoring.TMCStats.TMCProducerStatsImpl">
+        <constructor-arg value="FlushStats" />
+    </bean>
+
+    <!-- The event producer -->
+    <bean id="tmcEventProducer" class="archive.tmcdb.monitoring.TMCOffline.TMCEventProducer">
+        <constructor-arg index="0" value="${application_name}"/>
+        <property name="antennaType" value="${antenna_type}"/>
+        <property name="dataQueue" ref="dataQueue"/>
+        <property name="producerStats" ref="producerStats"/>
+        <property name="dropStats" ref="dropStats"/>
+        <property name="flushStats" ref="flushStats"/>
+        <property name="boundaryDataQueue" value="${boundary_data_queue}"/>
+        <property name="maxDataQueue" value="${max_data_queue}"/>
+        <property name="startupDate" value="${startupDate}"/>
+    </bean>
+
+    <!-- The monitor point name resolver -->
+    <bean id="mpResolver" class="alma.tmcdb.utils.MonitorPointNameResolver"/>
+
+    <!-- The unresolved monitor points -->
+    <bean id="unresolvedMonitorPoints" class="java.util.Hashtable"/>
+
+    <!-- The Jedis publisher -->
+    <bean id="jedisPublisher" class="archive.tmcdb.monitoring.TMCOffline.TMCJedisPublisher">
+        <constructor-arg index="0" ref="tmcProperties"/>
+        <property name="writerStats" ref="writerStats"/>
+        <property name="diskWriteTime" ref="diskWriteTime"/>
+        <property name="startupDate" value="${startupDate}"/>
+    </bean>
+
+    <!-- The clob process time stat -->
+    <bean id="clobProcessTime" class="archive.tmcdb.monitoring.TMCStats.TMCTimeStatisticImpl">
+        <constructor-arg value="ClobProcessTime" />
+    </bean>
+
+    <!-- The clob size stat -->
+    <bean id="clobSize" class="archive.tmcdb.monitoring.TMCStats.TMCSizeStatsImpl">
+        <constructor-arg value="ClobSize" />
+    </bean>
+
+    <!-- The consumer stats -->
+    <bean id="consumerStats" class="archive.tmcdb.monitoring.TMCStats.TMCProducerStatsImpl">
+        <constructor-arg value="ConsumerStats" />
+    </bean>
+
+    <!-- The stat list -->
+    <util:map id="statsList" map-class="java.util.Hashtable">
+        <entry key="ClobProcessTime" value-ref="clobProcessTime"/>
+        <entry key="ClobSize" value-ref="clobSize"/>
+        <entry key="DiskWriteTime" value-ref="diskWriteTime"/>
+        <entry key="ConsumerStats" value-ref="consumerStats"/>
+    </util:map>
+
+    <!-- The event consumer -->
+    <bean id="tmcEventConsumer" class="archive.tmcdb.monitoring.TMCOffline.TMCTTEventConsumer">
+        <constructor-arg index="0" ref="tmcProperties"/>
+        <property name="dataQueue" ref="dataQueue"/>
+        <property name="mpResolver" ref="mpResolver"/>
+        <property name="unresolvedMonitorPoints" ref="unresolvedMonitorPoints"/>
+        <property name="jedisPublisher" ref="jedisPublisher"/>
+        <property name="statsList" ref="statsList"/>
+        <property name="startupDate" value="${startupDate}"/>
+    </bean>
+
+    <!-- The event consumer list -->
+    <util:map id="tmcEventConsumerList" map-class="java.util.Hashtable">
+        <entry key="Consumer-01" value-ref="tmcEventConsumer"/>
+    </util:map>
+
+    <!-- The TMC JMX agent -->
+    <bean id="tmcJmxAgent" class="archive.tmcdb.monitoring.TMCAgent.TMCJMXAgent"/>
+
+    <!-- The principal bean -->
+    <bean id="tmcttArchiver" class="archive.tmcdb.monitoring.TMCOffline.TMCTTArchiverImpl">
+        <constructor-arg index="0" ref="tmcProperties"/>
+        <property name="factory" ref="factory"/>
+        <property name="dataQueue" ref="dataQueue"/>
+        <property name="mpResolver" ref="mpResolver"/>
+        <property name="unresolvedMonitorPoints" ref="unresolvedMonitorPoints"/>
+        <property name="tmcEventProducer" ref="tmcEventProducer"/>
+        <property name="tmcEventConsumerList" ref="tmcEventConsumerList"/>
+        <property name="tmcJmxAgent" ref="tmcJmxAgent"/>
+    </bean>
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!-- Properties for the application -->
+    <bean id="tmcProperties" class="archive.tmcdb.monitoring.TMCOffline.TMCProperties">
+        <constructor-arg value="CONFIG_ARCHIVER_FILE" />
+    </bean>
+
+    <!-- The writer stats -->
+    <bean id="writerStats" class="archive.tmcdb.monitoring.TMCStats.TMCProducerStatsImpl">
+        <constructor-arg value="WriterThroughput" />
+    </bean>
+
+    <!-- The disk write time stat -->
+    <bean id="diskWriteTime" class="archive.tmcdb.monitoring.TMCStats.TMCTimeStatisticImpl">
+        <constructor-arg value="DiskWriteTime" />
+    </bean>
+
+    <!-- The Jedis dumper -->
+    <bean id="tmcJedisDumper" class="archive.tmcdb.monitoring.TMCOffline.TMCJedisDumper">
+        <constructor-arg index="0" ref="tmcProperties"/>
+        <property name="writerStats" ref="writerStats"/>
+        <property name="diskWriteTime" ref="diskWriteTime"/>
+    </bean>
+
+    <!-- The principal bean -->
+    <bean id="tmcttArchiver" class="archive.tmcdb.monitoring.TMCOffline.TMCTTArchiverImpl">
+        <constructor-arg index="0" ref="tmcProperties"/>
+    </bean>
+</beans>

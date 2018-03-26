@@ -1,0 +1,63 @@
+<project name="TMCStats" basedir="." default="compile">
+    <property environment="env"/>
+    <property name="build.dir" value="build"/>
+    <property name="install.dir" value="${env.INTROOT}"/>
+	<property name="lib.dir" value="${env.INTROOT}/lib"/>
+	<property name="resources.dir" value="${build.dir}/classes/archive/tmcdb/monitoring/TMCStats"/>
+	<property name="thirparties.dir" value="../../MonitoringAccessSystem/thirparties"/>
+	<property name="lib2.dir" value="lib"/>
+	
+    <path id="classpath">
+        <fileset dir="${lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.dir}/classes"/>
+
+        <!--First let's compile the classes-->
+        <javac debug="on" 
+               fork="true"
+               destdir="${build.dir}/classes" 
+               srcdir="${basedir}/src"
+               classpathref="classpath">
+        </javac>
+		
+		<copy todir="${build.dir}/classes">
+			<fileset dir="${basedir}/src" includes="**/*.xml"/>
+		</copy>
+
+        <jar destfile="${build.dir}/TMCStats.jar" basedir="${build.dir}/classes"/>
+	</target>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+	<delete dir="${lib2.dir}"/>
+    </target>
+
+    <target name="install">
+		<!-- Coping dependencies of jar -->
+        <copy toDir="${lib.dir}" failonerror="true">
+			<fileset dir="${thirparties.dir}">
+				<include name="**/log4j-1.2.17.jar"/>
+				<include name="**/junit-4.10.jar"/>
+			</fileset>
+		</copy>
+
+		<!-- Coping jar of the application -->
+        <copy toDir="${lib.dir}" failonerror="true">
+			<fileset dir="${basedir}/build">
+				<include name="**/TMCStats.jar"/>
+			</fileset>
+		</copy>
+
+		<!-- Coping jar of the application -->
+		<copy toDir="${lib2.dir}" failonerror="true">
+			<fileset dir="${basedir}/build">
+				<include name="**/TMCStats.jar"/>
+			</fileset>
+		</copy>
+    </target>
+</project>

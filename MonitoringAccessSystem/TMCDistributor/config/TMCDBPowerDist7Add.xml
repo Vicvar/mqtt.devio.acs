@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<lru-type>
+    <name>PowerDist7</name>
+    <fullname>Power Distribution 7 in the Front-End</fullname>
+    <icd>ALMA-40.00.00.00-75.35.25.00-B-ICD</icd>
+    <icd-date>4688928000000000000</icd-date>
+    <description>Control and monitor a genericpower distribution assembly in the Front-End.</description>
+    <assembly-type>
+        <name>PowerDist7</name>
+        <dev-name>Power Distribution 7 in the Front-End</dev-name>
+        <description>Control and monitor a genericpower distribution assembly in the Front-End.</description>
+        <default-role>
+            <node>0x13</node>
+            <base-address>0x060</base-address>
+            <channel>1</channel>
+        </default-role>
+
+    </assembly-type>
+</lru-type>

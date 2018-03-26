@@ -1,0 +1,14 @@
+SOURCE TATEnvironment
+PROLOGUE prologue
+# first, we have to do the xmldb tests
+# InternalIFTest
+##NamespaceTest
+##SchemaManagerTest
+##CommonTest
+##DBCursorTest
+# VDocTest
+# The following test changes the config file, so that oracle is used:
+AllOracleTests
+# and then the DB2 tests
+# DB2test
+EPILOGUE epilogue

@@ -1,0 +1,89 @@
+/*
+ *    ALMA - Atacama Large Millimiter Array
+ *    (c) European Southern Observatory, 2002
+ *    Copyright by ESO (in the framework of the ALMA collaboration),
+ *    All rights reserved
+ *
+ *    This library is free software; you can redistribute it and/or
+ *    modify it under the terms of the GNU Lesser General Public
+ *    License as published by the Free Software Foundation; either
+ *    version 2.1 of the License, or (at your option) any later version.
+ *
+ *    This library is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ *    Lesser General Public License for more details.
+ *
+ *    You should have received a copy of the GNU Lesser General Public
+ *    License along with this library; if not, write to the Free Software
+ *    Foundation, Inc., 59 Temple Place, Suite 330, Boston, 
+ *    MA 02111-1307  USA
+ *
+ *    Created on Aug 29, 2003
+ *
+ */
+ 
+  
+// $Author: hmeuss $
+// $Date: 2012/02/27 16:25:26 $
+// $Log: NotImplementedException.java,v $
+// Revision 1.1  2012/02/27 16:25:26  hmeuss
+// added NotImplemented exception
+//
+// Revision 1.4  2003/12/01 12:20:04  sfarrow
+// Removed dependance on ACS
+//
+// Revision 1.3  2003/10/30 15:13:15  sfarrow
+// moved all the exceptions across to use alma.*
+//
+// Revision 1.2  2003/10/20 08:46:20  hmeuss
+// Added constructors from superclass, in order to create exceptions with messages.
+//
+// Revision 1.1  2003/08/29 09:02:04  hmeuss
+// Java internal interface updated
+// 
+ 
+package alma.archive.exceptions.general;
+
+
+import alma.archive.exceptions.ArchiveGeneralException;
+
+/**
+ * @author hmeuss
+ *
+ */
+public class NotImplementedException extends ArchiveGeneralException {
+
+	/**
+	 * 
+	 */
+	public NotImplementedException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param message
+	 */
+	public NotImplementedException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param message
+	 * @param cause
+	 */
+	public NotImplementedException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param cause
+	 */
+	public NotImplementedException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+}

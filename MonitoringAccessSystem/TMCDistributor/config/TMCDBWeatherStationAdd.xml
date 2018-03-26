@@ -1,0 +1,523 @@
+<?xml version="1.0" ?>
+<lru-type>
+    <name>WeatherStation</name>
+    <fullname>Weather Station</fullname>
+    <icd>not yet</icd>
+    <icd-date>4754505600000000000</icd-date>
+    <description>Weather Station Device</description>
+    <assembly-type>
+        <name>WeatherStation</name>
+        <dev-name>Weather Station</dev-name>
+        <description>Weather Station Device</description>
+        <default-role>
+            <node>none</node>
+            <base-address>none</base-address>
+            <channel>none</channel>
+        </default-role>
+
+        <baci-property>
+            <propertyname>HUMIDITY</propertyname>
+            <description>Humidity, between 0 and 1</description>
+            <format>2.3f</format>
+            <units>per one</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>100</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>HUMIDITY</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>per one</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>0</minrange>
+                <maxrange>1</maxrange>
+                <description>Humidity, between 0 and 1</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>TEMPERATURE</propertyname>
+            <description>Temperature, in Celsius</description>
+            <format>2.3f</format>
+            <units>Celsius</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>-20</graph-min>
+            <graph-max>40</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>TEMPERATURE</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>Celsius</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>-20</minrange>
+                <maxrange>40</maxrange>
+                <description>Temperature, in Celsius</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>WINDDIRECTION</propertyname>
+            <description>Wind Direction, in radians</description>
+            <format>1.5f</format>
+            <units>radians</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>6.283185307179</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>WINDDIRECTION</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>radians</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>0</minrange>
+                <maxrange>6.283185307179</maxrange>
+                <description>Wind Direction, in radians</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>WINDSPEED</propertyname>
+            <description>Wind Speed, in m/s</description>
+            <format>2.3f</format>
+            <units>m/s</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>20</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>WINDSPEED</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>m/s</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>0</minrange>
+                <maxrange>20</maxrange>
+                <description>Wind Speed, in m/s</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>PRESSURE</propertyname>
+            <description>Pressure, in Pascals</description>
+            <format>2.3f</format>
+            <units>Pa</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>70000</graph-min>
+            <graph-max>80000</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>PRESSURE</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>Pa</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>70000</minrange>
+                <maxrange>80000</maxrange>
+                <description>Pressure, in Pascals</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>POSITION_X</propertyname>
+            <description>WS coordinate X</description>
+            <format>none</format>
+            <units>m</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>POSITION_X</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>m</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>-1E+100</minrange>
+                <maxrange>1E+100</maxrange>
+                <description>WS coordinate X</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>POSITION_Y</propertyname>
+            <description>WS coordinate Y</description>
+            <format>none</format>
+            <units>m</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>POSITION_Y</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>m</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>-1E+100</minrange>
+                <maxrange>1E+100</maxrange>
+                <description>WS coordinate Y</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>POSITION_Z</propertyname>
+            <description>WS coordinate Z</description>
+            <format>none</format>
+            <units>m</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>300</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>0</graph-min>
+            <graph-max>0</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>POSITION_Z</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>m</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>-1E+100</minrange>
+                <maxrange>1E+100</maxrange>
+                <description>WS coordinate Z</description>
+            </monitor-point>
+
+        </baci-property>
+
+        <baci-property>
+            <propertyname>DEWPOINT</propertyname>
+            <description>Dew point</description>
+            <format>2.3f</format>
+            <units>Celsius</units>
+            <resolution>0</resolution>
+            <archive-priority>3</archive-priority>
+            <archive-min-int>0</archive-min-int>
+            <archive-max-int>60</archive-max-int>
+            <default-timer-trig>1</default-timer-trig>
+            <min-timer-trig>0.048</min-timer-trig>
+            <initialize-devio>0</initialize-devio>
+            <min-delta-trig>0</min-delta-trig>
+            <default-value>0</default-value>
+            <graph-min>-20</graph-min>
+            <graph-max>40</graph-max>
+            <min-step>0</min-step>
+            <archive-delta>0</archive-delta>
+            <alarm-high-on>0</alarm-high-on>
+            <alarm-low-on>0</alarm-low-on>
+            <alarm-high-off>0</alarm-high-off>
+            <alarm-low-off>0</alarm-low-off>
+            <alarm-timer-trig>0</alarm-timer-trig>
+            <min-value>-2147483648</min-value>
+            <max-value>2147483647</max-value>
+            <bitdescription></bitdescription>
+            <whenset></whenset>
+            <whencleared></whencleared>
+            <statedescription></statedescription>
+            <condition></condition>
+            <alarm-on></alarm-on>
+            <alarm-off></alarm-off>
+            <data></data>
+            <alarm-fault-family>!</alarm-fault-family>
+            <alarm-fault-member>!</alarm-fault-member>
+            <alarm-level>0</alarm-level>
+            <archive-suppress>0</archive-suppress>
+            <archive-mechanism>monitor_collector</archive-mechanism>
+
+            <monitor-point>
+                <monitorpointname>DEWPOINT</monitorpointname>
+                <datatype>double</datatype>
+                <rca>0x0</rca>
+                <terelated>0</terelated>
+                <rawdatatype>double</rawdatatype>
+                <worlddatatype>double</worlddatatype>
+                <units>Celsius</units>
+                <scale>0</scale>
+                <offset>0</offset>
+                <minrange>-20</minrange>
+                <maxrange>40</maxrange>
+                <description>Dew point</description>
+            </monitor-point>
+
+        </baci-property>
+
+    </assembly-type>
+</lru-type>

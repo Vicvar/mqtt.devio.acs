@@ -1,0 +1,113 @@
+#!/bin/bash
+# TMC Text Archiver
+#
+# chkconfig: - 99 99
+# description: Read data from AMQ and store it on Text
+#
+# processname: archive.tmcdb.monitoring.TMCOffline.TMCTTArchiverClient
+
+### BEGIN INIT INFO
+# Provides: snmpd
+# Required-Start: $local_fs $network
+# Required-Stop: $local_fs $network
+# Should-Start: 
+# Should-Stop: 
+# Default-Start: 
+# Default-Stop: 
+# Short-Description: start and stop Net-SNMP daemon
+# Description: Simple Network Management Protocol (SNMP) Daemon
+### END INIT INFO
+
+# source function library
+. /etc/init.d/functions
+
+
+OPTIONS="-LS0-6d -Lf /dev/null -p /var/run/snmpd.pid"
+
+RETVAL=0
+prog="TMCTTArchiver"
+binary=archive.tmcdb.monitoring.TMCOffline.TMCTTArchiverClient
+
+start() {
+        if [ -f /opt/tmcs/TMCS/logs/MoveLastOldData.lock ]; then
+          echo "TMCTTArchiver can not be started, because MoveLastOldData bash is running. Try again when this will be finished"
+          RETVAL=1
+          failure
+        fi;
+
+        echo -n $"Starting $prog: "
+        if [ $UID -ne 0 ]; then
+                RETVAL=1
+                failure
+        else
+                daemon --user tmcs /opt/tmcs/TMCS/bin/TextArchiver.sh
+                RETVAL=$?
+                [ $RETVAL -eq 0 ] && touch /var/lock/subsys/TMCTTArchiver
+        fi;
+        echo 
+        return $RETVAL
+}
+
+stop() {
+        echo -n $"Stopping $prog: "
+        if [ $UID -ne 0 ]; then
+                RETVAL=1
+                failure
+        else
+                kill -TERM $(jps |grep TMCTTArchiverClient | awk '{print $1}' )
+                RETVAL=$?
+                [ $RETVAL -eq 0 ] && rm -f /var/lock/subsys/TMCTTArchiver
+        fi;
+        echo
+        return $RETVAL
+}
+
+reload(){
+        echo -n $"Reloading $prog: "
+        killproc -p $pidfile $binary -HUP
+        RETVAL=$?
+        echo
+        return $RETVAL
+}
+
+restart(){
+	stop
+	start
+}
+
+condrestart(){
+    [ -e /var/lock/subsys/snmpd ] && restart
+    return 0
+}
+
+case "$1" in
+  start)
+	start
+	RETVAL=$?
+	;;
+  stop)
+	stop
+	RETVAL=$?
+	;;
+  restart)
+	restart
+	RETVAL=$?
+        ;;
+  reload|force-reload)
+	reload
+	RETVAL=$?
+        ;;
+  condrestart|try-restart)
+	condrestart
+	RETVAL=$?
+	;;
+  status)
+        status TMCTTArchiver
+	RETVAL=$?
+        ;;
+  *)
+	echo $"Usage: $0 {start|stop|status|restart|condrestart|reload|force-reload}"
+	RETVAL=2
+esac
+
+exit $RETVAL

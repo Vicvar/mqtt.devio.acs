@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<project name="TMCDBPersistenceLayer" default="all" basedir=".">
+
+	<!--
+     Project: MonitoringArchiveFBT
+     Author: Pablo Burgos
+     Created: 11-Apr-2009
+
+     $Id: build.xml,v 1.4 2010/06/18 13:31:56 jschwarz Exp $
+-->
+
+
+	<!--xmlns:ac="antlib:net.sf.antcontrib"-->
+	<!-- Name of project and version -->
+	<property name="project.name" value="TMCDBPersistenceLayer" />
+	<property name="project.version" value="0.1" />
+	<description>
+		This build file covers the Persistence Layer for TMCDB Monitoring.
+	</description>
+
+
+	<!-- ACSROOT etc. taken from env variables unless given explicitly as an ANT property -->
+	<property environment="env" />
+	<!--<property name="ACSROOT" value="${env.ACSROOT}" />-->
+	<!--<property name="INTROOT" value="${env.INTROOT}" />-->
+	<property name="ANT_HOME" value="${env.ANT_HOME}" />
+	<property name="JACORB_HOME" value="${env.JACORB_HOME}" />
+	<!--<property name="acslib" value="${ACSROOT}/lib" />-->
+	<!--<property name="intlib" value="${INTROOT}/lib" />-->
+	<!-- Global properties for this build -->
+	<property name="src.java.dir" value="${basedir}/src/main/java" />
+	<property name="src.main.resources" value="${basedir}/resources" />
+	<property name="lib.dir" value="${basedir}/../lib" />
+	<property name="jaclib" value="${JACORB_HOME}/lib" />
+	<property name="target.dir" value="${basedir}/target" />
+	<property name="classes.dir" value="${target.dir}/classes" />
+	<property name="src.etc.dir" value="${basedir}/etc" />
+	<property name="src.main.resources.meta-inf.dir" value="${src.main.resources}/META-INF" />
+	<property name="src.main.resources.meta-inf.persistence.file" location="${src.main.resources.meta-inf.dir}/persistence.xml" />
+	<property name="src.main.resources.Log4J.dir" value="${src.main.resources}/Log4J" />
+	<property name="main.class" value="" />
+	<!--<property name="dist.jar" value="${target.dir}/TMCDBPersistence.jar"/>-->
+	<property name="manisfest.mf" value="${src.main.resources}/MANIFEST.MF" />
+	<!-- Test properties  -->
+	<property name="src.test.java.dir" value="${basedir}/src/test/java" />
+	<property name="test-classes.dir" value="${target.dir}/test-classes" />
+	<property name="test-resources.dir" value="${basedir}/resources" />
+	<property name="test-resources-sql.dir" value="${test-resources.dir}/SQL" />
+	<property name="test-resources-hsqldb.dir" value="${test-resources.dir}/hsqldb" />
+	<property name="test-resources-testng.dir" value="${test-resources.dir}/TestNG" />
+
+	<!-- jar related properties -->
+	<property name="project.name-ver" value="${project.name}-${project.version}" />
+	<!--<property name="target.name" value="${project.name-ver}.jar" />-->
+	<property name="target.name" value="${project.name}.jar" />
+	<property name="target.jar" location="${target.dir}/${target.name}" />
+	<!-- ACS enviroment variables handling-->
+	<condition property="ACSROOT" value="${env.ACSROOT}" else="Z:/alma/ACS-8.0/ACSSW/">
+		<isset property="env.ACSROOT" />
+	</condition>
+	<condition property="acslib" value="${env.ACSROOT}/lib" else="Z:/alma/ACS-8.0/ACSSW/">
+		<isset property="env.ACSROOT" />
+	</condition>
+	<condition property="INTROOT" value="${env.INTROOT}" else="${ACSROOT}">
+		<isset property="env.INTROOT" />
+	</condition>
+	<!-- Here I handle the situation when no INTROOT has been set or no INTLIST exists-->
+	<condition property="intlib" value="${INTROOT}/lib" else="${ACSROOT}/lib">
+		<isset property="env.INTROOT" />
+	</condition>
+
+	<condition property="INTLIST" value="${ACSROOT}/intlist" else="${ACSROOT}/lib">
+		<available property="intlist.present" file="${ACSROOT}/intlist" type="dir" />
+	</condition>
+
+	<!-- the dependency with ACS is something needed for using container logging services-->
+	<!-- Classpath declaration -->
+
+    <path id="project.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+            <exclude name="ControlGenHwDevice/lib/maciSchemaBindings.jar"/>
+        </fileset>
+        <fileset dir="${intlib}">
+            <include name="**/*.jar"/>
+            <exclude name="ControlGenHwDevice/lib/maciSchemaBindings.jar"/>
+        </fileset>
+        <fileset dir="${INTLIST}">
+            <include name="**/*.jar"/>
+            <exclude name="ControlGenHwDevice/lib/maciSchemaBindings.jar"/>
+        </fileset>
+        <fileset dir="${acslib}">
+            <include name="*.jar"/>
+            <exclude name="ControlGenHwDevice/lib/maciSchemaBindings.jar"/>
+        </fileset>
+        <fileset dir="${jaclib}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+	<!-- Useful shortcuts -->
+	<patternset id="meta.files">
+		<include name="**/*.xml" />
+		<include name="**/*.properties" />
+	</patternset>
+
+
+	<!-- Copy metadata to build classpath -->
+	<target name="copymetafiles">
+		<copy todir="${classes.dir}">
+			<fileset dir="${src.main.resources}">
+				<patternset refid="meta.files" />
+			</fileset>
+		</copy>
+		<!-- Copy configuration files from etc/ -->
+		<copy todir="${classes.dir}">
+			<fileset dir="${src.main.resources.Log4J.dir}">
+				<patternset refid="meta.files" />
+			</fileset>
+		</copy>
+
+		<copy todir="${test-classes.dir}">
+			<fileset dir="${src.main.resources}">
+				<patternset refid="meta.files" />
+			</fileset>
+		</copy>
+		<!-- Copy configuration files from etc/ -->
+		<copy todir="${test-classes.dir}">
+			<fileset dir="${src.main.resources.Log4J.dir}">
+				<patternset refid="meta.files" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- init file structure for a successful building -->
+    <target name="init" description="Creates all needed folders and files">
+		<mkdir dir="${target.dir}" />
+		<mkdir dir="${target.dir}" />
+		<mkdir dir="${classes.dir}" />
+		<mkdir dir="${test-classes.dir}" />
+		<mkdir dir="${test-resources-sql.dir}" />
+        <!-- TODO: now that the DDL scripts come from $ACSDATA instead of ../Database, please revisit their usage here.
+     For example, you may want to concatenate ./hsqldb/TMCDB_swconfigcore/CreateHsqldbTables.sql with the two other create table scripts -->
+<!--copy todir="${test-resources-sql.dir}">
+    <fileset dir="${env.ACSDATA}/config/DDL"/>
+</copy-->
+<!--concat of file create_sequece_patch.sql must be eliminated when the hsqld ddl code generated includes sequences -->
+		<concat destfile="${test-resources-sql.dir}/CreateHsqldbTables.sql">
+		    <fileset file="${env.ACSDATA}/config/DDL/hsqldb/TMCDB_swconfigcore/CreateHsqldbTables.sql"/>
+		    <fileset file="${env.ACSDATA}/config/DDL/hsqldb/TMCDB_hwconfigmonitoring/CreateHsqldbTables.sql"/>
+		    <fileset file="${basedir}/resources/hsqldb/create_sequence_patch.sql"/>
+		    <fileset file="${env.ACSDATA}/config/DDL/hsqldb/TMCDB_swconfigext/CreateHsqldbTables.sql"/>
+		</concat>
+		<concat destfile="${test-resources-sql.dir}/DropAllTables.sql">
+		    <fileset file="${env.ACSDATA}/config/DDL/hsqldb/TMCDB_swconfigext/DropAllTables.sql"/>
+		    <fileset file="${env.ACSDATA}/config/DDL/hsqldb/TMCDB_hwconfigmonitoring/DropAllTables.sql"/>
+		    <fileset file="${env.ACSDATA}/config/DDL/hsqldb/TMCDB_swconfigcore/DropAllTables.sql"/>
+		</concat>
+	</target>
+
+
+	<!-- This target is for start HSQLDB-->
+	<target name="startHSQLDB" description="Start HSQLDB on memory">
+		<java classname="org.hsqldb.server.Server" fork="yes" spawn="true">
+			<classpath>
+				<pathelement location="${env.ACSROOT}/lib/hsqldb.jar" />
+			</classpath>
+			<arg value="-database.0" />
+			<arg value="tmcdb" />
+			<arg value="-dbname.0" />
+			<arg value="tmcdb" />
+		</java>
+		<sleep seconds="5" />
+		<!--Sleep added to let hsqldb to startup ok-->
+	</target>
+
+	<!-- This target for stopping  HSQLDB -->
+	<target name="stopHSQLDB" description="Stops HSQLDB Server">
+		<java jar="${env.ACSROOT}/lib/sqltool.jar" fork="true" spawn="false" classpathref="project.classpath" failonerror="false">
+			<!-- Fail on error false since the HSQLDB could not be already started-->
+			<arg value="--rcFile" />
+			<arg value="${test-resources-hsqldb.dir}/sqltool.rc" />
+			<arg value="--sql" />
+			<arg value="SHUTDOWN;" />
+			<arg value="localhost-sa" />
+		</java>
+		<!-- Now clean-up all tmcdb tables created on basedir-->
+		<delete file="${basedir}/tmcdb.properties" />
+		<delete file="${basedir}/tmcdb.script" />
+	</target>
+	<!-- This target for killing  HSQLDB -->
+	<target name="killHSQLDB" description="stop HSQLDB Server">
+		<java jar="${env.ACSROOT}/lib/sqltool.jar" fork="true" spawn="false" classpathref="project.classpath" failonerror="false">
+			<!-- Fail on error false since the HSQLDB could not be already started-->
+			<arg value="--rcFile" />
+			<arg value="${test-resources-hsqldb.dir}/sqltool.rc" />
+			<arg value="--sql" />
+			<arg value="SHUTDOWN;" />
+			<arg value="localhost-sa" />
+		</java>
+		<!-- Now clean-up all tmcdb tables created on basedir-->
+		<delete file="${basedir}/tmcdb.properties" />
+		<delete file="${basedir}/tmcdb.script" />
+	</target>
+
+	<!-- This target is for starting HSQLDB Manager using on memory database -->
+	<target name="dbmanager" description="Start HSQLDB Manager">
+		<java classname="org.hsqldb.util.DatabaseManagerSwing" fork="yes" spawn="true" classpathref="project.classpath">
+			<arg value="-url" />
+			<arg value="jdbc:hsqldb:hsql://localhost/tmcdb" />
+			<arg value="-driver" />
+			<arg value="org.hsqldb.jdbc.JDBCDriver" />
+		</java>
+	</target>
+
+	<!-- This target allows for DDL db instance creation on  HSQLDB -->
+	<target name="createHSQLDBTables" description="Execute schema scripts against HSQLDB database">
+		<java jar="${env.ACSROOT}/lib/sqltool.jar" fork="yes" classpathref="project.classpath" failonerror="true">
+			<arg value="--rcFile" />
+			<arg value="${test-resources-hsqldb.dir}/sqltool.rc" />
+			<arg value="localhost-sa" />
+			<arg value="${test-resources-sql.dir}/CreateHsqldbTables.sql" />
+
+		</java>
+	</target>
+
+	<!-- This target allows for DDL db schema dropp on  HSQLDB -->
+	<target name="dropHSQLDBTables" description="drop all TMCDB tables on HSQLDB database">
+		<java jar="${env.ACSROOT}/lib/sqltool.jar" fork="yes" classpathref="project.classpath" failonerror="false">
+			<arg value="--rcFile" />
+			<arg value="${test-resources-hsqldb.dir}/sqltool.rc" />
+			<arg value="localhost-sa" />
+			<arg value="${test-resources-sql.dir}/DropAllTables.sql" />
+
+		</java>
+	</target>
+
+
+	<!-- testng ant task definitions -->
+	<taskdef name="testng" classpathref="project.classpath" classname="org.testng.TestNGAntTask" />
+
+	<target name="testPersistence2Database">
+
+		<testng groups="persistence2database" testJar="${basedir}/../lib/TMCDBPersistenceLayerTest.jar">
+			<env key="JAVA_HOME" value="${user.home}/JDK" />
+			<sysproperty key="basedir" value="${basedir}" />
+			<sysproperty key="archive.configFile" value="dbConfig.properties" />
+			<sysproperty key="sqlfile" value="${basedir}/src/test/resources/SQL/CreateHsqldbTables.sql" />
+
+			<classpath>
+				<path refid="project.classpath" />
+				<pathelement location="${test-classes.dir}" />
+				<pathelement location="${basedir}/../lib/TMCDBPersistenceLayerTest.jar" />
+				<pathelement location="${env.JACORB_HOME}/lib/jacorb.jar"/>
+			</classpath>
+
+			<!-- <classfileset dir="${test-classes.dir}" includes="**/*.class" />  -->
+			<xmlfileset dir="${test-resources-testng.dir}" includes="testng.xml"/>
+
+		</testng>
+	</target>
+
+ <target name="test" depends="killHSQLDB, startHSQLDB, createHSQLDBTables,copymetafiles, testPersistence2Database, stopHSQLDB" description="Test Everything">
+	</target>
+
+	<!-- Run HelloWorld
+<target name="run" depends="compile, copymetafiles"
+description="Build and run HelloWorld">
+<java fork="true"
+classname="alma.archive.tmcdb.TMCDBOwlDaemon.TMCDBOwlDaemon"
+classpathref="project.classpath">
+<classpath path="${target.dir}"/>
+</java>
+</target> -->
+
+
+	<!-- all: Builds and test everything. Creates the distribution too -->
+	<target name="all" depends="test">
+		<echo> In ${basedir} </echo>
+	</target>
+	<!-- noop: special target added to test whole build process -->
+	<target name="noop">
+		<echo> In ${basedir} </echo>
+	</target>
+
+	<!-- Next target install all to INTROOT if defined. If not look for $ACSROOT-->
+
+	<target name="install" description="Install all distributables to $INTROOT, if it's defined. If not, install it to ACSROOT">
+		<if>
+			<not>
+				<equals arg1="${INTROOT}" arg2="" />
+			</not>
+			<then>
+				<echo message="Installing files to ${INTROOT} " />
+			</then>
+			<else>
+				<echo message="The value of property foo is not bar" />
+			</else>
+		</if>
+
+
+	</target>
+
+</project>
+
+
+

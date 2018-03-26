@@ -2,14 +2,40 @@
 #include "mqtt_devio.h"
 
 sensortag_impl::sensortag_impl(
-                const ACE_CString name,
+                const ACE_CString name, 
                 maci::ContainerServices *containerServices) :
         CharacteristicComponentImpl(name, containerServices),
         temperature_m(this), light_m(this), humidity_m(this),
         refresh_thread(NULL)
 
 {
-        component_name = name.c_str();
+    /* get broker url from CDB */    
+    try 
+	{
+	CORBA::Any* characteristic = get_characteristic_by_name("broker");
+	if (!(*characteristic>>=component_broker))
+	    {
+	    ACS_SHORT_LOG((LM_ERROR,"Error getting broker by the CORBA::Any object"));
+	    }
+	}
+    catch (...)
+	{
+	ACS_SHORT_LOG((LM_ERROR,"Error reading the characteristic broker by its name"));
+	}
+    /* get client_id from CDB */
+    try 
+	{
+	CORBA::Any* characteristic = get_characteristic_by_name("client_id");
+	if (!(*characteristic>>=client_name))
+	    {
+	    ACS_SHORT_LOG((LM_ERROR,"Error getting client_name by the CORBA::Any object"));
+	    }
+	}
+    catch (...)
+	{
+	ACS_SHORT_LOG((LM_ERROR,"Error reading the characteristic broker by its name"));
+	}
+	component_name = name.c_str();
 }
 
 sensortag_impl::~sensortag_impl()
@@ -25,19 +51,23 @@ sensortag_impl::~sensortag_impl()
 void sensortag_impl::initialize()
         throw (acsErrTypeLifeCycle::acsErrTypeLifeCycleExImpl)
 {
-//        on();
-        temperature_devio_m = new mqtt::mqtt_read("tcp://localhost:1883", 
-                            (component_name + ":temperature").c_str());
-        light_devio_m = new mqtt::mqtt_read("tcp://localhost:1883", 
-                            (component_name + ":light").c_str());
-        humidity_devio_m = new mqtt::mqtt_read("tcp://localhost:1883", 
-                            (component_name + ":humidity").c_str());
-	temperature_devio_w = new mqtt::mqtt_write("tcp://localhost:1883", 
-                            (component_name + ":temperature/w").c_str());
-	light_devio_w = new mqtt::mqtt_write("tcp://localhost:1883", 
-		                    (component_name + ":light/w").c_str());
-	humidity_devio_w = new mqtt::mqtt_write("tcp://localhost:1883", 
-		                    (component_name + ":humidity/w").c_str());
+	/* 
+	* Subscription to topics
+	* client name is configurable in CDB 
+	* two or more subscriptions to the same topic can not be made with the same client name
+	*/
+        temperature_devio_m = new mqtt::mqtt_read(component_broker, 
+                            (component_name + "/temperature").c_str(), client_name + "/temperature/r");
+        light_devio_m = new mqtt::mqtt_read(component_broker, 
+                            (component_name +  "/light").c_str(), client_name +  "/light/r");
+        humidity_devio_m = new mqtt::mqtt_read(component_broker, 
+                            (component_name  + "/humidity").c_str(), client_name + "/humidity/r");
+	temperature_devio_w = new mqtt::mqtt_write(component_broker, 
+                            ("w/" + component_name + "/temperature").c_str(), client_name + "/temperature/w");
+	light_devio_w = new mqtt::mqtt_write(component_broker, 
+		                    ("w/" + component_name + "/light").c_str(), client_name +  "/light/w");
+	humidity_devio_w = new mqtt::mqtt_write(component_broker, 
+		                    ("w/" + component_name + "/humidity").c_str(), client_name + "/humidity/w");
 	
         temperature_m =  new baci::ROdouble(
 			(component_name + ":temperature").c_str(),

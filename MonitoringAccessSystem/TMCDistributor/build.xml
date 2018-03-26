@@ -1,0 +1,105 @@
+<project name="TMCDistributor" basedir="." default="compile">
+    <property environment="env"/>
+    <property name="build.dir" value="build"/>
+    <property name="install.dir" value="${env.INTROOT}"/>
+    <property name="lib.dir" value="${env.INTROOT}/lib"/>
+    <property name="resources.dir" value="${build.dir}/classes/archive/tmcdb/monitoring/TMCOffline"/>
+    <property name="thirparties.dir" value="../../MonitoringAccessSystem/thirparties"/>
+    <property name="lib2.dir" value="lib"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="compile">
+        <delete dir="${build.dir}"/>
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.dir}/classes"/>
+
+        <!--First let's compile the classes-->
+        <javac debug="on" 
+               fork="true"
+               destdir="${build.dir}/classes" 
+               srcdir="${basedir}/src"
+               classpathref="classpath">
+            <compilerarg value="-Xlint:deprecation"/>
+        </javac>
+
+        <copy todir="${build.dir}/classes">
+            <fileset dir="${basedir}/src" includes="**/*.xml"/>
+        </copy>
+
+        <jar destfile="${build.dir}/TMCTTArchiver.jar" basedir="${build.dir}/classes">
+            <metainf dir="${resources.dir}">
+                <include name="applicationContext.xml"/>
+                <include name="beans-Dev.xml"/>
+                <include name="beans-Prod.xml"/>
+            </metainf>
+        </jar>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+	<delete dir="${lib2.dir}"/>
+    </target>
+
+    <target name="install">
+        <!-- Coping dependencies of jar -->
+        <copy toDir="${lib.dir}" failonerror="true">
+            <fileset dir="${thirparties.dir}">
+                <include name="**/activemq-all-5.6.0.jar.jar"/>
+                <include name="**/archive_database.jar"/>
+                <include name="**/castor.jar"/>
+                <include name="**/commons-logging-1.1.1.jar"/>
+                <include name="**/commons-pool-1.6.jar"/>
+                <include name="**/hibernate3.jar"/>
+                <include name="**/jedis-2.1.0.jar"/>
+                <include name="**/log4j-1.2.17.jar"/>
+                <include name="**/spring-beans-3.2.0.M2.jar"/>
+                <include name="**/spring-context-3.2.0.M2.jar"/>
+                <include name="**/spring-core-3.2.0.M2.jar"/>
+                <include name="**/spring-expression-3.2.0.M2.jar"/>
+                <include name="**/TMCDBPersistence.jar"/>
+                <include name="**/TMCDBUtils.jar"/>
+                <include name="**/xercesImpl.jar"/>
+                <include name="**/junit-4.10.jar"/>
+                <include name="**/indexed-file-reader-java6-1.0.jar"/>
+                <include name="**/jsr166y-1.7.0.jar"/>
+            </fileset>
+        </copy>
+
+        <!-- Coping jar of the application -->
+        <copy toDir="${lib.dir}" failonerror="true">
+            <fileset dir="${basedir}/build">
+                <include name="**/TMCTTArchiver.jar"/>
+            </fileset>
+        </copy>
+
+        <!-- Coping jar of the application -->
+        <copy toDir="${lib2.dir}" failonerror="true">
+            <fileset dir="${basedir}/build">
+                <include name="**/TMCTTArchiver.jar"/>
+            </fileset>
+        </copy>
+
+        <!-- Coping sh -->
+        <copy file="${basedir}/src/TMCTTArchiver.sh" tofile="${install.dir}/bin/TMCTTArchiver" overwrite="true"/>
+        <copy file="${basedir}/src/TMCTTArchiverPart.sh" tofile="${install.dir}/bin/TMCTTArchiverPart" overwrite="true"/>
+        <copy file="${basedir}/src/TMCTTArchiverSuite.sh" tofile="${install.dir}/bin/TMCTTArchiverSuite" overwrite="true"/>
+ 	<copy file="${basedir}/config/config_archiver.properties" tofile="${install.dir}/config/config_archiver.properties" overwrite="true"/>
+        <copy file="${basedir}/config/log4j.xml" tofile="${install.dir}/config/log4j.xml" overwrite="true"/>
+
+        <!-- Replace of path -->
+        <replace file="${install.dir}/bin/TMCTTArchiver" token="/opt/tmcs/TMCS" value="${env.INTROOT}"/>
+        <replace file="${install.dir}/bin/TMCTTArchiverPart" token="/opt/tmcs/TMCS" value="${env.INTROOT}"/>
+        <replace file="${install.dir}/bin/TMCTTArchiverSuite" token="/opt/tmcs/TMCS" value="${env.INTROOT}"/>
+
+        <exec executable="/bin/chmod"> 
+            <arg value="-R"/>
+            <arg value="777"/>
+            <arg value="${install.dir}/bin"/>
+        </exec>
+    </target>
+</project>

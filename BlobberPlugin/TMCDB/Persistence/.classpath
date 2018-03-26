@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="ACSROOT"/>
+	<classpathentry kind="lib" path="lib/testng-5.8-jdk15.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/ojdbc5.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/ejb3-persistence.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/hibernate3.jar" sourcepath="/RK_TOOLS/hibernate-distribution-3.3.1.GA/project/core/src/main/java"/>
+	<classpathentry kind="var" path="ACSROOT/lib/archive_database.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/junit-4.8.2.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/acserr.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/acserrj.jar" sourcepath="ACSROOT/lib/acserrj.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/jACSUtil.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/cdbrdb-pojos.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/tmcdbGenerator.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/TMCDBpojos.jar"/>
+	<classpathentry kind="var" path="ACSROOT/lib/TMCDB_HD_plugin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

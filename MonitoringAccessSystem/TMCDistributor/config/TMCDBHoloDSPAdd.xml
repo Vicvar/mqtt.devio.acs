@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lru-type>
+    <name>HOLODSPImpl</name>
+    <fullname>Holography Digital Signal Processor</fullname> 
+    <icd>ALMA-42.02.00.00-75.35.25.00</icd> 
+    <icd-date>0</icd-date>
+    <description>Holography Digital Signal Processor</description> 
+    <assembly-type>
+        <name>HoloDSP</name>
+        <dev-name>Holography Digital Signal Processor</dev-name>
+        <description>Holography Digital Signal Processor</description>
+        <default-role>
+            <node>0x1D</node>
+            <base-address>none</base-address>
+            <channel>3</channel>
+        </default-role>
+    </assembly-type>
+</lru-type>

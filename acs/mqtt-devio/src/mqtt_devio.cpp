@@ -44,16 +44,16 @@ void acs_callback::delivery_complete(mqtt::delivery_token_ptr token)
 {
 }
 
-mqtt_devio::mqtt_devio(const std::string& mqtt_brk_addr, const std::string& baci_name):
+mqtt_devio::mqtt_devio(const std::string& mqtt_brk_addr, const std::string& baci_name, const std::string& client_name):
         mqtt_brk_addr(mqtt_brk_addr), topic(baci_name), 
-        client_name(baci_name + "ClientTest"), cb_(NULL), client_(NULL)
+        client_name(baci_name + client_name), cb_(NULL), client_(NULL)
 {
     connect_options connOpts;
     connOpts.set_keep_alive_interval(20);
     connOpts.set_clean_session(false);
     connOpts.set_automatic_reconnect(true);
 
-    client_ = new mqtt::async_client(mqtt_brk_addr, topic);
+    client_ = new mqtt::async_client(mqtt_brk_addr, client_name);
     cb_ = new acs_callback(*client_, topic, this);
     client_->set_callback(*cb_);
 
@@ -91,7 +91,7 @@ mqtt_devio::~mqtt_devio()
     delete client_;
 }
 
-mqtt_read::mqtt_read(const std::string& mqtt_brk_addr, const std::string& baci_name) : mqtt_devio(mqtt_brk_addr, baci_name)
+mqtt_read::mqtt_read(const std::string& mqtt_brk_addr, const std::string& baci_name, const std::string& client_name) : mqtt_devio(mqtt_brk_addr, baci_name, client_name)
 {
     connect_options connOpts;
     connOpts.set_keep_alive_interval(20);
@@ -112,7 +112,7 @@ mqtt_read::mqtt_read(const std::string& mqtt_brk_addr, const std::string& baci_n
     }
 }
 
-mqtt_write::mqtt_write(const std::string& mqtt_brk_addr, const std::string& baci_name) : mqtt_devio(mqtt_brk_addr, baci_name)
+mqtt_write::mqtt_write(const std::string& mqtt_brk_addr, const std::string& baci_name, const std::string& client_name) : mqtt_devio(mqtt_brk_addr, baci_name, client_name)
 {
     connect_options connOpts;
     connOpts.set_keep_alive_interval(20);
