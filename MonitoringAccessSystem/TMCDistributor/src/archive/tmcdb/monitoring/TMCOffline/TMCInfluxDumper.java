@@ -171,6 +171,7 @@ public class TMCInfluxDumper {
 	setInfluxDBConnection(this.influx_url, this.influx_user, this.influx_password);
 	setInfluxDBDatabase(this.getDatabaseName());
 	setInfluxDBRetentionPolicy(this.aRetentionPolicy);
+	
         if (logger.isDebugEnabled()) {
           logger.debug("influx_url=" + this.influx_url);
           logger.debug("aRetentionPolicy=" + this.aRetentionPolicy);
@@ -464,7 +465,7 @@ public class TMCInfluxDumper {
      * @return The data list as a string
      */
     public void getDataListAsString(int start, int end) {
-
+	BatchPoints batchPoints = BatchPoints.database(this.getDatabaseName()).tag("async", "true").retentionPolicy(this.aRetentionPolicy).build();
         if (dataList != null && !dataList.isEmpty()) {
           List<String> dataList = this.dataList.subList(start, end);
           for (String data : dataList) {
@@ -496,7 +497,7 @@ public class TMCInfluxDumper {
                     String currentTime = TMCTimeConverter.toDateReadableFormatMillisecondShort(currentTimeStamp);
                     if (currentTime != null && currentTime.length() == 23) {
                       try {
-			String data_value = "";
+			Double data_value = 0.0;
                         String values = clobArray[(i + 1)];
                         String[] valueArray = values.split(" ");
                         if (valueArray != null && valueArray.length > 0) {
@@ -505,9 +506,7 @@ public class TMCInfluxDumper {
                             if ("-".equals(lastCharacter))
                               value += "E";
                             Double valueDouble = Double.parseDouble(value);
-                            if (valueDouble < Long.MIN_VALUE || valueDouble > Long.MAX_VALUE)
-                              value = "" + valueDouble.doubleValue();
-                            data_value = value;
+                            data_value = valueDouble;
                           }
                         }
                         else {
@@ -516,13 +515,11 @@ public class TMCInfluxDumper {
                           if ("-".equals(lastCharacter))
                             value += "E";
                           Double valueDouble = Double.parseDouble(value);
-                          if (valueDouble < Long.MIN_VALUE || valueDouble > Long.MAX_VALUE)
-                            value = "" + valueDouble.doubleValue();
-                          data_value = value;
+                          data_value = valueDouble;
                         }
-			
-			 this.publish(getMeasurement(),  (currentTimeStamp - 122192928000060000L)/10000, getMonitorPointName(), data_value);
-			 	
+			 long time = (currentTimeStamp - 122192928000060000L)/10000;
+			 Point point = Point.measurement(getMeasurement()).time(time , TimeUnit.MILLISECONDS).tag("baciName", getMonitorPointName()).addField("value", data_value).build();
+	 		 batchPoints.point(point);			
 			
                       }
                       catch (NumberFormatException nfe) {
@@ -583,6 +580,7 @@ public class TMCInfluxDumper {
         else {
           logger.error("From getDataListAsString: dataList is empty. This is strange.");
         }
+	this.influxDB.write(batchPoints);
     }
 
     /**
@@ -590,7 +588,7 @@ public class TMCInfluxDumper {
      * 
      */
 
-    private void publish(String measurement, long time, String property, String value) {
+   /* private void publish(String measurement, long time, String property, Double value) {
     	
 	   this.influxDB.write(Point.measurement(measurement)
 	 				.time(time, TimeUnit.MILLISECONDS)
@@ -602,5 +600,5 @@ public class TMCInfluxDumper {
 	  logger.debug("send data to influx");
           logger.debug("measurement=" + measurement + "; time=" + time + "; property=" + property + "; value=" + value);
         }
-    }
+    }*/
 }
